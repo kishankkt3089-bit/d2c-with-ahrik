@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHrik Network | Capital, Connections & Strategic Alliances | D2C WITH AHRIK</title>
+    <meta name="description" content="Access investor networks, multi-channel distribution, strategic brand partnerships, and the ecosystem that gives D2C brands an unfair competitive advantage.">
+    <link rel="stylesheet" href="style.css?v=20260727_2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+                /* === Network PILLAR DUAL-COLOR BUTTON & CARD THEME === */
+        :root { 
+            --pillar-dark: #1d4ed8; 
+            --pillar: #2563eb; 
+            --pillar-light: #60a5fa; 
+            --pillar-rgb: 37,99,235;
+            --pillar-subtle: rgba(37,99,235, 0.08); 
+        }
+        [data-theme="light"] { 
+            --pillar-dark: #2563eb; 
+            --pillar: #1d4ed8; 
+            --pillar-light: #1d4ed8; 
+            --pillar-subtle: rgba(37,99,235, 0.12); 
+        }
+                .btn-primary {
+            background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%) !important;
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.5px !important;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+            border: 1px solid rgba(37,99,235, 0.6) !important;
+            box-shadow: 0 4px 18px rgba(37,99,235, 0.4) !important;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+            color: #ffffff !important;
+            border-color: #60a5fa !important;
+            box-shadow: 0 8px 25px rgba(37,99,235, 0.65), 0 0 15px rgba(37,99,235, 0.3) !important;
+            transform: translateY(-3px) scale(1.02) !important;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #2563eb, #60a5fa) !important;
+            border-color: #60a5fa !important;
+            box-shadow: 0 8px 30px rgba(37,99,235, 0.7), 0 0 15px rgba(37,99,235, 0.4) !important;
+            transform: translateY(-3px) scale(1.02) !important;
+        }
+        .btn-secondary {
+            background: rgba(37,99,235, 0.08) !important;
+            border: 1px solid rgba(37,99,235, 0.3) !important;
+            color: var(--text-primary) !important;
+            backdrop-filter: blur(12px) !important;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+        }
+        .btn-secondary:hover {
+            background: rgba(37,99,235, 0.18) !important;
+            border-color: #60a5fa !important;
+            box-shadow: 0 6px 22px rgba(37,99,235, 0.3) !important;
+            transform: translateY(-3px) !important;
+            color: #60a5fa !important;
+        }
+        /* === Network PILLAR THEME ===*/
+        :root { --pillar: #2563eb; --pillar-light: #60a5fa; }
+        [data-theme="light"] { 
+            --pillar-dark: #2563eb; 
+            --pillar: #1d4ed8; 
+            --pillar-light: #1d4ed8; 
+            --pillar-subtle: rgba(37,99,235, 0.12); 
+        }
+        .pillar-page-hero .eyebrow, .section-eyebrow { color: #60a5fa !important; }
+        .hero-stat .num, .visual-metric .big { background: linear-gradient(135deg, #2563eb, #60a5fa) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+        /* === 3D SERVICE CARD EFFECT === */
+        .prem-grid { perspective: 1200px; }
+        .prem-card {
+            background: var(--section-glass);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 32px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275), box-shadow 0.4s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        .prem-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            background: radial-gradient(circle at 50% 50%, rgba(var(--pillar-rgb,99,102,241),0.12) 0%, transparent 65%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .prem-card:hover::before { opacity: 1; }
+        .prem-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--pillar), var(--pillar-light)); opacity: 0; transition: opacity 0.3s; border-radius: 18px 18px 0 0; }
+        .prem-card:hover { transform: translateY(-8px)  scale(1.01); border-color: rgba(var(--pillar-rgb,99,102,241),0.5); box-shadow: 0 30px 60px rgba(0,0,0,0.35), 0 0 25px rgba(var(--pillar-rgb,99,102,241),0.15); }
+        .prem-card:hover::after { opacity: 1; }
+        .card-explore-hint { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--pillar-light, var(--accent-secondary)); opacity: 0.95; transition: all 0.3s ease; transform: translateY(6px); transition: all 0.3s ease; }
+        .prem-card:hover .card-explore-hint { opacity: 1; transform: translateY(0); }
+        .card-icon-lg { background: rgba(37,99,235,0.08) !important; border-color: rgba(37,99,235,0.25) !important; color: #60a5fa !important; }
+        .prem-card::after { background: linear-gradient(90deg, #2563eb, #60a5fa) !important; }
+        .prem-card:hover { border-color: rgba(37,99,235,0.4) !important; }
+        .prem-card .card-promise { border-left-color: #2563eb !important; }
+        .chip { background: rgba(37,99,235,0.08) !important; border-color: rgba(37,99,235,0.25) !important; }
+        .chip i, .feature-text .tag { color: #60a5fa !important; }
+        .step-num { background: linear-gradient(135deg, #2563eb, #60a5fa) !important; }
+        .cta-strip { background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(96,165,250,0.06)) !important; border-color: rgba(37,99,235,0.25) !important; }
+        .next-pillar-link:hover { border-color: #2563eb !important; }
+        .gradient-text { background: linear-gradient(135deg, #2563eb, #60a5fa) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+        .resp-box.ahrik { border-color: rgba(37,99,235,0.25) !important; }
+        .resp-box.ahrik h4 { color: #60a5fa !important; }
+        .pillar-page-hero { min-height: 92vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 140px 5% 80px; position: relative; z-index: 2; }
+        .pillar-page-hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent-secondary); margin-bottom: 20px; display: block; }
+        .pillar-page-hero h1 { font-size: clamp(42px, 6vw, 72px); font-weight: 800; line-height: 1.08; margin-bottom: 24px; max-width: 900px; }
+        .pillar-page-hero .hero-sub { font-size: clamp(16px, 1.8vw, 20px); color: var(--text-secondary); max-width: 680px; margin: 0 auto 40px; line-height: 1.7; }
+        .hero-cta-row { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+        .hero-stat-strip { display: flex; gap: 50px; justify-content: center; flex-wrap: wrap; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color); }
+        .hero-stat .num { font-size: 38px; font-weight: 800; background: linear-gradient(135deg, var(--text-gradient-1), var(--text-gradient-2)); -webkit-background-clip: text; -webkit-text-fill-color: initial; color: #60a5fa; line-height: 1; margin-bottom: 6px; }
+        .hero-stat .lbl { font-size: 13px; color: var(--text-secondary); }
+        .pillar-section { padding: 80px 5%; max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+        .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-secondary); margin-bottom: 14px; display: block; }
+        .section-title { font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; margin-bottom: 16px; }
+        .section-sub { font-size: 17px; color: var(--text-secondary); max-width: 680px; line-height: 1.7; margin-bottom: 50px; }
+        .prem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        /* === 3D SERVICE CARD EFFECT === */
+        .prem-grid { perspective: 1200px; }
+        .prem-card {
+            background: var(--section-glass);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 32px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275), box-shadow 0.4s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        .prem-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            background: radial-gradient(circle at 50% 50%, rgba(var(--pillar-rgb,99,102,241),0.12) 0%, transparent 65%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .prem-card:hover::before { opacity: 1; }
+        .prem-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--pillar), var(--pillar-light)); opacity: 0; transition: opacity 0.3s; border-radius: 18px 18px 0 0; }
+        .prem-card:hover { transform: translateY(-8px)  scale(1.01); border-color: rgba(var(--pillar-rgb,99,102,241),0.5); box-shadow: 0 30px 60px rgba(0,0,0,0.35), 0 0 25px rgba(var(--pillar-rgb,99,102,241),0.15); }
+        .prem-card:hover::after { opacity: 1; }
+        .card-explore-hint { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--pillar-light, var(--accent-secondary)); opacity: 0.95; transition: all 0.3s ease; transform: translateY(6px); transition: all 0.3s ease; }
+        .prem-card:hover .card-explore-hint { opacity: 1; transform: translateY(0); }
+        .card-icon-lg { width: 54px; height: 54px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--accent-secondary); margin-bottom: 22px; }
+        .prem-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 10px; }
+        .prem-card .card-promise { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; border-left: 3px solid var(--accent-secondary); padding-left: 12px; }
+        .prem-card ul { list-style: none; padding: 0; }
+        .prem-card ul li { font-size: 13px; color: var(--text-secondary); margin-bottom: 9px; padding-left: 16px; position: relative; }
+        .prem-card ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--accent-primary); }
+        .split-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; margin-bottom: 80px; }
+        @media (max-width: 900px) { .split-feature { grid-template-columns: 1fr; gap: 40px; } }
+        .feature-text .tag { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--text-gradient-1); margin-bottom: 14px; display: block; }
+        .feature-text h3 { font-size: clamp(24px, 3vw, 34px); font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+        .feature-text p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+        .outcome-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+        .chip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2); border-radius: 30px; font-size: 13px; font-weight: 500; color: var(--text-primary); }
+        .chip i { color: var(--text-gradient-1); font-size: 11px; }
+        .feature-visual { background: var(--section-glass); border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .visual-metric-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .visual-metric { background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.15); border-radius: 14px; padding: 24px; text-align: center; }
+        .visual-metric .big { font-size: 36px; font-weight: 800; background: linear-gradient(135deg, var(--text-gradient-1), var(--text-gradient-2)); -webkit-background-clip: text; -webkit-text-fill-color: initial; color: #60a5fa; line-height: 1; margin-bottom: 6px; }
+        .visual-metric .sm { font-size: 12px; color: var(--text-secondary); }
+        .cta-strip { background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(192,132,252,0.08)); border: 1px solid rgba(192,132,252,0.2); border-radius: 22px; padding: 50px 60px; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
+        .cta-strip h3 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .cta-strip p { font-size: 15px; color: var(--text-secondary); max-width: 520px; line-height: 1.6; }
+        .cta-strip-actions { display: flex; gap: 16px; flex-wrap: wrap; flex-shrink: 0; }
+        .pillar-footer-extra { padding: 60px 5% 30px; border-top: 1px solid var(--border-color); position: relative; z-index: 2; }
+        .pillar-next-strip { max-width: 1280px; margin: 0 auto 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .pillar-next-strip h4 { font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-bottom: 10px; }
+        .next-pillar-links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .next-pillar-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--section-glass); border: 1px solid var(--border-color); border-radius: 10px; font-size: 13px; font-weight: 600; color: var(--text-secondary); text-decoration: none; transition: all 0.2s; backdrop-filter: blur(10px); }
+        .next-pillar-link:hover { border-color: var(--text-gradient-1); color: var(--text-primary); }
+        .next-pillar-link i { color: var(--accent-secondary); font-size: 12px; }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <nav class="navbar-wrapper">
+                <div class="navbar-left">
+            <div class="logo-dropdown-wrapper">
+                <a href="index.html" class="logo">D2C WITH AHRIK</a>
+                <button class="logo-dropdown-btn" id="logo-dropdown-btn" aria-label="Toggle Ecosystem Menu">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="deepmind-dropdown-panel" id="deepmind-dropdown-panel">
+                    <span class="dropdown-category-title">SIX CORE PILLARS</span>
+                    <a href="base.html" class="deepmind-dropdown-item deepmind-item-base">
+                        <div class="deepmind-item-icon"><i class="fas fa-landmark"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Base</span>
+                            <span class="deepmind-item-subtitle">Legal &amp; Financial Architecture</span>
+                        </div>
+                    </a>
+                    <a href="studio.html" class="deepmind-dropdown-item deepmind-item-studio">
+                        <div class="deepmind-item-icon"><i class="fas fa-palette"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Studio</span>
+                            <span class="deepmind-item-subtitle">AI Visuals &amp; Brand Production</span>
+                        </div>
+                    </a>
+                    <a href="build.html" class="deepmind-dropdown-item deepmind-item-build">
+                        <div class="deepmind-item-icon"><i class="fas fa-code"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Build</span>
+                            <span class="deepmind-item-subtitle">Storefronts &amp; 24/7 AI Automation</span>
+                        </div>
+                    </a>
+                    <a href="marketing.html" class="deepmind-dropdown-item deepmind-item-marketing">
+                        <div class="deepmind-item-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Marketing</span>
+                            <span class="deepmind-item-subtitle">Growth Funnels &amp; Retention</span>
+                        </div>
+                    </a>
+                    <a href="commerce.html" class="deepmind-dropdown-item deepmind-item-commerce">
+                        <div class="deepmind-item-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Commerce</span>
+                            <span class="deepmind-item-subtitle">Managed Marketplace Operations</span>
+                        </div>
+                    </a>
+                    <a href="network.html" class="deepmind-dropdown-item deepmind-item-network">
+                        <div class="deepmind-item-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Network</span>
+                            <span class="deepmind-item-subtitle">Investor Access &amp; Brand Alliances</span>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider-line"></div>
+                    <span class="dropdown-category-title">EXPLORE AGENCY</span>
+                    <a href="services.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-th-large"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Services Matrix</span>
+                            <span class="deepmind-item-subtitle">Full capabilities overview</span>
+                        </div>
+                    </a>
+                    <a href="portfolio.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Case Studies &amp; Work</span>
+                            <span class="deepmind-item-subtitle">Real D2C brand results</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>        <div class="pillars-box">
+            <a href="base.html">Base</a>
+            <a href="studio.html">Studio</a>
+            <a href="build.html">Build</a>
+            <a href="marketing.html">Marketing</a>
+            <a href="commerce.html">Commerce</a>
+            <a href="network.html">Network</a>
+        </div>
+        <div class="navbar-right">
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+            <div class="main-links">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a><a href="connect.html">Contact Us</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <section class="pillar-page-hero">
+        <div>
+            <span class="eyebrow">Pillar 06 &mdash; Capital &amp; Connections</span>
+            <h1 class="animate-up">Scale Beyond Revenue.<br><span class="gradient-text">Access Capital, Connections</span> &amp; Ecosystems.</h1>
+            <p class="hero-sub animate-up delay-1">Revenue is the foundation. But the brands that become category leaders access something that money alone can't buy: the right investors, the right distribution networks, the right people in the room at the right time. AHrik Network opens those doors for your brand.</p>
+            <div class="hero-cta-row animate-up delay-2">
+                <a href="connect.html" class="btn-primary">Access the Network</a>
+                <a href="services.html" class="btn-secondary">Explore All Services</a>
+            </div>
+            <div class="hero-stat-strip animate-up delay-2">
+                <div class="hero-stat"><div class="num">VC</div><div class="lbl">Investor Network Access</div></div>
+                <div class="hero-stat"><div class="num">Multi</div><div class="lbl">Channel Distribution</div></div>
+                <div class="hero-stat"><div class="num">360&deg;</div><div class="lbl">Brand Partnership Support</div></div>
+                <div class="hero-stat"><div class="num">Series A</div><div class="lbl">Fundraise Readiness</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pillar-section">
+        <div class="split-feature">
+            <div class="feature-text">
+                <span class="tag">The Next Level</span>
+                <h3>The Right Room Changes Everything. Let Us Put You In It.</h3>
+                <p>When your product is great, your operations run smoothly, and your marketing machine is working &mdash; the next constraint is access. Access to investors who believe in D2C at scale. Access to distribution channels that aren't available to every seller. Access to brand partnerships that create 10x the reach of paid advertising alone.</p>
+                <div class="outcome-chips">
+                    <span class="chip"><i class="fas fa-check"></i> Investor-Ready at Any Stage</span>
+                    <span class="chip"><i class="fas fa-check"></i> Multi-Channel Distribution</span>
+                    <span class="chip"><i class="fas fa-check"></i> High-Impact Brand Alliances</span>
+                    <span class="chip"><i class="fas fa-check"></i> Community &amp; PR Flywheel</span>
+                </div>
+            </div>
+            <div class="feature-visual">
+                <div class="visual-metric-row">
+                    <div class="visual-metric"><div class="big">VC</div><div class="sm">Curated Investor Introductions</div></div>
+                    <div class="visual-metric"><div class="big">10x</div><div class="sm">Reach via Strategic Partnerships</div></div>
+                    <div class="visual-metric"><div class="big">Global</div><div class="sm">Export &amp; Cross-Border Access</div></div>
+                    <div class="visual-metric"><div class="big">PR</div><div class="sm">Earned Media &amp; Brand Authority</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pillar-section" style="padding-top: 0;">
+        <span class="section-eyebrow">Network Solutions</span>
+        <h2 class="section-title">The Unfair Advantages <span class="gradient-text">Other Agencies Can't Offer</span></h2>
+        <p class="section-sub">AHrik Network isn't a list of contacts. It's a curated ecosystem of capital, distribution, and strategic relationships &mdash; activated specifically for your brand's growth stage.</p>
+        <div class="prem-grid">
+            <a href="network-investor.html" class="prem-card" id="fundraise-readiness">
+                <div class="card-icon-lg"><i class="fas fa-hand-holding-usd"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #60a5fa; margin-bottom: 8px; display: block;">Network Layer 01</span>
+                <h3>Fundraise Readiness</h3>
+                <p class="card-promise">Capital follows compelling stories backed by clean data. We make sure you're always ready for the investor conversation you didn't expect.</p>
+                <ul>
+                    <li>Investor Pitch Deck Development &amp; Storytelling</li>
+                    <li>Financial Model &amp; Unit Economics Narrative</li>
+                    <li>Due Diligence Documentation &amp; Data Room Setup</li>
+                    <li>Angel, Seed &amp; Series A Fundraise Strategy</li>
+                    <li>VC, Angel &amp; Family Office Introductions</li>
+                </ul>
+                <span class="card-explore-hint">Learn More <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="network-retail.html" class="prem-card" id="distribution-partnerships">
+                <div class="card-icon-lg"><i class="fas fa-project-diagram"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #60a5fa; margin-bottom: 8px; display: block;">Network Layer 02</span>
+                <h3>Distribution Partnerships</h3>
+                <p class="card-promise">The fastest-growing D2C brands don't rely on a single channel. We open distribution doors that diversify and multiply your revenue.</p>
+                <ul>
+                    <li>Modern Trade &amp; Retail Chain Access</li>
+                    <li>Quick Commerce &amp; Hyperlocal Channel Expansion</li>
+                    <li>Export Strategy &amp; Cross-Border Distribution</li>
+                    <li>Wholesale &amp; B2B Channel Development</li>
+                    <li>Corporate Gifting &amp; Institutional Buyer Acquisition</li>
+                </ul>
+                <span class="card-explore-hint">Learn More <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="network-alliances.html" class="prem-card" id="strategic-alliances">
+                <div class="card-icon-lg"><i class="fas fa-handshake"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #60a5fa; margin-bottom: 8px; display: block;">Network Layer 03</span>
+                <h3>Strategic Brand Alliances</h3>
+                <p class="card-promise">The right partnership can achieve in 30 days what advertising takes 12 months to build. We architect collaborations that create real market impact.</p>
+                <ul>
+                    <li>Co-Branding &amp; Brand Collaboration Strategy</li>
+                    <li>Influencer &amp; Celebrity Partnership Programs</li>
+                    <li>Cross-Brand Bundle &amp; Gifting Partnerships</li>
+                    <li>Affiliate &amp; Ambassador Program Architecture</li>
+                    <li>IP Licensing &amp; White-Label Partnership Models</li>
+                </ul>
+                <span class="card-explore-hint">Learn More <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="network-pr.html" class="prem-card" id="community-pr">
+                <div class="card-icon-lg"><i class="fas fa-star"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #60a5fa; margin-bottom: 8px; display: block;">Network Layer 04</span>
+                <h3>Community &amp; PR</h3>
+                <p class="card-promise">Brands that are talked about grow without proportional ad spend. We build the earned media presence and community flywheel that makes you unforgettable.</p>
+                <ul>
+                    <li>PR Strategy, Media Outreach &amp; Placements</li>
+                    <li>Community Building (WhatsApp, Telegram, Discord)</li>
+                    <li>Founder Personal Brand Development</li>
+                    <li>Awards, Certifications &amp; Industry Credibility Building</li>
+                    <li>Podcast, Speaking &amp; Thought Leadership Strategy</li>
+                </ul>
+                <span class="card-explore-hint">Learn More <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FINAL JOURNEY CLOSE -->
+    <section class="pillar-section" style="padding-top: 0;">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 60px;">
+            <span class="section-eyebrow">The AHrik Journey Complete</span>
+            <h2 class="section-title">Six Pillars. One <span class="gradient-text">Unified Empire.</span></h2>
+            <p style="font-size: 17px; color: var(--text-secondary); line-height: 1.7;">From the legal foundation to investor networks, from AI creative assets to fully-managed commerce &mdash; AHrik is the only partner you'll ever need to build a generational D2C brand in India.</p>
+        </div>
+        <div class="cta-strip">
+            <div>
+                <h3>Your Brand's Next Chapter Starts Here.</h3>
+                <p>Whether you're just starting or scaling beyond &#8377;2Cr/month &mdash; AHrik Network is where your brand finds the connections, capital, and alliances that separate good brands from generational ones.</p>
+            </div>
+            <div class="cta-strip-actions">
+                <a href="services.html" class="btn-secondary"><i class="fas fa-th-large"></i> All Services</a>
+                <a href="connect.html" class="btn-primary">Tap Into the Network</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="pillar-footer-extra">
+        <div class="pillar-next-strip">
+            <div>
+                <h4>Revisit Your AHrik Journey</h4>
+                <div class="next-pillar-links">
+                    <a href="base.html" class="next-pillar-link"><i class="fas fa-landmark"></i> Base</a>
+                    <a href="studio.html" class="next-pillar-link"><i class="fas fa-palette"></i> Studio</a>
+                    <a href="build.html" class="next-pillar-link"><i class="fas fa-code"></i> Build</a>
+                    <a href="marketing.html" class="next-pillar-link"><i class="fas fa-chart-line"></i> Marketing</a>
+                    <a href="commerce.html" class="next-pillar-link"><i class="fas fa-shopping-bag"></i> Commerce</a>
+                </div>
+            </div>
+            <a href="services.html" class="btn-secondary"><i class="fas fa-th-large"></i> All Services</a>
+        </div>
+    </div>
+
+        <footer style="position: relative; z-index: 2;">
+        <div style="background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(96,165,250,0.05)); border-top: 1px solid rgba(37,99,235,0.2); padding: 70px 5% 60px;">
+            <div class="pillar-banner-split-grid" style="max-width: 1280px; margin: 0 auto; display: grid; gap: 60px; align-items: start;">
+                <div>
+                    <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.25); border-radius: 30px; padding: 8px 18px; margin-bottom: 24px;">
+                        <i class="fas fa-network-wired" style="color: #60a5fa; font-size: 13px;"></i>
+                        <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #60a5fa; text-transform: uppercase;">AHrik Network</span>
+                    </div>
+                    <h2 style="font-size: clamp(26px, 3.5vw, 38px); font-weight: 800; margin-bottom: 16px; line-height: 1.2;">Your Capital & Connections <span style="color: #60a5fa; background: none; -webkit-text-fill-color: initial; color: #60a5fa;">Partner.</span></h2>
+                    <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; max-width: 520px; margin-bottom: 28px;">AHrik Network is where D2C brands access what money alone can't buy — the right investors at the right stage, distribution channels that multiply revenue, strategic brand partnerships with disproportionate ROI, and a PR and community flywheel that makes your brand a category authority.</p>
+                    <a href="connect.html" class="btn-primary" style="background: linear-gradient(135deg, #1d4ed8, #2563eb); border-color: rgba(37,99,235, 0.6); box-shadow: 0 4px 18px rgba(37,99,235, 0.45); color: #ffffff; font-weight: 700; text-shadow: 0 1px 3px rgba(0,0,0,0.6);">Get Started</a>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div style="background: rgba(37,99,235,0.06); border: 1px solid rgba(37,99,235,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #60a5fa; background: none; -webkit-text-fill-color: initial; color: #60a5fa; margin-bottom: 6px;">VC</div><div style="font-size: 12px; color: var(--text-secondary);">Investor Network Access</div></div><div style="background: rgba(37,99,235,0.06); border: 1px solid rgba(37,99,235,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #60a5fa; background: none; -webkit-text-fill-color: initial; color: #60a5fa; margin-bottom: 6px;">10x</div><div style="font-size: 12px; color: var(--text-secondary);">Reach via Brand Alliances</div></div><div style="background: rgba(37,99,235,0.06); border: 1px solid rgba(37,99,235,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #60a5fa; background: none; -webkit-text-fill-color: initial; color: #60a5fa; margin-bottom: 6px;">Multi</div><div style="font-size: 12px; color: var(--text-secondary);">Channel Distribution</div></div><div style="background: rgba(37,99,235,0.06); border: 1px solid rgba(37,99,235,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #60a5fa; background: none; -webkit-text-fill-color: initial; color: #60a5fa; margin-bottom: 6px;">Series A</div><div style="font-size: 12px; color: var(--text-secondary);">Fundraise Readiness</div></div>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 50px 5% 30px; border-top: 1px solid var(--border-color);">
+            <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr; gap: 40px;">
+                                                <div>
+                    <a href="network.html" class="footer-logo footer-logo-network" style="font-size: 18px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: #60a5fa !important; -webkit-text-fill-color: #60a5fa !important; text-decoration: none; margin-bottom: 14px; display: block; background: none !important; border: none !important; padding: 0 !important; border-radius: 0 !important; box-shadow: none !important; filter: none !important; text-shadow: 0 0 14px rgba(96, 165, 250, 0.4) !important;">AHRIK NETWORK</a>
+                    <p style="font-size: 14.5px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px; line-height: 1.5; letter-spacing: 0.3px;">Unfair Advantages: Investor Access & Strategic Alliances.</p>
+                    <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.7; margin-bottom: 22px;">AHrik Network opens doors to curated VC investor networks, retail distribution channels, high-impact brand alliances, and earned PR. We connect ambitious D2C founders with the capital, strategic partnerships, and ecosystem needed to build category leadership.</p>
+                    <div class="newsletter-form" style="flex-direction: column; gap: 10px; align-items: stretch;">
+                        <input type="email" placeholder="Enter your work email" style="width: 100%;">
+                        <button class="btn-primary" style="background: linear-gradient(135deg, #2563eb, #60a5fa); border-color: rgba(37,99,235, 0.6); box-shadow: 0 4px 15px rgba(37,99,235, 0.4); color: #ffffff; font-weight: 700;">Get Insights</button>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #60a5fa; text-transform: uppercase; margin-bottom: 18px;">Network Services</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="network.html#fundraise-readiness" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#60a5fa'" onmouseout="this.style.color='var(--text-secondary)'">Investor Pitch Deck & Prep</a></li>
+                        <li style="margin-bottom: 10px;"><a href="network.html#fundraise-readiness" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#60a5fa'" onmouseout="this.style.color='var(--text-secondary)'">VC & Angel Network Access</a></li>
+                        <li style="margin-bottom: 10px;"><a href="network.html#distribution-partnerships" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#60a5fa'" onmouseout="this.style.color='var(--text-secondary)'">Modern Trade & Retail Distribution</a></li>
+                        <li style="margin-bottom: 10px;"><a href="network.html#distribution-partnerships" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#60a5fa'" onmouseout="this.style.color='var(--text-secondary)'">Quick Commerce Expansion</a></li>
+                        <li style="margin-bottom: 10px;"><a href="network.html#strategic-alliances" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#60a5fa'" onmouseout="this.style.color='var(--text-secondary)'">Brand Alliance Strategy</a></li>
+                        <li style="margin-bottom: 10px;"><a href="network.html#community-pr" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#60a5fa'" onmouseout="this.style.color='var(--text-secondary)'">PR & Founder Personal Brand</a></li>
+                    </ul>
+                </div>
+                <div>
+                                        <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--pillar-light, var(--text-primary)); text-transform: uppercase; margin-bottom: 18px;">The Journey</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 8px;"><a href="base.html" class="footer-journey-base" style="color: #22d3ee !important; -webkit-text-fill-color: #22d3ee !important; text-decoration: none; font-size: 14px; font-weight: 700;">Base &rarr; Foundation</a></li>
+                        <li style="margin-bottom: 8px;"><a href="studio.html" class="footer-journey-studio" style="color: #a78bfa !important; -webkit-text-fill-color: #a78bfa !important; text-decoration: none; font-size: 14px; font-weight: 700;">Studio &rarr; Creative</a></li>
+                        <li style="margin-bottom: 8px;"><a href="build.html" class="footer-journey-build" style="color: #fb923c !important; -webkit-text-fill-color: #fb923c !important; text-decoration: none; font-size: 14px; font-weight: 700;">Build &rarr; Digital</a></li>
+                        <li style="margin-bottom: 8px;"><a href="marketing.html" class="footer-journey-marketing" style="color: #4ade80 !important; -webkit-text-fill-color: #4ade80 !important; text-decoration: none; font-size: 14px; font-weight: 700;">Marketing &rarr; Growth</a></li>
+                        <li style="margin-bottom: 8px;"><a href="commerce.html" class="footer-journey-commerce" style="color: #fbbf24 !important; -webkit-text-fill-color: #fbbf24 !important; text-decoration: none; font-size: 14px; font-weight: 700;">Commerce &rarr; Revenue</a></li>
+                        <li style="margin-bottom: 8px;"><a href="network.html" class="footer-journey-network" style="color: #60a5fa !important; -webkit-text-fill-color: #60a5fa !important; text-decoration: none; font-size: 14px; font-weight: 700;">Network &rarr; Capital</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #60a5fa; text-transform: uppercase; margin-bottom: 18px;">Navigate</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="index.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Home</a></li>
+                        <li style="margin-bottom: 10px;"><a href="about.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">About</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">All Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="portfolio.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Portfolio</a></li>
+                        <li style="margin-bottom: 10px;"><a href="connect.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #60a5fa; text-transform: uppercase; margin-bottom: 18px;">Connect</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="mailto:hello@d2cwithahrik.com" style="color: var(--text-secondary); text-decoration: none; font-size: 13px;">hello@d2cwithahrik.com</a></li>
+                        <li style="margin-bottom: 16px; font-size: 13px; color: var(--text-secondary);">Response SLA: under 24 Hours</li>
+                    </ul>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="#" style="width: 36px; height: 36px; background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #60a5fa;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="width: 36px; height: 36px; background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #60a5fa;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="width: 36px; height: 36px; background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #60a5fa;"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 20px 5%; border-top: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; max-width: 1280px; margin: 0 auto;">
+            <p style="font-size: 13px; color: var(--text-secondary);">&copy; 2026 D2C WITH AHRIK. All rights reserved.</p>
+            
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="3d-animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

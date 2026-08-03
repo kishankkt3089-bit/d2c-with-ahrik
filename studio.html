@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHrik Studio | AI-Powered Creative Production House | D2C WITH AHRIK</title>
+    <meta name="description" content="Brand identity, AI visuals, product photography, brand films, and UI/UX design &mdash; AHrik Studio is where D2C brands become impossible to ignore.">
+    <link rel="stylesheet" href="style.css?v=20260727_2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+                /* === Studio PILLAR DUAL-COLOR BUTTON & CARD THEME === */
+        :root { 
+            --pillar-dark: #5b21b6; 
+            --pillar: #7c3aed; 
+            --pillar-light: #a78bfa; 
+            --pillar-rgb: 124,58,237;
+            --pillar-subtle: rgba(124,58,237, 0.08); 
+        }
+        [data-theme="light"] { 
+            --pillar-dark: #7c3aed; 
+            --pillar: #5b21b6; 
+            --pillar-light: #5b21b6; 
+            --pillar-subtle: rgba(124,58,237, 0.12); 
+        }
+                .btn-primary {
+            background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%) !important;
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.5px !important;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+            border: 1px solid rgba(124,58,237, 0.6) !important;
+            box-shadow: 0 4px 18px rgba(124,58,237, 0.4) !important;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%) !important;
+            color: #ffffff !important;
+            border-color: #a78bfa !important;
+            box-shadow: 0 8px 25px rgba(124,58,237, 0.65), 0 0 15px rgba(124,58,237, 0.3) !important;
+            transform: translateY(-3px) scale(1.02) !important;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #7c3aed, #a78bfa) !important;
+            border-color: #a78bfa !important;
+            box-shadow: 0 8px 30px rgba(124,58,237, 0.7), 0 0 15px rgba(124,58,237, 0.4) !important;
+            transform: translateY(-3px) scale(1.02) !important;
+        }
+        .btn-secondary {
+            background: rgba(124,58,237, 0.08) !important;
+            border: 1px solid rgba(124,58,237, 0.3) !important;
+            color: var(--text-primary) !important;
+            backdrop-filter: blur(12px) !important;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+        }
+        .btn-secondary:hover {
+            background: rgba(124,58,237, 0.18) !important;
+            border-color: #a78bfa !important;
+            box-shadow: 0 6px 22px rgba(124,58,237, 0.3) !important;
+            transform: translateY(-3px) !important;
+            color: #a78bfa !important;
+        }
+        /* === Studio PILLAR THEME ===*/
+        :root { --pillar: #7c3aed; --pillar-light: #a78bfa; }
+        [data-theme="light"] { 
+            --pillar-dark: #7c3aed; 
+            --pillar: #5b21b6; 
+            --pillar-light: #5b21b6; 
+            --pillar-subtle: rgba(124,58,237, 0.12); 
+        }
+        .pillar-page-hero .eyebrow, .section-eyebrow { color: #a78bfa !important; }
+        .hero-stat .num, .visual-metric .big { background: linear-gradient(135deg, #7c3aed, #a78bfa) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+        /* === 3D SERVICE CARD EFFECT === */
+        .prem-grid { perspective: 1200px; }
+        .prem-card {
+            background: var(--section-glass);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 32px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275), box-shadow 0.4s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        .prem-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            background: radial-gradient(circle at 50% 50%, rgba(var(--pillar-rgb,99,102,241),0.12) 0%, transparent 65%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .prem-card:hover::before { opacity: 1; }
+        .prem-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--pillar), var(--pillar-light)); opacity: 0; transition: opacity 0.3s; border-radius: 18px 18px 0 0; }
+        .prem-card:hover { transform: translateY(-8px)  scale(1.01); border-color: rgba(var(--pillar-rgb,99,102,241),0.5); box-shadow: 0 30px 60px rgba(0,0,0,0.35), 0 0 25px rgba(var(--pillar-rgb,99,102,241),0.15); }
+        .prem-card:hover::after { opacity: 1; }
+        .card-explore-hint { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--pillar-light, var(--accent-secondary)); opacity: 0.95; transition: all 0.3s ease; transform: translateY(6px); transition: all 0.3s ease; }
+        .prem-card:hover .card-explore-hint { opacity: 1; transform: translateY(0); }
+        .card-icon-lg { background: rgba(124,58,237,0.08) !important; border-color: rgba(124,58,237,0.25) !important; color: #a78bfa !important; }
+        .prem-card::after { background: linear-gradient(90deg, #7c3aed, #a78bfa) !important; }
+        .prem-card:hover { border-color: rgba(124,58,237,0.4) !important; }
+        .prem-card .card-promise { border-left-color: #7c3aed !important; }
+        .chip { background: rgba(124,58,237,0.08) !important; border-color: rgba(124,58,237,0.25) !important; }
+        .chip i, .feature-text .tag { color: #a78bfa !important; }
+        .step-num { background: linear-gradient(135deg, #7c3aed, #a78bfa) !important; }
+        .cta-strip { background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(167,139,250,0.06)) !important; border-color: rgba(124,58,237,0.25) !important; }
+        .next-pillar-link:hover { border-color: #7c3aed !important; }
+        .gradient-text { background: linear-gradient(135deg, #7c3aed, #a78bfa) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+        .resp-box.ahrik { border-color: rgba(124,58,237,0.25) !important; }
+        .resp-box.ahrik h4 { color: #a78bfa !important; }
+        .pillar-page-hero { min-height: 92vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 140px 5% 80px; position: relative; z-index: 2; }
+        .pillar-page-hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent-secondary); margin-bottom: 20px; display: block; }
+        .pillar-page-hero h1 { font-size: clamp(42px, 6vw, 72px); font-weight: 800; line-height: 1.08; margin-bottom: 24px; max-width: 900px; }
+        .pillar-page-hero .hero-sub { font-size: clamp(16px, 1.8vw, 20px); color: var(--text-secondary); max-width: 680px; margin: 0 auto 40px; line-height: 1.7; }
+        .hero-cta-row { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+        .hero-stat-strip { display: flex; gap: 50px; justify-content: center; flex-wrap: wrap; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color); }
+        .hero-stat .num { font-size: 38px; font-weight: 800; background: linear-gradient(135deg, var(--text-gradient-1), var(--text-gradient-2)); -webkit-background-clip: text; -webkit-text-fill-color: initial; color: #a78bfa; line-height: 1; margin-bottom: 6px; }
+        .hero-stat .lbl { font-size: 13px; color: var(--text-secondary); }
+        .pillar-section { padding: 80px 5%; max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+        .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-secondary); margin-bottom: 14px; display: block; }
+        .section-title { font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; margin-bottom: 16px; }
+        .section-sub { font-size: 17px; color: var(--text-secondary); max-width: 680px; line-height: 1.7; margin-bottom: 50px; }
+        .prem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        /* === 3D SERVICE CARD EFFECT === */
+        .prem-grid { perspective: 1200px; }
+        .prem-card {
+            background: var(--section-glass);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 32px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275), box-shadow 0.4s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        .prem-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            background: radial-gradient(circle at 50% 50%, rgba(var(--pillar-rgb,99,102,241),0.12) 0%, transparent 65%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        .prem-card:hover::before { opacity: 1; }
+        .prem-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--pillar), var(--pillar-light)); opacity: 0; transition: opacity 0.3s; border-radius: 18px 18px 0 0; }
+        .prem-card:hover { transform: translateY(-8px)  scale(1.01); border-color: rgba(var(--pillar-rgb,99,102,241),0.5); box-shadow: 0 30px 60px rgba(0,0,0,0.35), 0 0 25px rgba(var(--pillar-rgb,99,102,241),0.15); }
+        .prem-card:hover::after { opacity: 1; }
+        .card-explore-hint { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--pillar-light, var(--accent-secondary)); opacity: 0.95; transition: all 0.3s ease; transform: translateY(6px); transition: all 0.3s ease; }
+        .prem-card:hover .card-explore-hint { opacity: 1; transform: translateY(0); }
+        .card-icon-lg { width: 54px; height: 54px; background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--accent-secondary); margin-bottom: 22px; }
+        .prem-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 10px; }
+        .prem-card .card-promise { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; border-left: 3px solid var(--accent-secondary); padding-left: 12px; }
+        .prem-card ul { list-style: none; padding: 0; }
+        .prem-card ul li { font-size: 13px; color: var(--text-secondary); margin-bottom: 9px; padding-left: 16px; position: relative; }
+        .prem-card ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--accent-primary); }
+        .split-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; margin-bottom: 80px; }
+        @media (max-width: 900px) { .split-feature { grid-template-columns: 1fr; gap: 40px; } }
+        .feature-text .tag { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--text-gradient-1); margin-bottom: 14px; display: block; }
+        .feature-text h3 { font-size: clamp(24px, 3vw, 34px); font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+        .feature-text p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+        .outcome-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+        .chip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2); border-radius: 30px; font-size: 13px; font-weight: 500; color: var(--text-primary); }
+        .chip i { color: var(--text-gradient-1); font-size: 11px; }
+        .feature-visual { background: var(--section-glass); border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .visual-metric-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .visual-metric { background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.15); border-radius: 14px; padding: 24px; text-align: center; }
+        .visual-metric .big { font-size: 36px; font-weight: 800; background: linear-gradient(135deg, var(--text-gradient-1), var(--text-gradient-2)); -webkit-background-clip: text; -webkit-text-fill-color: initial; color: #a78bfa; line-height: 1; margin-bottom: 6px; }
+        .visual-metric .sm { font-size: 12px; color: var(--text-secondary); }
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; }
+        .process-step { padding: 30px; text-align: center; border-right: 1px solid var(--border-color); }
+        .process-step:last-child { border-right: none; }
+        .step-num { width: 48px; height: 48px; background: linear-gradient(135deg, var(--text-gradient-1), var(--text-gradient-2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800; color: white; margin: 0 auto 16px; }
+        .process-step h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+        .process-step p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+        .cta-strip { background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(192,132,252,0.08)); border: 1px solid rgba(192,132,252,0.2); border-radius: 22px; padding: 50px 60px; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
+        .cta-strip h3 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .cta-strip p { font-size: 15px; color: var(--text-secondary); max-width: 520px; line-height: 1.6; }
+        .cta-strip-actions { display: flex; gap: 16px; flex-wrap: wrap; flex-shrink: 0; }
+        .pillar-footer-extra { padding: 60px 5% 30px; border-top: 1px solid var(--border-color); position: relative; z-index: 2; }
+        .pillar-next-strip { max-width: 1280px; margin: 0 auto 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .pillar-next-strip h4 { font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-bottom: 10px; }
+        .next-pillar-links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .next-pillar-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--section-glass); border: 1px solid var(--border-color); border-radius: 10px; font-size: 13px; font-weight: 600; color: var(--text-secondary); text-decoration: none; transition: all 0.2s; backdrop-filter: blur(10px); }
+        .next-pillar-link:hover { border-color: var(--text-gradient-1); color: var(--text-primary); }
+        .next-pillar-link i { color: var(--accent-secondary); font-size: 12px; }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <nav class="navbar-wrapper">
+                <div class="navbar-left">
+            <div class="logo-dropdown-wrapper">
+                <a href="index.html" class="logo">D2C WITH AHRIK</a>
+                <button class="logo-dropdown-btn" id="logo-dropdown-btn" aria-label="Toggle Ecosystem Menu">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="deepmind-dropdown-panel" id="deepmind-dropdown-panel">
+                    <span class="dropdown-category-title">SIX CORE PILLARS</span>
+                    <a href="base.html" class="deepmind-dropdown-item deepmind-item-base">
+                        <div class="deepmind-item-icon"><i class="fas fa-landmark"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Base</span>
+                            <span class="deepmind-item-subtitle">Legal &amp; Financial Architecture</span>
+                        </div>
+                    </a>
+                    <a href="studio.html" class="deepmind-dropdown-item deepmind-item-studio">
+                        <div class="deepmind-item-icon"><i class="fas fa-palette"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Studio</span>
+                            <span class="deepmind-item-subtitle">AI Visuals &amp; Brand Production</span>
+                        </div>
+                    </a>
+                    <a href="build.html" class="deepmind-dropdown-item deepmind-item-build">
+                        <div class="deepmind-item-icon"><i class="fas fa-code"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Build</span>
+                            <span class="deepmind-item-subtitle">Storefronts &amp; 24/7 AI Automation</span>
+                        </div>
+                    </a>
+                    <a href="marketing.html" class="deepmind-dropdown-item deepmind-item-marketing">
+                        <div class="deepmind-item-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Marketing</span>
+                            <span class="deepmind-item-subtitle">Growth Funnels &amp; Retention</span>
+                        </div>
+                    </a>
+                    <a href="commerce.html" class="deepmind-dropdown-item deepmind-item-commerce">
+                        <div class="deepmind-item-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Commerce</span>
+                            <span class="deepmind-item-subtitle">Managed Marketplace Operations</span>
+                        </div>
+                    </a>
+                    <a href="network.html" class="deepmind-dropdown-item deepmind-item-network">
+                        <div class="deepmind-item-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Network</span>
+                            <span class="deepmind-item-subtitle">Investor Access &amp; Brand Alliances</span>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider-line"></div>
+                    <span class="dropdown-category-title">EXPLORE AGENCY</span>
+                    <a href="services.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-th-large"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Services Matrix</span>
+                            <span class="deepmind-item-subtitle">Full capabilities overview</span>
+                        </div>
+                    </a>
+                    <a href="portfolio.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Case Studies &amp; Work</span>
+                            <span class="deepmind-item-subtitle">Real D2C brand results</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>        <div class="pillars-box">
+            <a href="base.html">Base</a>
+            <a href="studio.html">Studio</a>
+            <a href="build.html">Build</a>
+            <a href="marketing.html">Marketing</a>
+            <a href="commerce.html">Commerce</a>
+            <a href="network.html">Network</a>
+        </div>
+        <div class="navbar-right">
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+            <div class="main-links">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a><a href="connect.html">Contact Us</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <section class="pillar-page-hero">
+        <div>
+            <span class="eyebrow">Pillar 02 &mdash; Creative Production</span>
+            <h1 class="animate-up">Your Brand Is More Than a Logo.<br><span class="gradient-text">It's a Visual Empire.</span></h1>
+            <p class="hero-sub animate-up delay-1">In a world where your customer makes a buying decision in 3 seconds, visual identity is your most powerful growth lever. AHrik Studio is your AI-powered creative production house &mdash; built to make your brand impossible to ignore, forget, or scroll past.</p>
+            <div class="hero-cta-row animate-up delay-2">
+                <a href="connect.html" class="btn-primary">Elevate My Brand Visuals</a>
+                <a href="services.html" class="btn-secondary">Explore All Services</a>
+            </div>
+            <div class="hero-stat-strip animate-up delay-2">
+                <div class="hero-stat"><div class="num">6x</div><div class="lbl">Faster Creative Output via AI</div></div>
+                <div class="hero-stat"><div class="num">100+</div><div class="lbl">Creative Assets Per Sprint</div></div>
+                <div class="hero-stat"><div class="num">360&deg;</div><div class="lbl">Brand Identity Coverage</div></div>
+                <div class="hero-stat"><div class="num">AI</div><div class="lbl">Enhanced Every Deliverable</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="pillar-section">
+        <div class="split-feature">
+            <div class="feature-text">
+                <span class="tag">The Creative Gap</span>
+                <h3>Great Products Lose to Great-Looking Products. Every. Single. Time.</h3>
+                <p>Your product might be exceptional. But if your packaging looks cheap, your ads look generic, and your brand has no visual personality &mdash; you're invisible on every shelf, every feed, every marketplace listing. AHrik Studio closes that gap permanently.</p>
+                <div class="outcome-chips">
+                    <span class="chip"><i class="fas fa-check"></i> Premium Brand Identity</span>
+                    <span class="chip"><i class="fas fa-check"></i> Performance-First Creatives</span>
+                    <span class="chip"><i class="fas fa-check"></i> AI-Powered Production Speed</span>
+                    <span class="chip"><i class="fas fa-check"></i> Cross-Platform Visual Consistency</span>
+                </div>
+            </div>
+            <div class="feature-visual">
+                <div class="visual-metric-row">
+                    <div class="visual-metric"><div class="big">3s</div><div class="sm">Your Buyer Decides in 3 Seconds</div></div>
+                    <div class="visual-metric"><div class="big">AI</div><div class="sm">Studio-Quality Without Studio Cost</div></div>
+                    <div class="visual-metric"><div class="big">6x</div><div class="sm">Creative Velocity with AI Tools</div></div>
+                    <div class="visual-metric"><div class="big">&#8377;&#8593;</div><div class="sm">Premium Visuals Drive Premium Pricing</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="pillar-section" style="padding-top: 0;">
+        <span class="section-eyebrow">Creative Solutions</span>
+        <h2 class="section-title">Every Creative Asset Your <span class="gradient-text">Brand Needs to Win</span></h2>
+        <p class="section-sub">From your logo to your latest ad creative to your brand film &mdash; we design, shoot, and produce every piece of content that represents your brand to the world.</p>
+        <div class="prem-grid">
+            <a href="studio-brand-identity.html" class="prem-card" id="brand-identity">
+                <div class="card-icon-lg"><i class="fas fa-fingerprint"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #a78bfa; margin-bottom: 8px; display: block;">Creative Layer 01</span>
+                <h3>Brand Identity Design</h3>
+                <p class="card-promise">Your visual identity is your first impression, your silent salesperson, and your competitive moat — all in one system.</p>
+                <ul>
+                    <li>Logo Design &amp; Full Brand Style Guide</li>
+                    <li>Color Palette, Typography &amp; Icon System</li>
+                    <li>Packaging Design &amp; Label Development</li>
+                    <li>Brand Asset Library Creation</li>
+                    <li>Brand Audit &amp; Visual Refresh Services</li>
+                </ul>
+                <span class="card-explore-hint">Learn More <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="studio-brand-comm.html" class="prem-card" id="brand-comm">
+                <div class="card-icon-lg"><i class="fas fa-bullhorn"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #a78bfa; margin-bottom: 8px; display: block;">Creative Layer 02</span>
+                <h3>Brand Communication</h3>
+                <p class="card-promise">Every touchpoint is a conversion opportunity. We design creatives that stop the scroll and start the sale.</p>
+                <ul>
+                    <li>Social Media Creative Systems &amp; Templates</li>
+                    <li>Meta &amp; Google Performance Ad Creatives</li>
+                    <li>Packaging Insert &amp; Offline Collateral</li>
+                    <li>Investor Pitch Decks &amp; Brand Catalogues</li>
+                    <li>Email &amp; WhatsApp Campaign Creatives</li>
+                </ul>
+                <span class="card-explore-hint">Learn More <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="studio-product-visuals.html" class="prem-card" id="product-visuals">
+                <div class="card-icon-lg"><i class="fas fa-camera"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #a78bfa; margin-bottom: 8px; display: block;">Creative Layer 03</span>
+                <h3>Product Visuals</h3>
+                <p class="card-promise">A product that looks premium, sells premium. We deliver studio-quality imagery — with or without a physical shoot.</p>
+                <ul>
+                    <li>Product Photography &amp; Lifestyle Shoots</li>
+                    <li>AI Photoshoots &amp; 3D Product Rendering</li>
+                    <li>Fashion &amp; Model Photography</li>
+                    <li>E-commerce Optimized Image Sets (Amazon, Flipkart)</li>
+                    <li>360-Degree Product Visualization</li>
+                </ul>
+                <span class="card-explore-hint">Learn More <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="studio-visual-storytelling.html" class="prem-card" id="visual-storytelling">
+                <div class="card-icon-lg"><i class="fas fa-film"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #a78bfa; margin-bottom: 8px; display: block;">Creative Layer 04</span>
+                <h3>Visual Storytelling</h3>
+                <p class="card-promise">Video is the highest-converting content format. We produce everything from brand films to Reels — built for performance.</p>
+                <ul>
+                    <li>Brand Films &amp; Long-Form Brand Videos</li>
+                    <li>Instagram Reels, YouTube Shorts &amp; TikToks</li>
+                    <li>Motion Graphics &amp; 2D/3D Explainer Videos</li>
+                    <li>AI Video, AI UGC &amp; AI Avatars</li>
+                    <li>AI Campaign Visuals &amp; Product Rendering</li>
+                </ul>
+                <span class="card-explore-hint">Learn More <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="studio-ux-design.html" class="prem-card" id="experience-design">
+                <div class="card-icon-lg"><i class="fas fa-desktop"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #a78bfa; margin-bottom: 8px; display: block;">Creative Layer 05</span>
+                <h3>Experience Design (UI/UX)</h3>
+                <p class="card-promise">Design-led digital experiences convert visitors into customers. We craft every screen with conversion intent built in.</p>
+                <ul>
+                    <li>Website UI &amp; High-Converting Landing Pages</li>
+                    <li>Mobile App UI Design (iOS &amp; Android)</li>
+                    <li>Design System Architecture &amp; Tokenisation</li>
+                    <li>Prototyping &amp; Interactive Wireframing</li>
+                    <li>UI Audit &amp; Conversion-Focused Redesign</li>
+                </ul>
+                <span class="card-explore-hint">Learn More <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- AI PRODUCTION HIGHLIGHT -->
+    <section class="pillar-section" style="padding-top: 0;">
+        <div class="split-feature">
+            <div class="feature-visual">
+                <div class="visual-metric-row">
+                    <div class="visual-metric"><div class="big">AI</div><div class="sm">Photoshoots Without a Physical Set</div></div>
+                    <div class="visual-metric"><div class="big">3D</div><div class="sm">Product Rendering for Every SKU</div></div>
+                    <div class="visual-metric"><div class="big">UGC</div><div class="sm">AI-Generated Customer Stories</div></div>
+                    <div class="visual-metric"><div class="big">100+</div><div class="sm">Assets Delivered Per Creative Sprint</div></div>
+                </div>
+            </div>
+            <div class="feature-text">
+                <span class="tag">AI Creative Advantage</span>
+                <h3>Studio-Quality Output. Without Studio-Level Timelines or Costs.</h3>
+                <p>Traditional creative production is slow, expensive, and limited. AHrik Studio uses AI-powered production workflows to deliver premium visual assets in a fraction of the time &mdash; enabling your brand to launch faster, test more creatives, and scale content without scaling headcount.</p>
+                <div class="outcome-chips">
+                    <span class="chip"><i class="fas fa-bolt"></i> AI Photoshoots</span>
+                    <span class="chip"><i class="fas fa-bolt"></i> AI Video &amp; UGC</span>
+                    <span class="chip"><i class="fas fa-bolt"></i> AI Avatars</span>
+                    <span class="chip"><i class="fas fa-bolt"></i> 3D Product Renders</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pillar-section" style="padding-top: 0;">
+        <div class="cta-strip">
+            <div>
+                <h3>Your Brand Deserves to Be Seen.</h3>
+                <p>Great creative isn't a cost &mdash; it's your highest-ROI investment. Let's build a visual identity that makes your brand impossible to ignore.</p>
+            </div>
+            <div class="cta-strip-actions">
+                <a href="build.html" class="btn-secondary">Next: Build <i class="fas fa-arrow-right"></i></a>
+                <a href="connect.html" class="btn-primary">Brief Our Creative Team</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="pillar-footer-extra">
+        <div class="pillar-next-strip">
+            <div>
+                <h4>Continue Your AHrik Journey</h4>
+                <div class="next-pillar-links">
+                    <a href="base.html" class="next-pillar-link"><i class="fas fa-landmark"></i> Base</a>
+                    <a href="build.html" class="next-pillar-link"><i class="fas fa-code"></i> Build</a>
+                    <a href="marketing.html" class="next-pillar-link"><i class="fas fa-chart-line"></i> Marketing</a>
+                    <a href="commerce.html" class="next-pillar-link"><i class="fas fa-shopping-bag"></i> Commerce</a>
+                    <a href="network.html" class="next-pillar-link"><i class="fas fa-network-wired"></i> Network</a>
+                </div>
+            </div>
+            <a href="services.html" class="btn-secondary"><i class="fas fa-th-large"></i> All Services</a>
+        </div>
+    </div>
+
+        <footer style="position: relative; z-index: 2;">
+        <div style="background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(167,139,250,0.05)); border-top: 1px solid rgba(124,58,237,0.2); padding: 70px 5% 60px;">
+            <div class="pillar-banner-split-grid" style="max-width: 1280px; margin: 0 auto; display: grid; gap: 60px; align-items: start;">
+                <div>
+                    <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.25); border-radius: 30px; padding: 8px 18px; margin-bottom: 24px;">
+                        <i class="fas fa-palette" style="color: #a78bfa; font-size: 13px;"></i>
+                        <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #a78bfa; text-transform: uppercase;">AHrik Studio</span>
+                    </div>
+                    <h2 style="font-size: clamp(26px, 3.5vw, 38px); font-weight: 800; margin-bottom: 16px; line-height: 1.2;">Your AI-Powered Creative Production <span style="color: #a78bfa; background: none; -webkit-text-fill-color: initial; color: #a78bfa;">Partner.</span></h2>
+                    <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; max-width: 520px; margin-bottom: 28px;">AHrik Studio is your full-service creative production house — where brand identity, product visuals, and motion content are crafted with AI-enhanced precision. We make your brand impossible to scroll past, with a visual language so cohesive that customers recognize you before they read your name.</p>
+                    <a href="connect.html" class="btn-primary" style="background: linear-gradient(135deg, #5b21b6, #7c3aed); border-color: rgba(124,58,237, 0.6); box-shadow: 0 4px 18px rgba(124,58,237, 0.45); color: #ffffff; font-weight: 700; text-shadow: 0 1px 3px rgba(0,0,0,0.6);">Get Started</a>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div style="background: rgba(124,58,237,0.06); border: 1px solid rgba(124,58,237,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #a78bfa; background: none; -webkit-text-fill-color: initial; color: #a78bfa; margin-bottom: 6px;">6x</div><div style="font-size: 12px; color: var(--text-secondary);">Creative Velocity via AI</div></div><div style="background: rgba(124,58,237,0.06); border: 1px solid rgba(124,58,237,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #a78bfa; background: none; -webkit-text-fill-color: initial; color: #a78bfa; margin-bottom: 6px;">360°</div><div style="font-size: 12px; color: var(--text-secondary);">Brand Identity Coverage</div></div><div style="background: rgba(124,58,237,0.06); border: 1px solid rgba(124,58,237,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #a78bfa; background: none; -webkit-text-fill-color: initial; color: #a78bfa; margin-bottom: 6px;">AI</div><div style="font-size: 12px; color: var(--text-secondary);">Every Deliverable Enhanced</div></div><div style="background: rgba(124,58,237,0.06); border: 1px solid rgba(124,58,237,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #a78bfa; background: none; -webkit-text-fill-color: initial; color: #a78bfa; margin-bottom: 6px;">100+</div><div style="font-size: 12px; color: var(--text-secondary);">Assets Per Sprint</div></div>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 50px 5% 30px; border-top: 1px solid var(--border-color);">
+            <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr; gap: 40px;">
+                                                <div>
+                    <a href="studio.html" class="footer-logo footer-logo-studio" style="font-size: 18px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: #a78bfa !important; -webkit-text-fill-color: #a78bfa !important; text-decoration: none; margin-bottom: 14px; display: block; background: none !important; border: none !important; padding: 0 !important; border-radius: 0 !important; box-shadow: none !important; filter: none !important; text-shadow: 0 0 14px rgba(167, 139, 250, 0.4) !important;">AHRIK STUDIO</a>
+                    <p style="font-size: 14.5px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px; line-height: 1.5; letter-spacing: 0.3px;">Visual Identity & AI Creatives Built to Convert at First Glance.</p>
+                    <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.7; margin-bottom: 22px;">AHrik Studio crafts high-converting brand identities, AI-enhanced product photography, 3D renders, video ads, and UI/UX experiences. We eliminate creative guesswork, turning visual storytelling into a predictable customer acquisition and brand equity engine.</p>
+                    <div class="newsletter-form" style="flex-direction: column; gap: 10px; align-items: stretch;">
+                        <input type="email" placeholder="Enter your work email" style="width: 100%;">
+                        <button class="btn-primary" style="background: linear-gradient(135deg, #7c3aed, #a78bfa); border-color: rgba(124,58,237, 0.6); box-shadow: 0 4px 15px rgba(124,58,237, 0.4); color: #ffffff; font-weight: 700;">Get Insights</button>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #a78bfa; text-transform: uppercase; margin-bottom: 18px;">Studio Services</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="studio-brand-identity.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#a78bfa'" onmouseout="this.style.color='var(--text-secondary)'">Brand Identity Design</a></li>
+                        <li style="margin-bottom: 10px;"><a href="studio-product-visuals.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#a78bfa'" onmouseout="this.style.color='var(--text-secondary)'">Product Photography</a></li>
+                        <li style="margin-bottom: 10px;"><a href="studio-product-visuals.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#a78bfa'" onmouseout="this.style.color='var(--text-secondary)'">AI Photoshoots & 3D Renders</a></li>
+                        <li style="margin-bottom: 10px;"><a href="studio-brand-comm.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#a78bfa'" onmouseout="this.style.color='var(--text-secondary)'">Social Media & Ad Creatives</a></li>
+                        <li style="margin-bottom: 10px;"><a href="studio-visual-storytelling.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#a78bfa'" onmouseout="this.style.color='var(--text-secondary)'">Brand Films & Reels</a></li>
+                        <li style="margin-bottom: 10px;"><a href="studio-ux-design.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#a78bfa'" onmouseout="this.style.color='var(--text-secondary)'">UI/UX Experience Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                                        <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--pillar-light, var(--text-primary)); text-transform: uppercase; margin-bottom: 18px;">The Journey</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 8px;"><a href="base.html" class="footer-journey-base" style="color: #22d3ee !important; -webkit-text-fill-color: #22d3ee !important; text-decoration: none; font-size: 14px; font-weight: 700;">Base &rarr; Foundation</a></li>
+                        <li style="margin-bottom: 8px;"><a href="studio.html" class="footer-journey-studio" style="color: #a78bfa !important; -webkit-text-fill-color: #a78bfa !important; text-decoration: none; font-size: 14px; font-weight: 700;">Studio &rarr; Creative</a></li>
+                        <li style="margin-bottom: 8px;"><a href="build.html" class="footer-journey-build" style="color: #fb923c !important; -webkit-text-fill-color: #fb923c !important; text-decoration: none; font-size: 14px; font-weight: 700;">Build &rarr; Digital</a></li>
+                        <li style="margin-bottom: 8px;"><a href="marketing.html" class="footer-journey-marketing" style="color: #4ade80 !important; -webkit-text-fill-color: #4ade80 !important; text-decoration: none; font-size: 14px; font-weight: 700;">Marketing &rarr; Growth</a></li>
+                        <li style="margin-bottom: 8px;"><a href="commerce.html" class="footer-journey-commerce" style="color: #fbbf24 !important; -webkit-text-fill-color: #fbbf24 !important; text-decoration: none; font-size: 14px; font-weight: 700;">Commerce &rarr; Revenue</a></li>
+                        <li style="margin-bottom: 8px;"><a href="network.html" class="footer-journey-network" style="color: #60a5fa !important; -webkit-text-fill-color: #60a5fa !important; text-decoration: none; font-size: 14px; font-weight: 700;">Network &rarr; Capital</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #a78bfa; text-transform: uppercase; margin-bottom: 18px;">Navigate</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="index.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Home</a></li>
+                        <li style="margin-bottom: 10px;"><a href="about.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">About</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">All Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="portfolio.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Portfolio</a></li>
+                        <li style="margin-bottom: 10px;"><a href="connect.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #a78bfa; text-transform: uppercase; margin-bottom: 18px;">Connect</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="mailto:hello@d2cwithahrik.com" style="color: var(--text-secondary); text-decoration: none; font-size: 13px;">hello@d2cwithahrik.com</a></li>
+                        <li style="margin-bottom: 16px; font-size: 13px; color: var(--text-secondary);">Response SLA: under 24 Hours</li>
+                    </ul>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="#" style="width: 36px; height: 36px; background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #a78bfa;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="width: 36px; height: 36px; background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #a78bfa;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="width: 36px; height: 36px; background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #a78bfa;"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 20px 5%; border-top: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; max-width: 1280px; margin: 0 auto;">
+            <p style="font-size: 13px; color: var(--text-secondary);">&copy; 2026 D2C WITH AHRIK. All rights reserved.</p>
+            
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="3d-animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

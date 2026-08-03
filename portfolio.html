@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio &amp; Case Studies | D2C WITH AHRIK</title>
+    <link rel="stylesheet" href="style.css?v=20260727_2">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .port-hero { min-height: 65vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 140px 5% 60px; position: relative; z-index: 2; }
+        .port-hero h1 { font-size: clamp(38px, 5.5vw, 68px); font-weight: 800; line-height: 1.15; max-width: 950px; margin: 0 auto 24px; }
+        .port-hero p { font-size: clamp(16.5px, 1.8vw, 20px); color: #cbd5e1; max-width: 760px; margin: 0 auto 36px; line-height: 1.7; font-weight: 450; }
+        
+        .port-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; padding: 20px 5% 80px; max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+        @media (max-width: 768px) { .port-grid { grid-template-columns: 1fr; } }
+        
+        .port-card { background: rgba(18, 21, 28, 0.95); border: 1px solid var(--border-color); border-radius: 24px; padding: 38px 32px; backdrop-filter: blur(20px); transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
+        .port-card:hover { transform: translateY(-8px) scale(1.025) !important; border-color: #c084fc !important; box-shadow: 0 25px 60px rgba(0,0,0,0.55), 0 0 35px rgba(192, 132, 252, 0.3) !important; }
+        
+        .port-tag { display: inline-block; padding: 6px 14px; border-radius: 20px; background: rgba(192, 132, 252, 0.15); border: 1px solid rgba(192, 132, 252, 0.4); color: #c084fc; font-size: 11.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+        .port-scale { font-size: 13px; font-weight: 800; color: #4ade80; float: right; margin-top: 2px; }
+        
+        .port-card h3 { font-size: 26px; font-weight: 800; color: #ffffff; margin-bottom: 12px; }
+        .port-card p { font-size: 14.5px; color: #cbd5e1; line-height: 1.65; margin-bottom: 22px; }
+        
+        .pillars-used { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+        .pillar-chip { font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 12px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #f8fafc; }
+        
+        .results-box { background: rgba(15, 17, 21, 0.85); border-radius: 16px; padding: 20px; border: 1px solid rgba(255, 255, 255, 0.1); margin-top: auto; }
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center; }
+        .result-stat .num { font-size: 20px; font-weight: 800; color: #ffffff; line-height: 1.2; }
+        .result-stat .num.green { color: #4ade80; }
+        .result-stat .num.purple { color: #c084fc; }
+        .result-stat .lbl { font-size: 11px; color: #cbd5e1; font-weight: 600; text-transform: uppercase; margin-top: 3px; }
+
+        .port-cta-box { background: linear-gradient(135deg, rgba(38, 18, 68, 0.95), rgba(15, 17, 21, 0.98)); border: 2px solid rgba(192, 132, 252, 0.6); border-radius: 24px; padding: 50px 40px; text-align: center; max-width: 960px; margin: 40px auto 80px; backdrop-filter: blur(20px); position: relative; z-index: 2; }
+        .port-cta-box h3 { font-size: clamp(26px, 3.5vw, 40px); font-weight: 800; color: #ffffff; margin-bottom: 16px; }
+        .port-cta-box p { font-size: 16.5px; color: #cbd5e1; max-width: 720px; margin: 0 auto 30px; line-height: 1.7; }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- LOCKED NAVBAR -->
+    <nav class="navbar-wrapper">
+        <div class="navbar-left">
+            <div class="logo-dropdown-wrapper">
+                <a href="index.html" class="logo">D2C WITH AHRIK</a>
+                <button class="logo-dropdown-btn" id="logo-dropdown-btn" aria-label="Toggle Ecosystem Menu">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="deepmind-dropdown-panel" id="deepmind-dropdown-panel">
+                    <span class="dropdown-category-title">SIX CORE PILLARS</span>
+                    <a href="base.html" class="deepmind-dropdown-item deepmind-item-base">
+                        <div class="deepmind-item-icon"><i class="fas fa-landmark"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Base</span>
+                            <span class="deepmind-item-subtitle">Legal &amp; Financial Architecture</span>
+                        </div>
+                    </a>
+                    <a href="studio.html" class="deepmind-dropdown-item deepmind-item-studio">
+                        <div class="deepmind-item-icon"><i class="fas fa-palette"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Studio</span>
+                            <span class="deepmind-item-subtitle">AI Visuals &amp; Brand Production</span>
+                        </div>
+                    </a>
+                    <a href="build.html" class="deepmind-dropdown-item deepmind-item-build">
+                        <div class="deepmind-item-icon"><i class="fas fa-code"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Build</span>
+                            <span class="deepmind-item-subtitle">Storefronts &amp; 24/7 AI Automation</span>
+                        </div>
+                    </a>
+                    <a href="marketing.html" class="deepmind-dropdown-item deepmind-item-marketing">
+                        <div class="deepmind-item-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Marketing</span>
+                            <span class="deepmind-item-subtitle">Growth Funnels &amp; Retention</span>
+                        </div>
+                    </a>
+                    <a href="commerce.html" class="deepmind-dropdown-item deepmind-item-commerce">
+                        <div class="deepmind-item-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Commerce</span>
+                            <span class="deepmind-item-subtitle">Managed Marketplace Operations</span>
+                        </div>
+                    </a>
+                    <a href="network.html" class="deepmind-dropdown-item deepmind-item-network">
+                        <div class="deepmind-item-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Network</span>
+                            <span class="deepmind-item-subtitle">Investor Access &amp; Brand Alliances</span>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider-line"></div>
+                    <span class="dropdown-category-title">EXPLORE AGENCY</span>
+                    <a href="services.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-th-large"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Services Matrix</span>
+                            <span class="deepmind-item-subtitle">Full capabilities overview</span>
+                        </div>
+                    </a>
+                    <a href="portfolio.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Case Studies &amp; Work</span>
+                            <span class="deepmind-item-subtitle">Real D2C brand results</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+                <div class="pillars-box">
+            <a href="base.html">Base</a>
+            <a href="studio.html">Studio</a>
+            <a href="build.html">Build</a>
+            <a href="marketing.html">Marketing</a>
+            <a href="commerce.html">Commerce</a>
+            <a href="network.html">Network</a>
+        </div>
+
+        <div class="navbar-right">
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+            <div class="main-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="connect.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PORTFOLIO HERO SECTION -->
+    <header class="port-hero">
+        <div class="hero-content">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-primary); margin-bottom: 14px; display: block;">VERIFIED CASE STUDIES &amp; PROOF</span>
+            <h1>Architecting <span class="gradient-text">Generational D2C Empires</span></h1>
+            <p>Explore how our 6 unified pillars transformed emerging D2C concepts into multi-crore category leaders with verified revenue proof, ROAS scale, and quick-commerce market expansion.</p>
+        </div>
+        <div class="hero-glow"></div>
+    </header>
+
+    <!-- FEATURED CASE STUDIES GRID -->
+    <section class="port-grid">
+        <!-- CASE STUDY 01: VEDA ORGANICS -->
+        <div class="port-card">
+            <div>
+                <div>
+                    <span class="port-tag">Beauty &amp; Personal Care</span>
+                    <span class="port-scale">&#8377;0 &rarr; &#8377;2.4Cr/mo</span>
+                </div>
+                <h3>Veda Organics</h3>
+                <p>Complete 6-pillar ecosystem deployment. Transformed a stalled organic skincare brand into a top-performing D2C player with Blinkit Quick Commerce distribution.</p>
+                <div class="pillars-used">
+                    <span class="pillar-chip" style="color: #22d3ee; border-color: rgba(34, 211, 238, 0.4);">Base</span>
+                    <span class="pillar-chip" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">Studio</span>
+                    <span class="pillar-chip" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">Build</span>
+                    <span class="pillar-chip" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.4);">Marketing</span>
+                    <span class="pillar-chip" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);">Commerce</span>
+                    <span class="pillar-chip" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.4);">Network</span>
+                </div>
+            </div>
+            <div class="results-box">
+                <div class="results-grid">
+                    <div class="result-stat">
+                        <div class="num green">4.2x</div>
+                        <div class="lbl">Meta ROAS</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num purple">+340%</div>
+                        <div class="lbl">Revenue</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num">Top 3</div>
+                        <div class="lbl">Blinkit Rank</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CASE STUDY 02: KAVYA ATHLETICA -->
+        <div class="port-card">
+            <div>
+                <div>
+                    <span class="port-tag">Fashion &amp; Activewear</span>
+                    <span class="port-scale">&#8377;15L &rarr; &#8377;1.8Cr/mo</span>
+                </div>
+                <h3>Kavya Athletica</h3>
+                <p>AI Studio photoshoot production &amp; headless Shopify build. Solved high cart abandonment rate with 24/7 AI sales automation and WhatsApp retention campaigns.</p>
+                <div class="pillars-used">
+                    <span class="pillar-chip" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">Studio</span>
+                    <span class="pillar-chip" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">Build</span>
+                    <span class="pillar-chip" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.4);">Marketing</span>
+                </div>
+            </div>
+            <div class="results-box">
+                <div class="results-grid">
+                    <div class="result-stat">
+                        <div class="num green">3.6x</div>
+                        <div class="lbl">Ad ROAS</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num purple">-42%</div>
+                        <div class="lbl">Cart Drop</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num">48 Hours</div>
+                        <div class="lbl">AI Velocity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CASE STUDY 03: NUTRIVITA LABS -->
+        <div class="port-card">
+            <div>
+                <div>
+                    <span class="port-tag">Health &amp; Wellness</span>
+                    <span class="port-scale">&#8377;40L &rarr; &#8377;3.1Cr/mo</span>
+                </div>
+                <h3>NutriVita Labs</h3>
+                <p>Amazon SP-API catalog optimization, FSSAI IP compliance armor, and organic SEO engine scaling supplement sales to #1 Bestseller category rank.</p>
+                <div class="pillars-used">
+                    <span class="pillar-chip" style="color: #22d3ee; border-color: rgba(34, 211, 238, 0.4);">Base</span>
+                    <span class="pillar-chip" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.4);">Marketing</span>
+                    <span class="pillar-chip" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);">Commerce</span>
+                </div>
+            </div>
+            <div class="results-box">
+                <div class="results-grid">
+                    <div class="result-stat">
+                        <div class="num green">#1 Rank</div>
+                        <div class="lbl">Amazon PPC</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num purple">+210%</div>
+                        <div class="lbl">Marketplace</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num">48%</div>
+                        <div class="lbl">Repeat Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CASE STUDY 04: BREW CRAFT CO. -->
+        <div class="port-card">
+            <div>
+                <div>
+                    <span class="port-tag">FMCG &amp; Beverages</span>
+                    <span class="port-scale">Launch &rarr; &#8377;85L/mo</span>
+                </div>
+                <h3>Brew Craft Co.</h3>
+                <p>Zero-to-one brand launch. Built 3D bottle renders, custom storefront, and executed rapid Zepto &amp; Instamart Quick Commerce entry in 3 major metro cities.</p>
+                <div class="pillars-used">
+                    <span class="pillar-chip" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">Studio</span>
+                    <span class="pillar-chip" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">Build</span>
+                    <span class="pillar-chip" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);">Commerce</span>
+                </div>
+            </div>
+            <div class="results-box">
+                <div class="results-grid">
+                    <div class="result-stat">
+                        <div class="num green">15k</div>
+                        <div class="lbl">Units Mo.1</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num purple">Zepto</div>
+                        <div class="lbl">Quick Entry</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num">4.1x</div>
+                        <div class="lbl">Launch ROAS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CASE STUDY 05: LUMINA SKINCARE -->
+        <div class="port-card">
+            <div>
+                <div>
+                    <span class="port-tag">Luxury Skincare</span>
+                    <span class="port-scale">&#8377;20L &rarr; &#8377;2.9Cr/mo</span>
+                </div>
+                <h3>Lumina Skincare</h3>
+                <p>Luxury visual rebrand, custom Shopify bundle builder app, and retail modern trade distribution partnership setup via AHrik Network.</p>
+                <div class="pillars-used">
+                    <span class="pillar-chip" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">Studio</span>
+                    <span class="pillar-chip" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">Build</span>
+                    <span class="pillar-chip" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.4);">Network</span>
+                </div>
+            </div>
+            <div class="results-box">
+                <div class="results-grid">
+                    <div class="result-stat">
+                        <div class="num green">&#8377;2,450</div>
+                        <div class="lbl">AOV Achieved</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num purple">3.9x</div>
+                        <div class="lbl">Blended ROAS</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num">Retail</div>
+                        <div class="lbl">Distribution</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CASE STUDY 06: URBAN PULSE -->
+        <div class="port-card">
+            <div>
+                <div>
+                    <span class="port-tag">Consumer Tech</span>
+                    <span class="port-scale">&#8377;50L &rarr; &#8377;4.2Cr/mo</span>
+                </div>
+                <h3>Urban Pulse</h3>
+                <p>Full AI customer support automation integration, performance ad funnel scaling, and warm VC angel network introductions for growth funding.</p>
+                <div class="pillars-used">
+                    <span class="pillar-chip" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">Build</span>
+                    <span class="pillar-chip" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.4);">Marketing</span>
+                    <span class="pillar-chip" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.4);">Network</span>
+                </div>
+            </div>
+            <div class="results-box">
+                <div class="results-grid">
+                    <div class="result-stat">
+                        <div class="num green">70%</div>
+                        <div class="lbl">Bot Automated</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num purple">3.5x</div>
+                        <div class="lbl">ROAS Scale</div>
+                    </div>
+                    <div class="result-stat">
+                        <div class="num">VC Access</div>
+                        <div class="lbl">Funding Prep</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO CTA SECTION -->
+    <section>
+        <div class="port-cta-box">
+            <h3>Ready to Become Our Next <span class="gradient-text">Success Story?</span></h3>
+            <p>Schedule a strategic 6-pillar audit with our leadership team and discover how we can engineer your brand's growth trajectory.</p>
+            <a href="connect.html" class="btn-primary" style="padding: 16px 36px; font-size: 15.5px;">Schedule My Strategy Audit Call &rarr;</a>
+        </div>
+    </section>
+
+    <!-- LOCKED FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div>
+                <h2>Stay Connected</h2>
+                <p>Join our inner circle. Get exclusive insights on D2C growth, AI marketing, and brand architecture delivered straight to your inbox.</p>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your work email">
+                <button class="btn-primary">Subscribe</button>
+            </div>
+        </div>
+        
+        <div class="footer-grid">
+            <div class="footer-col" style="max-width: 250px;">
+                <a href="index.html" class="footer-logo" style="background: linear-gradient(135deg, #c084fc, #f472b6) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; font-weight: 800 !important;">D2C WITH AHRIK</a>
+                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6; margin-top: 15px;">A D2C brand-building agency. We don't just consult on brands &mdash; we inhabit them. </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="connect.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>THE JOURNEY</h3>
+                <ul>
+                    <li><a href="base.html" class="footer-journey-base" style="color: #22d3ee !important; font-weight: 700;">Base</a></li>
+                    <li><a href="studio.html" class="footer-journey-studio" style="color: #a78bfa !important; font-weight: 700;">Studio</a></li>
+                    <li><a href="build.html" class="footer-journey-build" style="color: #fb923c !important; font-weight: 700;">Build</a></li>
+                    <li><a href="marketing.html" class="footer-journey-marketing" style="color: #4ade80 !important; font-weight: 700;">Marketing</a></li>
+                    <li><a href="commerce.html" class="footer-journey-commerce" style="color: #fbbf24 !important; font-weight: 700;">Commerce</a></li>
+                    <li><a href="network.html" class="footer-journey-network" style="color: #60a5fa !important; font-weight: 700;">Network</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>CONNECT</h3>
+                <ul>
+                    <li><a href="mailto:hello@d2cwithahrik.com">hello@d2cwithahrik.com</a></li>
+                    <li><a href="connect.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="font-size: 13px; color: var(--text-secondary);">&copy; 2026 D2C WITH AHRIK. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="3d-animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

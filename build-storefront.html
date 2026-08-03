@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Experiences &amp; Storefronts — Digital Layer 01 | AHrik Build</title>
+    <meta name="description" content="AHrik Build engineers high-converting D2C storefronts and web experiences optimized for speed, CRO, core web vitals, and scalable sales.">
+    <link rel="stylesheet" href="style.css?v=20260727_2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --pillar: #ea580c; --pillar-light: #fb923c; --pillar-dark: #c2410c; --pillar-rgb: 8,145,178; --pillar-subtle: rgba(234,88,12,0.08); }
+        [data-theme="light"] { --pillar: #c2410c; --pillar-light: #ea580c; --pillar-subtle: rgba(234,88,12,0.12); }
+        .btn-primary { background: linear-gradient(135deg, #c2410c, #ea580c) !important; color: #fff !important; font-weight: 700 !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important; border: 1px solid rgba(234,88,12,0.6) !important; box-shadow: 0 4px 18px rgba(234,88,12,0.4) !important; }
+        .btn-primary:hover { background: linear-gradient(135deg, #ea580c, #fb923c) !important; box-shadow: 0 8px 28px rgba(234,88,12,0.6) !important; transform: translateY(-3px) scale(1.02) !important; }
+        .btn-secondary { background: rgba(234,88,12,0.08) !important; border: 1px solid rgba(234,88,12,0.3) !important; color: var(--text-primary) !important; }
+        .btn-secondary:hover { background: rgba(234,88,12,0.18) !important; border-color: #fb923c !important; color: #fb923c !important; transform: translateY(-3px) !important; }
+        .gradient-text { background: linear-gradient(135deg, #ea580c, #fb923c) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+        .svc-hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 140px 5% 80px; position: relative; z-index: 2; }
+        .svc-hero .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fb923c; margin-bottom: 20px; display: block; }
+        .svc-hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; line-height: 1.1; margin-bottom: 24px; max-width: 900px; }
+        .svc-hero .hero-sub { font-size: clamp(15px, 1.8vw, 18px); color: var(--text-secondary); max-width: 680px; margin: 0 auto 40px; line-height: 1.7; }
+        .hero-cta-row { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+        .stat-strip { display: flex; gap: 50px; justify-content: center; flex-wrap: wrap; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color); }
+        .stat-item .num { font-size: 36px; font-weight: 800; color: #fb923c; line-height: 1; margin-bottom: 6px; }
+        .stat-item .lbl { font-size: 12px; color: var(--text-secondary); }
+        .svc-section { padding: 80px 5%; max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+        .eyebrow-sm { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #fb923c; margin-bottom: 14px; display: block; }
+        .section-h2 { font-size: clamp(26px, 3.5vw, 42px); font-weight: 800; margin-bottom: 16px; }
+        .section-p { font-size: 17px; color: var(--text-secondary); max-width: 680px; line-height: 1.7; margin-bottom: 48px; }
+        .split { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+        @media (max-width: 900px) { .split { grid-template-columns: 1fr; gap: 40px; } }
+        .feature-tag { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #fb923c; margin-bottom: 14px; display: block; }
+        .feature-h3 { font-size: clamp(22px, 3vw, 32px); font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+        .feature-p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+        .chip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; background: rgba(234,88,12,0.08); border: 1px solid rgba(234,88,12,0.2); border-radius: 30px; font-size: 13px; font-weight: 500; color: var(--text-primary); }
+        .chip i { color: #fb923c; font-size: 11px; }
+        .feat-visual { background: var(--section-glass); border: 1px solid rgba(234,88,12,0.15); border-radius: 20px; padding: 40px; backdrop-filter: blur(12px); }
+        .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .metric-box { background: rgba(234,88,12,0.06); border: 1px solid rgba(234,88,12,0.15); border-radius: 14px; padding: 24px; text-align: center; }
+        .metric-box .big { font-size: 32px; font-weight: 800; color: #fb923c; margin-bottom: 6px; line-height: 1; }
+        .metric-box .sm { font-size: 12px; color: var(--text-secondary); }
+        .deliv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 40px; }
+        .deliv-item { background: var(--section-glass); border: 1px solid var(--border-color); border-left: 3px solid #ea580c; border-radius: 12px; padding: 18px 22px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; transition: all 0.25s ease; display: flex; align-items: flex-start; gap: 12px; }
+        .deliv-item:hover { border-left-color: #fb923c; color: var(--text-primary); transform: translateX(4px); }
+        .deliv-item i { color: #fb923c; margin-top: 2px; font-size: 13px; flex-shrink: 0; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; }
+        .step { padding: 30px; text-align: center; border-right: 1px solid var(--border-color); }
+        .step:last-child { border-right: none; }
+        .step-n { width: 48px; height: 48px; background: linear-gradient(135deg, #c2410c, #ea580c); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; margin: 0 auto 16px; }
+        .step h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .step p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+        .faq-wrap { max-width: 800px; margin-top: 40px; }
+        .faq-block { margin-bottom: 16px; border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden; background: var(--section-glass); }
+        .faq-q { padding: 20px 26px; font-size: 15px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-q i { color: #fb923c; transition: transform 0.3s; flex-shrink: 0; }
+        .faq-a { padding: 0 26px 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.7; display: none; }
+        .faq-block.open .faq-q i { transform: rotate(45deg); }
+        .faq-block.open .faq-a { display: block; }
+        .cta-strip { background: linear-gradient(135deg, rgba(234,88,12,0.1), rgba(234,88,12,0.04)); border: 1px solid rgba(234,88,12,0.25); border-radius: 22px; padding: 50px 60px; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
+        .cta-strip h3 { font-size: 26px; font-weight: 800; margin-bottom: 10px; }
+        .cta-strip p { font-size: 15px; color: var(--text-secondary); max-width: 520px; }
+        .cta-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        .next-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--section-glass); border: 1px solid var(--border-color); border-radius: 10px; font-size: 13px; font-weight: 600; color: var(--text-secondary); text-decoration: none; transition: all 0.2s; backdrop-filter: blur(10px); }
+        .next-link:hover { border-color: #ea580c; color: var(--text-primary); }
+        .next-link i { color: #fb923c; font-size: 12px; }
+        .next-links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .pillar-footer-extra { padding: 60px 5% 30px; border-top: 1px solid var(--border-color); position: relative; z-index: 2; }
+        .footer-strip { max-width: 1280px; margin: 0 auto 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .footer-strip h4 { font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-bottom: 10px; }
+        .breadcrumb-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(234,88,12,0.08); border: 1px solid rgba(234,88,12,0.2); border-radius: 30px; font-size: 12px; color: #fb923c; text-decoration: none; margin-bottom: 24px; transition: all 0.2s; }
+        .breadcrumb-link:hover { background: rgba(234,88,12,0.15); }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <nav class="navbar-wrapper">
+        <div class="navbar-left">
+            <div class="logo-dropdown-wrapper">
+                <a href="index.html" class="logo">D2C WITH AHRIK</a>
+                <button class="logo-dropdown-btn" id="logo-dropdown-btn" aria-label="Toggle Menu"><i class="fas fa-chevron-down"></i></button>
+                <div class="deepmind-dropdown-panel" id="deepmind-dropdown-panel">
+                    <span class="dropdown-category-title">SIX CORE PILLARS</span>
+                    <a href="base.html" class="deepmind-dropdown-item deepmind-item-base"><div class="deepmind-item-icon"><i class="fas fa-landmark"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHRIK BUILD</span><span class="deepmind-item-subtitle">Legal &amp; Financial Architecture</span></div></a>
+                    <a href="studio.html" class="deepmind-dropdown-item deepmind-item-studio"><div class="deepmind-item-icon"><i class="fas fa-palette"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Studio</span><span class="deepmind-item-subtitle">AI Visuals &amp; Brand Production</span></div></a>
+                    <a href="build.html" class="deepmind-dropdown-item deepmind-item-build"><div class="deepmind-item-icon"><i class="fas fa-code"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Build</span><span class="deepmind-item-subtitle">Storefronts &amp; 24/7 AI Automation</span></div></a>
+                    <a href="marketing.html" class="deepmind-dropdown-item deepmind-item-marketing"><div class="deepmind-item-icon"><i class="fas fa-chart-line"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Marketing</span><span class="deepmind-item-subtitle">Growth Funnels &amp; Retention</span></div></a>
+                    <a href="commerce.html" class="deepmind-dropdown-item deepmind-item-commerce"><div class="deepmind-item-icon"><i class="fas fa-shopping-bag"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Commerce</span><span class="deepmind-item-subtitle">Managed Marketplace Operations</span></div></a>
+                    <a href="network.html" class="deepmind-dropdown-item deepmind-item-network"><div class="deepmind-item-icon"><i class="fas fa-network-wired"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Network</span><span class="deepmind-item-subtitle">Investor Access &amp; Brand Alliances</span></div></a>
+                    <div class="dropdown-divider-line"></div>
+                    <span class="dropdown-category-title">EXPLORE AGENCY</span>
+                    <a href="services.html" class="deepmind-dropdown-item"><div class="deepmind-item-icon"><i class="fas fa-th-large"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">Services Matrix</span><span class="deepmind-item-subtitle">Full capabilities overview</span></div></a>
+                    <a href="portfolio.html" class="deepmind-dropdown-item"><div class="deepmind-item-icon"><i class="fas fa-briefcase"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">Case Studies &amp; Work</span><span class="deepmind-item-subtitle">Real D2C brand results</span></div></a>
+                </div>
+            </div>
+        </div>
+                <div class="pillars-box">
+            <a href="base.html">Base</a>
+            <a href="studio.html">Studio</a>
+            <a href="build.html">Build</a>
+            <a href="marketing.html">Marketing</a>
+            <a href="commerce.html">Commerce</a>
+            <a href="network.html">Network</a>
+        </div>
+        <div class="navbar-right">
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+            <div class="main-links">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a><a href="connect.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="svc-hero">
+        <div>
+            <a href="build.html" class="breadcrumb-link"><i class="fas fa-arrow-left"></i> AHRIK BUILD</a>
+            <span class="eyebrow">AHRIK BUILD &mdash; Digital Layer 01</span>
+            <h1 class="animate-up">A Slow, Generic Storefront Costs You <br><span class="gradient-text">60% of Potential Sales.</span></h1>
+            <p class="hero-sub animate-up">A D2C storefront that loads slowly, looks generic, and has a confusing checkout is silently leaking 40-70% of potential revenue. AHrik Build engineers high-converting D2C storefronts — designed for performance, built for scale, and optimized for every rupee of ad spend you invest.</p>
+            <div class="hero-cta-row animate-up">
+                <a href="connect.html" class="btn-primary">Build My Storefront &rarr;</a>
+                <a href="build.html" class="btn-secondary"><i class="fas fa-code"></i> All Build Services</a>
+            </div>
+            <div class="stat-strip animate-up">
+                <div class="stat-item"><div class="num">3x</div><div class="lbl">Faster Launch Velocity</div></div>
+                <div class="stat-item"><div class="num">CRO</div><div class="lbl">Every Page Conversion-Optimized</div></div>
+                <div class="stat-item"><div class="num">24/7</div><div class="lbl">Systems Running Without You</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM / SOLUTION -->
+    <section class="svc-section">
+        <div class="split">
+            <div class="feature-text">
+                <span class="feature-tag">The Revenue Leak</span>
+                <h3 class="feature-h3">Slow Storefronts Are the Silent Revenue Killer Most D2C Brands Never Fix.</h3>
+                <p class="feature-p">A 1-second delay in page load time kills 7% of your conversions. A checkout with more than 3 fields kills 60% more. A mobile website that feels like a desktop site creates an experience that makes users leave — and go to your competitor. AHrik Build engineers every element to convert, retain, and compound.</p>
+                <div class="chips">
+                    <span class="chip"><i class="fas fa-check"></i> D2C Storefront Built</span>
+                    <span class="chip"><i class="fas fa-check"></i> Landing Pages &amp; Funnels</span>
+                    <span class="chip"><i class="fas fa-check"></i> Core Web Vitals Score 90+</span>
+                    <span class="chip"><i class="fas fa-check"></i> Checkout Conversion Optimized</span>
+                </div>
+            </div>
+            <div class="feat-visual">
+                <div class="metric-grid">
+                    <div class="metric-box"><div class="big">3x</div><div class="sm">Faster Launch</div></div>
+                    <div class="metric-box"><div class="big">CRO</div><div class="sm">Every Page</div></div>
+                    <div class="metric-box"><div class="big">90+</div><div class="sm">Core Web Vitals Score</div></div>
+                    <div class="metric-box"><div class="big">7%</div><div class="sm">Conversion Increase per 1s Improvement</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DELIVERABLES -->
+    <section class="svc-section" style="padding-top:0;">
+        <span class="eyebrow-sm">What You Get</span>
+        <h2 class="section-h2">Everything Included in <span class="gradient-text">D2C Storefront Development</span></h2>
+        <p class="section-p">A complete D2C storefront built to convert, scale, and perform — from homepage architecture to checkout optimization to post-purchase upsell flows.</p>
+        <div class="deliv-grid">
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Custom Shopify / Custom Web Storefront Development</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Mobile-First Responsive Layout & UX Engineering</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> High-Converting Landing Page & Funnel Building</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Speed Optimization (Target 90+ Core Web Vitals)</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Headless Commerce & PWA Architecture</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Cart & One-Click Checkout Flow Integration</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Custom Theme Customization & Liquid Code</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> SEO On-Page Architecture & Structured Data</div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="svc-section" style="background: var(--section-glass); border-radius: 24px; backdrop-filter: blur(12px); border: 1px solid var(--border-color);">
+        <span class="eyebrow-sm">How It Works</span>
+        <h2 class="section-h2">Storefront Live in <span class="gradient-text">4 Phases</span></h2>
+        <div class="steps" style="margin-top: 40px;">
+            <div class="step">
+                <div class="step-n">1</div>
+                <h4>Tech Stack Architecture</h4>
+                <p>We map your product catalog, sales volumes, marketing stack, and growth ambitions to recommend the ideal tech stack — Shopify, WooCommerce, or custom headless — before writing a single line of code.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">2</div>
+                <h4>Design &amp; UX Build</h4>
+                <p>Our design team builds the complete UX architecture — homepage, product pages, collection pages, checkout, and post-purchase flows — optimized for mobile-first conversion.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">3</div>
+                <h4>Development &amp; Integration</h4>
+                <p>Our development team builds the full storefront, integrates payment gateways, logistics APIs, and your analytics stack — with bi-weekly progress demos for your review.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">4</div>
+                <h4>Launch &amp; Performance Audit</h4>
+                <p>We conduct a pre-launch performance audit, run final CRO checks, and support your go-live with a 30-day post-launch optimization window for any conversion rate improvements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="svc-section">
+        <span class="eyebrow-sm">Common Questions</span>
+        <h2 class="section-h2">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <div class="faq-wrap">
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Shopify vs WooCommerce — which should I use? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">We recommend Shopify for brands under INR 5 Cr ARR wanting fast launch and low maintenance overhead. WooCommerce for brands needing deep customization at a lower platform cost. Custom headless stacks for brands at INR 10 Cr+ ARR needing maximum performance and unique experiences. We choose based on your specific goals, not platform preferences.</div>
+            </div>
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does a D2C storefront build take? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">A standard D2C storefront takes 3-5 weeks from kick-off to launch — design week 1-2, development week 2-4, testing and launch week 5. Complex custom builds or marketplace integrations may take 6-8 weeks. We always prioritize a CRO-ready MVP launch over a delayed perfect launch.</div>
+            </div>
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you provide ongoing support after launch? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">Yes. All storefront builds include 30 days of post-launch support for bug fixes, performance monitoring, and initial conversion optimization. Ongoing monthly retainer plans are available for brands wanting continuous CRO testing, feature additions, and technical maintenance.</div>
+            </div>
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can you migrate my existing Shopify store? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">Yes. We handle complete Shopify-to-Shopify migrations, WooCommerce-to-Shopify migrations, and custom platform migrations. This includes theme redesign, product data migration, SEO redirect mapping, and zero-downtime deployment — ensuring you lose no organic rankings or customer data during the transition.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="svc-section">
+        <div class="cta-strip">
+            <div>
+                <h3>Your Storefront Should Work as Hard as You Do.</h3>
+                <p>Every day you run on a slow, low-converting storefront is a day of lost revenue. Let us engineer yours for maximum performance.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="connect.html" class="btn-primary">Book a Free Strategy Call &rarr;</a>
+                <a href="base.html" class="btn-secondary">Explore Base</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILLAR FOOTER -->
+    <div class="pillar-footer-extra">
+        <div class="footer-strip">
+            <div>
+                <h4>Explore Other AHRIK BUILD Services</h4>
+                <div class="next-links">
+                    <a href="build-automation.html" class="next-link"><i class="fas fa-robot"></i> AI Automation</a>
+                    <a href="build-apps.html" class="next-link"><i class="fas fa-mobile-alt"></i> Custom Apps</a>
+                    <a href="build-integrations.html" class="next-link"><i class="fas fa-plug"></i> Integrations</a>
+                </div>
+            </div>
+            <a href="services.html" class="btn-secondary"><i class="fas fa-th-large"></i> All Services</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="position: relative; z-index: 2;">
+        <div style="background: linear-gradient(135deg, rgba(234,88,12,0.1), rgba(234,88,12,0.03)); border-top: 1px solid rgba(234,88,12,0.2); padding: 50px 5% 40px;">
+            <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; align-items: start;">
+                <div>
+                    <a href="base.html" style="font-size: 20px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: #fb923c; text-decoration: none; margin-bottom: 14px; display: block; -webkit-text-fill-color: initial;">AHRIK BUILD</a>
+                    <p style="font-size: 13px; font-weight: 700; color: #fb923c; margin-bottom: 8px;">Storefronts, AI Automation &amp; Digital Systems Built to Scale.</p>
+                    <p style="color: var(--text-secondary); font-size: 13px; line-height: 1.65; margin-bottom: 18px;">AHrik Build engineers the high-converting digital storefronts, AI automation systems, custom apps, and integrations your D2C brand needs to scale.</p>
+                    <a href="connect.html" class="btn-primary" style="font-size: 13px; padding: 10px 20px; display: inline-block;">Get Started &rarr;</a>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #fb923c; text-transform: uppercase; margin-bottom: 18px;">Base Services</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom:10px;"><a href="build-storefront.html" style="color:#fb923c; text-decoration:none; font-size:14px; font-weight:600;">D2C Storefront Development</a></li>
+                        <li style="margin-bottom:10px;"><a href="build-automation.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;" onmouseover="this.style.color='#fb923c'" onmouseout="this.style.color='var(--text-secondary)'">AI &amp; Automation Systems</a></li>
+                        <li style="margin-bottom:10px;"><a href="build-apps.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;" onmouseover="this.style.color='#fb923c'" onmouseout="this.style.color='var(--text-secondary)'">Custom Business Applications</a></li>
+                        <li style="margin-bottom:10px;"><a href="build-integrations.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;" onmouseover="this.style.color='#fb923c'" onmouseout="this.style.color='var(--text-secondary)'">Integrations &amp; Infrastructure</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #fb923c; text-transform: uppercase; margin-bottom: 18px;">Navigate</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom:10px;"><a href="index.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">Home</a></li>
+                        <li style="margin-bottom:10px;"><a href="about.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">About</a></li>
+                        <li style="margin-bottom:10px;"><a href="services.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">All Services</a></li>
+                        <li style="margin-bottom:10px;"><a href="portfolio.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">Portfolio</a></li>
+                        <li style="margin-bottom:10px;"><a href="connect.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 20px 5%; border-top: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <p style="font-size: 13px; color: var(--text-secondary);">&copy; 2026 D2C WITH AHRIK. All rights reserved.</p>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="width: 8px; height: 8px; background: #ea580c; border-radius: 50%; display: inline-block;"></span>
+                <span style="font-size: 12px; color: var(--text-secondary);">AHrik Build Pillar 03</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="3d-animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D2C WITH AHRIK | Premium D2C Agency Ecosystem</title>
+    <link rel="stylesheet" href="style.css?v=20260727_2">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* HIGH-CONTRAST PILLAR & COMPARISON CARDS FOR MAXIMUM READABILITY */
+        .home-pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-top: 50px; }
+        .pillar-card-home { background: rgba(18, 21, 28, 0.92); border: 1px solid var(--border-color); border-radius: 20px; padding: 36px; backdrop-filter: blur(16px); transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; color: inherit; position: relative; overflow: hidden; }
+        .pillar-card-home:hover { transform: translateY(-8px) scale(1.025) !important; box-shadow: 0 22px 50px rgba(0,0,0,0.5); }
+        .pillar-card-home.p-base:hover { border-color: #22d3ee; box-shadow: 0 20px 45px rgba(8,145,178,0.3); }
+        .pillar-card-home.p-studio:hover { border-color: #a78bfa; box-shadow: 0 20px 45px rgba(124,58,237,0.3); }
+        .pillar-card-home.p-build:hover { border-color: #fb923c; box-shadow: 0 20px 45px rgba(234,88,12,0.3); }
+        .pillar-card-home.p-marketing:hover { border-color: #4ade80; box-shadow: 0 20px 45px rgba(22,163,74,0.3); }
+        .pillar-card-home.p-commerce:hover { border-color: #fbbf24; box-shadow: 0 20px 45px rgba(217,119,6,0.3); }
+        .pillar-card-home.p-network:hover { border-color: #60a5fa; box-shadow: 0 20px 45px rgba(37,99,235,0.3); }
+        .p-badge { font-size: 11px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 14px; display: inline-block; }
+        .p-base .p-badge { color: #22d3ee; }
+        .p-studio .p-badge { color: #a78bfa; }
+        .p-build .p-badge { color: #fb923c; }
+        .p-marketing .p-badge { color: #4ade80; }
+        .p-commerce .p-badge { color: #fbbf24; }
+        .p-network .p-badge { color: #60a5fa; }
+        .p-title { font-size: 25px; font-weight: 800; margin-bottom: 12px; color: #ffffff; }
+        .p-desc { font-size: 14.5px; color: #cbd5e1; line-height: 1.65; margin-bottom: 20px; font-weight: 400; }
+        .p-list { list-style: none; padding: 0; margin: 0 0 24px 0; }
+        .p-list li { font-size: 14px; color: #f8fafc; margin-bottom: 9px; display: flex; align-items: center; gap: 9px; font-weight: 500; }
+        .p-list li i { font-size: 12px; flex-shrink: 0; }
+        .p-base .p-list li i { color: #22d3ee; }
+        .p-studio .p-list li i { color: #a78bfa; }
+        .p-build .p-list li i { color: #fb923c; }
+        .p-marketing .p-list li i { color: #4ade80; }
+        .p-commerce .p-list li i { color: #fbbf24; }
+        .p-network .p-list li i { color: #60a5fa; }
+        .p-link { font-size: 13.5px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; transition: gap 0.2s; }
+        .p-base .p-link { color: #22d3ee; }
+        .p-studio .p-link { color: #a78bfa; }
+        .p-build .p-link { color: #fb923c; }
+        .p-marketing .p-link { color: #4ade80; }
+        .p-commerce .p-link { color: #fbbf24; }
+        .p-network .p-link { color: #60a5fa; }
+        .pillar-card-home:hover .p-link { gap: 12px; }
+        .stat-grid-home { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 50px; }
+        .stat-card-home { background: rgba(18, 21, 28, 0.92); border: 1px solid var(--border-color); border-radius: 16px; padding: 30px 24px; text-align: center; backdrop-filter: blur(10px); }
+        .stat-card-home .big-num { font-size: 38px; font-weight: 800; background: linear-gradient(135deg, var(--text-gradient-1), var(--text-gradient-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 6px; line-height: 1; }
+        .stat-card-home .lbl-text { font-size: 13.5px; color: #cbd5e1; font-weight: 600; }
+
+        /* ULTRA HIGH-CONTRAST COMPARISON CARDS FOR 100% READABILITY */
+        .comp-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 50px; text-align: left; }
+        @media (max-width: 900px) { .comp-wrapper { grid-template-columns: 1fr; } }
+        .comp-box { position: relative; border-radius: 24px; padding: 42px 34px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.35s ease, border-color 0.35s ease; display: flex; flex-direction: column; justify-content: space-between; min-height: 520px; overflow: hidden; }
+        .comp-box::before { content: ''; position: absolute; inset: 0; background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(192, 132, 252, 0.1), transparent 40%); opacity: 0; transition: opacity 0.3s ease; pointer-events: none; z-index: 1; }
+        .comp-box::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #7c3aed, #ec4899); opacity: 0; transition: opacity 0.3s ease; border-radius: 24px 24px 0 0; z-index: 2; }
+        .comp-box:hover::before, .comp-box:hover::after { opacity: 1; }
+        
+        .comp-box-agencies { background: linear-gradient(135deg, rgba(28, 16, 42, 0.96), rgba(15, 17, 21, 0.98)); border: 1px solid rgba(168, 85, 247, 0.45); }
+        .comp-box-agencies:hover { transform: translateY(-8px) scale(1.025) !important; border-color: rgba(168, 85, 247, 0.7); box-shadow: 0 25px 55px rgba(0, 0, 0, 0.55), 0 0 30px rgba(168, 85, 247, 0.3); }
+        
+        .comp-box-ahrik { background: linear-gradient(135deg, rgba(38, 18, 68, 0.96), rgba(15, 17, 21, 0.98)); border: 2px solid rgba(192, 132, 252, 0.7); box-shadow: 0 15px 40px rgba(124, 58, 237, 0.3); }
+        .comp-box-ahrik:hover { transform: translateY(-8px) scale(1.025) !important; border-color: #c084fc; box-shadow: 0 25px 65px rgba(124, 58, 237, 0.5), 0 0 40px rgba(244, 114, 182, 0.35); }
+        
+        .comp-badge-purple-dark { display: inline-block; padding: 7px 16px; border-radius: 20px; background: rgba(168, 85, 247, 0.2); border: 1px solid rgba(168, 85, 247, 0.5); color: #e9d5ff; font-size: 11.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+        .comp-badge-purple-glowing { display: inline-block; padding: 7px 16px; border-radius: 20px; background: linear-gradient(135deg, rgba(124, 58, 237, 0.35), rgba(236, 72, 153, 0.35)); border: 1px solid rgba(192, 132, 252, 0.7); color: #ffffff; font-size: 11.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; box-shadow: 0 0 18px rgba(192, 132, 252, 0.35); }
+        
+        .comp-title-purple { font-size: 26px; font-weight: 800; color: #ffffff; margin-top: 6px; margin-bottom: 22px; }
+        .comp-title-logo-gradient { font-size: 27px; font-weight: 800; margin-top: 6px; margin-bottom: 22px; background: linear-gradient(135deg, #c084fc, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; }
+        
+        .comp-list { list-style: none; padding: 0; margin: 0; }
+        .comp-list li { font-size: 15px; line-height: 1.7; margin-bottom: 18px; display: flex; align-items: flex-start; gap: 13px; font-weight: 400; }
+        
+        .comp-list-bad li { color: #f1f5f9; }
+        .comp-list-bad li strong { color: #ffffff; font-weight: 700; }
+        .comp-list-bad li i { color: #ff4d4d; font-size: 16px; margin-top: 3px; flex-shrink: 0; filter: drop-shadow(0 0 6px rgba(255, 77, 77, 0.6)); }
+        
+        .comp-list-good li { color: #ffffff; }
+        .comp-list-good li strong { color: #ffffff; font-weight: 700; text-shadow: 0 0 10px rgba(192, 132, 252, 0.4); }
+        .comp-list-good li i { color: #c084fc; font-size: 16px; margin-top: 3px; flex-shrink: 0; filter: drop-shadow(0 0 8px rgba(192, 132, 252, 0.8)); }
+
+        /* REFINED HIGH-CONTRAST HOMEPAGE DISCOVERY FORM CARD */
+        .home-form-card { background: rgba(18, 21, 28, 0.96); border: 1px solid var(--border-color); border-radius: 24px; padding: 48px 40px; max-width: 760px; margin: 0 auto; backdrop-filter: blur(20px); box-shadow: 0 25px 60px rgba(0,0,0,0.55); position: relative; overflow: hidden; transition: all 0.35s ease; }
+        .home-form-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #c084fc, #f472b6); border-radius: 24px 24px 0 0; }
+        .home-form-card:hover { transform: translateY(-6px) scale(1.015) !important; border-color: #c084fc !important; box-shadow: 0 30px 70px rgba(0,0,0,0.6), 0 0 35px rgba(192, 132, 252, 0.3) !important; }
+        .home-form-card h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 800; color: #ffffff; margin-bottom: 12px; text-align: center; }
+        .home-form-card p { font-size: 16px; color: #cbd5e1; line-height: 1.65; margin-bottom: 32px; text-align: center; font-weight: 450; }
+
+        .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 20px; }
+        @media (max-width: 650px) { .form-row-2 { grid-template-columns: 1fr; } }
+        
+        .form-field-group { margin-bottom: 20px; text-align: left; }
+        .form-field-group label { display: block; font-size: 13px; font-weight: 700; color: #f8fafc; margin-bottom: 8px; letter-spacing: 0.5px; }
+        .form-field-group input, .form-field-group select { width: 100%; padding: 15px 18px; background: rgba(15, 17, 21, 0.92); border: 1px solid rgba(255, 255, 255, 0.16); color: #ffffff; border-radius: 12px; font-family: 'Inter', sans-serif; font-size: 14.5px; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+        .form-field-group input::placeholder { color: #94a3b8; }
+        .form-field-group input:focus, .form-field-group select:focus { outline: none; border-color: #c084fc; box-shadow: 0 0 16px rgba(192, 132, 252, 0.35); }
+        .form-field-group select option { background: #0f1115; color: #ffffff; }
+
+        .home-pillar-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+        .home-pillar-pill { cursor: pointer; position: relative; }
+        .home-pillar-pill input { position: absolute; opacity: 0; cursor: pointer; }
+        .home-pillar-pill span { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 30px; font-size: 13px; font-weight: 600; color: #cbd5e1; transition: all 0.25s ease; user-select: none; }
+        .home-pillar-pill input:checked + span { background: linear-gradient(135deg, rgba(124, 58, 237, 0.35), rgba(236, 72, 153, 0.35)); border-color: #c084fc; color: #ffffff; box-shadow: 0 0 15px rgba(192, 132, 252, 0.3); }
+        .home-pillar-pill:hover span { border-color: rgba(192, 132, 252, 0.5); color: #ffffff; }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- LOCKED NAVBAR -->
+    <nav class="navbar-wrapper">
+        <div class="navbar-left">
+            <div class="logo-dropdown-wrapper">
+                <a href="index.html" class="logo">D2C WITH AHRIK</a>
+                <button class="logo-dropdown-btn" id="logo-dropdown-btn" aria-label="Toggle Ecosystem Menu">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="deepmind-dropdown-panel" id="deepmind-dropdown-panel">
+                    <span class="dropdown-category-title">SIX CORE PILLARS</span>
+                    <a href="base.html" class="deepmind-dropdown-item deepmind-item-base">
+                        <div class="deepmind-item-icon"><i class="fas fa-landmark"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Base</span>
+                            <span class="deepmind-item-subtitle">Legal &amp; Financial Architecture</span>
+                        </div>
+                    </a>
+                    <a href="studio.html" class="deepmind-dropdown-item deepmind-item-studio">
+                        <div class="deepmind-item-icon"><i class="fas fa-palette"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Studio</span>
+                            <span class="deepmind-item-subtitle">AI Visuals &amp; Brand Production</span>
+                        </div>
+                    </a>
+                    <a href="build.html" class="deepmind-dropdown-item deepmind-item-build">
+                        <div class="deepmind-item-icon"><i class="fas fa-code"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Build</span>
+                            <span class="deepmind-item-subtitle">Storefronts &amp; 24/7 AI Automation</span>
+                        </div>
+                    </a>
+                    <a href="marketing.html" class="deepmind-dropdown-item deepmind-item-marketing">
+                        <div class="deepmind-item-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Marketing</span>
+                            <span class="deepmind-item-subtitle">Growth Funnels &amp; Retention</span>
+                        </div>
+                    </a>
+                    <a href="commerce.html" class="deepmind-dropdown-item deepmind-item-commerce">
+                        <div class="deepmind-item-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Commerce</span>
+                            <span class="deepmind-item-subtitle">Managed Marketplace Operations</span>
+                        </div>
+                    </a>
+                    <a href="network.html" class="deepmind-dropdown-item deepmind-item-network">
+                        <div class="deepmind-item-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Network</span>
+                            <span class="deepmind-item-subtitle">Investor Access &amp; Brand Alliances</span>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider-line"></div>
+                    <span class="dropdown-category-title">EXPLORE AGENCY</span>
+                    <a href="services.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-th-large"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Services Matrix</span>
+                            <span class="deepmind-item-subtitle">Full capabilities overview</span>
+                        </div>
+                    </a>
+                    <a href="portfolio.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Case Studies &amp; Work</span>
+                            <span class="deepmind-item-subtitle">Real D2C brand results</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+                <div class="pillars-box">
+            <a href="base.html">Base</a>
+            <a href="studio.html">Studio</a>
+            <a href="build.html">Build</a>
+            <a href="marketing.html">Marketing</a>
+            <a href="commerce.html">Commerce</a>
+            <a href="network.html">Network</a>
+        </div>
+
+        <div class="navbar-right">
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+            <div class="main-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="connect.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="animate-up">Building <span class="gradient-text">D2C Empires</span> Under One Roof</h1>
+            <p class="animate-up delay-1">We are not just a service provider. We are your end-to-end growth ecosystem &mdash; manufacturing, scaling, and sustaining generational consumer brands.</p>
+            <div class="hero-buttons animate-up delay-2">
+                <a href="#pillars" class="btn-primary">Explore Pillars</a>
+                <a href="connect.html" class="btn-secondary"><i class="fas fa-paper-plane" style="color: #c084fc; margin-right: 8px;"></i> Start Your Journey</a>
+            </div>
+        </div>
+        <div class="hero-glow"></div>
+    </header>
+
+    <!-- SIX CORE PILLARS SHOWCASE -->
+    <section id="pillars" style="padding: 80px 5%; max-width: 1280px; margin: 0 auto; position: relative; z-index: 2;">
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 40px;">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-primary); margin-bottom: 12px; display: block;">The AHrik Ecosystem</span>
+            <h2 style="font-size: clamp(28px, 4vw, 48px); font-weight: 800; margin-bottom: 16px;">Six Pillars. One <span class="gradient-text">Unified Empire.</span></h2>
+            <p style="font-size: 16.5px; color: #cbd5e1; line-height: 1.7;">Each pillar is a specialized powerhouse. Combined, they form India's most comprehensive D2C brand acceleration engine &mdash; working in absolute synergy for your growth.</p>
+        </div>
+
+        <div class="home-pillars-grid">
+            <!-- PILLAR 1: BASE -->
+            <a href="base.html" class="pillar-card-home p-base">
+                <div>
+                    <span class="p-badge">AHrik Base &mdash; Pillar 01</span>
+                    <h3 class="p-title">Legal &amp; Financial Architecture</h3>
+                    <p class="p-desc">Bulletproof legal structure, trademark protection, GST compliance, and unit economics architecture before you scale.</p>
+                    <ul class="p-list">
+                        <li><i class="fas fa-check"></i> Business Entity Setup &amp; Structuring</li>
+                        <li><i class="fas fa-check"></i> Trademark Filing &amp; IP Protection</li>
+                        <li><i class="fas fa-check"></i> Accounting, Bookkeeping &amp; Tax Compliance</li>
+                        <li><i class="fas fa-check"></i> Operations Blueprint &amp; SOP Creation</li>
+                    </ul>
+                </div>
+                <span class="p-link">Explore Base Services &rarr;</span>
+            </a>
+
+            <!-- PILLAR 2: STUDIO -->
+            <a href="studio.html" class="pillar-card-home p-studio">
+                <div>
+                    <span class="p-badge">AHrik Studio &mdash; Pillar 02</span>
+                    <h3 class="p-title">AI Visuals &amp; Brand Production</h3>
+                    <p class="p-desc">Visual identity, AI-enhanced product photography, 3D renders, stop-the-scroll video ads, and CRO-driven UI/UX design.</p>
+                    <ul class="p-list">
+                        <li><i class="fas fa-check"></i> Complete Brand Identity System</li>
+                        <li><i class="fas fa-check"></i> AI Photoshoots &amp; 3D Product Rendering</li>
+                        <li><i class="fas fa-check"></i> Meta &amp; Google Performance Creatives</li>
+                        <li><i class="fas fa-check"></i> Brand Films, Reels &amp; AI UGC Videos</li>
+                    </ul>
+                </div>
+                <span class="p-link">Explore Studio Services &rarr;</span>
+            </a>
+
+            <!-- PILLAR 3: BUILD -->
+            <a href="build.html" class="pillar-card-home p-build">
+                <div>
+                    <span class="p-badge">AHrik Build &mdash; Pillar 03</span>
+                    <h3 class="p-title">Storefronts &amp; 24/7 AI Automation</h3>
+                    <p class="p-desc">High-converting D2C storefronts, 24/7 AI customer service chatbots, custom web apps, and full API integration layers.</p>
+                    <ul class="p-list">
+                        <li><i class="fas fa-check"></i> D2C Storefront Engineering (Shopify / Headless)</li>
+                        <li><i class="fas fa-check"></i> AI Customer Support Chatbots &amp; Workflows</li>
+                        <li><i class="fas fa-check"></i> Custom Admin Dashboards &amp; Loyalty Apps</li>
+                        <li><i class="fas fa-check"></i> ERP, Payment Gateway &amp; Logistics Integrations</li>
+                    </ul>
+                </div>
+                <span class="p-link">Explore Build Services &rarr;</span>
+            </a>
+
+            <!-- PILLAR 4: MARKETING -->
+            <a href="marketing.html" class="pillar-card-home p-marketing">
+                <div>
+                    <span class="p-badge">AHrik Marketing &mdash; Pillar 04</span>
+                    <h3 class="p-title">Growth Funnels &amp; Retention</h3>
+                    <p class="p-desc">Profitable Meta &amp; Google performance ads, SEO organic traffic engines, WhatsApp retention automation, and UGC campaigns.</p>
+                    <ul class="p-list">
+                        <li><i class="fas fa-check"></i> Performance Advertising (Meta &amp; Google Ads)</li>
+                        <li><i class="fas fa-check"></i> Technical SEO &amp; Organic Content Engine</li>
+                        <li><i class="fas fa-check"></i> WhatsApp &amp; Email Retention Automation</li>
+                        <li><i class="fas fa-check"></i> Influencer &amp; UGC Creator Programs</li>
+                    </ul>
+                </div>
+                <span class="p-link">Explore Marketing Services &rarr;</span>
+            </a>
+
+            <!-- PILLAR 5: COMMERCE -->
+            <a href="commerce.html" class="pillar-card-home p-commerce">
+                <div>
+                    <span class="p-badge">AHrik Commerce &mdash; Pillar 05</span>
+                    <h3 class="p-title">Managed Marketplace Operations</h3>
+                    <p class="p-desc">End-to-end management for Amazon, Flipkart, Blinkit, and Zepto &mdash; cataloging, advertising, inventory, and account health.</p>
+                    <ul class="p-list">
+                        <li><i class="fas fa-check"></i> Amazon SP-API &amp; Flipkart Listing Optimization</li>
+                        <li><i class="fas fa-check"></i> Quick Commerce Entry (Blinkit, Zepto, Instamart)</li>
+                        <li><i class="fas fa-check"></i> Sponsored Ads &amp; Marketplace PPC Management</li>
+                        <li><i class="fas fa-check"></i> Inventory Sync &amp; Account Health Defense</li>
+                    </ul>
+                </div>
+                <span class="p-link">Explore Commerce Services &rarr;</span>
+            </a>
+
+            <!-- PILLAR 6: NETWORK -->
+            <a href="network.html" class="pillar-card-home p-network">
+                <div>
+                    <span class="p-badge">AHrik Network &mdash; Pillar 06</span>
+                    <h3 class="p-title">Investor Access &amp; Strategic Alliances</h3>
+                    <p class="p-desc">Warm investor introductions to VCs and angels, modern trade retail distribution access, strategic co-branding, and earned PR.</p>
+                    <ul class="p-list">
+                        <li><i class="fas fa-check"></i> VC, Angel &amp; Family Office Introductions</li>
+                        <li><i class="fas fa-check"></i> Modern Trade &amp; Retail Distribution Entry</li>
+                        <li><i class="fas fa-check"></i> Strategic Brand Alliances &amp; Co-Branding</li>
+                        <li><i class="fas fa-check"></i> PR Strategy &amp; Startup Media Placements</li>
+                    </ul>
+                </div>
+                <span class="p-link">Explore Network Services &rarr;</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- THE AHRIK ADVANTAGE & HIGH-CONTRAST PURPLE COMPARISON SECTION -->
+    <section id="vision" class="about">
+        <div class="about-content" style="max-width: 1100px;">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-primary); margin-bottom: 12px; display: block;">Why D2C Founders Choose AHrik</span>
+            <h2>The AHRIK <span class="gradient-text">Advantage</span></h2>
+            <p style="max-width: 800px; margin: 0 auto 20px; color: #cbd5e1; font-size: 17px; line-height: 1.7;">Most brands fail because they hire 5 different agencies for 5 different tasks. The design team doesn't talk to the tech team, the tech team doesn't understand marketing, and legal is an afterthought.</p>
+            <p style="max-width: 800px; margin: 0 auto 40px; color: #f8fafc; font-size: 17px; line-height: 1.7;"><strong style="color: #ffffff;">At D2C WITH AHRIK, we eliminate the friction.</strong> Our 6 specialized pillars work in absolute synergy. We manufacture your brand's identity, build your digital infrastructure, run AI-powered marketing, scale your marketplace sales, and open doors to investor capital &mdash; all completely in-house under one roof.</p>
+            
+            <!-- HIGH-CONTRAST TALL PURPLE PILLAR-CARD COMPARISON GRID -->
+            <div class="comp-wrapper">
+                <!-- 5 DIFFERENT AGENCIES (PURPLE MODEL) -->
+                <div class="comp-box comp-box-agencies">
+                    <div>
+                        <span class="comp-badge-purple-dark"><i class="fas fa-exclamation-triangle"></i> FRAGMENTED MODEL</span>
+                        <h3 class="comp-title-purple">5 Different Agencies</h3>
+                        <ul class="comp-list comp-list-bad">
+                            <li><i class="fas fa-times"></i> <div><strong>Fragmented Strategy:</strong> Design team doesn't talk to dev team; dev team ignores marketing &amp; conversion logic.</div></li>
+                            <li><i class="fas fa-times"></i> <div><strong>Compounding Retainer Costs:</strong> Paying 5 separate agency retainers with zero shared ROI accountability.</div></li>
+                            <li><i class="fas fa-times"></i> <div><strong>The Blame Game:</strong> Performance agency blames the website; dev agency blames ad creative quality.</div></li>
+                            <li><i class="fas fa-times"></i> <div><strong>Slow Turnaround:</strong> 4 to 6 weeks wasted for simple creative revisions and basic tech updates.</div></li>
+                            <li><i class="fas fa-times"></i> <div><strong>Zero Capital Access:</strong> No connections to VC networks, retail shelf space, or proper legal IP armor.</div></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- D2C WITH AHRIK (STACKED BELOW BADGE WITH LOGO GRADIENT TITLE) -->
+                <div class="comp-box comp-box-ahrik">
+                    <div>
+                        <span class="comp-badge-purple-glowing"><i class="fas fa-bolt"></i> UNIFIED 6-PILLAR EMPIRE</span>
+                        <h3 class="comp-title-logo-gradient">D2C WITH AHRIK</h3>
+                        <ul class="comp-list comp-list-good">
+                            <li><i class="fas fa-check"></i> <div><strong>100% In-House Synergy:</strong> All 6 pillars execute under one cohesive master brand growth playbook.</div></li>
+                            <li><i class="fas fa-check"></i> <div><strong>Single Point of Contact:</strong> One dedicated growth lead managing design, tech, ads, &amp; operations seamlessly.</div></li>
+                            <li><i class="fas fa-check"></i> <div><strong>Unified ROI Accountability:</strong> Every asset engineered directly to increase CAC efficiency, ROAS &amp; profit margins.</div></li>
+                            <li><i class="fas fa-check"></i> <div><strong>48-Hour AI Velocity:</strong> AI-enhanced studio &amp; dev teams delivering high-converting content 3-5x faster.</div></li>
+                            <li><i class="fas fa-check"></i> <div><strong>Capital &amp; Retail Access:</strong> Direct warm intros to VCs, angel networks, and Q-Commerce retail distribution.</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stat-grid-home" style="margin-top: 60px;">
+                <div class="stat-card-home">
+                    <div class="big-num">INR 100Cr+</div>
+                    <div class="lbl-text">Client Revenue Generated</div>
+                </div>
+                <div class="stat-card-home">
+                    <div class="big-num">3.4x</div>
+                    <div class="lbl-text">Average Performance ROAS</div>
+                </div>
+                <div class="stat-card-home">
+                    <div class="big-num">48h</div>
+                    <div class="lbl-text">AI Visual Delivery Velocity</div>
+                </div>
+                <div class="stat-card-home">
+                    <div class="big-num">6-in-1</div>
+                    <div class="lbl-text">Unified Agency Ecosystem</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REFINED HIGH-CONTRAST DISCOVERY CALL FORM CARD -->
+    <section id="contact" style="padding: 80px 5%; position: relative; z-index: 2;">
+        <div class="home-form-card">
+            <h2>Ready to Scale Your D2C Empire?</h2>
+            <p>Select your required pillars and schedule a direct 6-pillar ecosystem consultation with our executive leadership team.</p>
+            
+            <form id="contact-form">
+                <div class="form-row-2">
+                    <div class="form-field-group">
+                        <label>Your Full Name *</label>
+                        <input type="text" placeholder="e.g. Rahul Verma" required>
+                    </div>
+                    <div class="form-field-group">
+                        <label>Work Email Address *</label>
+                        <input type="email" placeholder="rahul@brand.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-field-group">
+                        <label>Brand / Company Name *</label>
+                        <input type="text" placeholder="e.g. Apex D2C Labs" required>
+                    </div>
+                    <div class="form-field-group">
+                        <label>WhatsApp / Phone Number *</label>
+                        <input type="tel" placeholder="+91 98765 43210" required>
+                    </div>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-field-group">
+                        <label>Product Category *</label>
+                        <select required>
+                            <option value="" disabled selected>Select Your Category</option>
+                            <option value="bpc">Beauty &amp; Personal Care</option>
+                            <option value="fashion">Fashion &amp; Apparel</option>
+                            <option value="fmcg">Food, Beverage &amp; FMCG</option>
+                            <option value="wellness">Health &amp; Wellness</option>
+                            <option value="electronics">Consumer Tech &amp; Electronics</option>
+                            <option value="other">Other D2C Category</option>
+                        </select>
+                    </div>
+                    <div class="form-field-group">
+                        <label>Current Monthly Revenue *</label>
+                        <select required>
+                            <option value="" disabled selected>Select Revenue Range</option>
+                            <option value="prelaunch">Pre-launch / Concept Stage</option>
+                            <option value="10l-50l">&#8377;10L - &#8377;50L / Month</option>
+                            <option value="50l-2cr">&#8377;50L - &#8377;2Cr / Month</option>
+                            <option value="2cr-plus">&#8377;2Cr+ / Month (Enterprise Scale)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-field-group">
+                    <label>Select Required AHrik Growth Pillars:</label>
+                    <div class="home-pillar-pills">
+                        <label class="home-pillar-pill">
+                            <input type="checkbox" name="pillars" value="base">
+                            <span><i class="fas fa-landmark" style="color: #22d3ee;"></i> Base (Legal &amp; IP)</span>
+                        </label>
+                        <label class="home-pillar-pill">
+                            <input type="checkbox" name="pillars" value="studio">
+                            <span><i class="fas fa-palette" style="color: #a78bfa;"></i> Studio (AI Visuals)</span>
+                        </label>
+                        <label class="home-pillar-pill">
+                            <input type="checkbox" name="pillars" value="build">
+                            <span><i class="fas fa-code" style="color: #fb923c;"></i> Build (Store &amp; AI Bot)</span>
+                        </label>
+                        <label class="home-pillar-pill">
+                            <input type="checkbox" name="pillars" value="marketing" checked>
+                            <span><i class="fas fa-chart-line" style="color: #4ade80;"></i> Marketing (Ads &amp; ROAS)</span>
+                        </label>
+                        <label class="home-pillar-pill">
+                            <input type="checkbox" name="pillars" value="commerce">
+                            <span><i class="fas fa-shopping-bag" style="color: #fbbf24;"></i> Commerce (Amazon/Blinkit)</span>
+                        </label>
+                        <label class="home-pillar-pill">
+                            <input type="checkbox" name="pillars" value="network">
+                            <span><i class="fas fa-network-wired" style="color: #60a5fa;"></i> Network (VC Funding)</span>
+                        </label>
+                        <label class="home-pillar-pill">
+                            <input type="checkbox" name="pillars" value="full">
+                            <span><i class="fas fa-rocket" style="color: #f472b6;"></i> Full 6-Pillar Ecosystem</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary full-width" style="padding: 16px; font-size: 15.5px; margin-top: 10px;">Schedule My Free Strategy Call &rarr;</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- LOCKED FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div>
+                <h2>Stay Connected</h2>
+                <p>Join our inner circle. Get exclusive insights on D2C growth, AI marketing, and brand architecture delivered straight to your inbox.</p>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your work email">
+                <button class="btn-primary">Subscribe</button>
+            </div>
+        </div>
+        
+        <div class="footer-grid">
+            <div class="footer-col" style="max-width: 250px;">
+                <a href="index.html" class="footer-logo" style="background: linear-gradient(135deg, #c084fc, #f472b6) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; font-weight: 800 !important;">D2C WITH AHRIK</a>
+                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6; margin-top: 15px;">A D2C brand-building agency. We don't just consult on brands &mdash; we inhabit them. </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="connect.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>THE JOURNEY</h3>
+                <ul>
+                    <li><a href="base.html" class="footer-journey-base" style="color: #22d3ee !important; font-weight: 700;">Base</a></li>
+                    <li><a href="studio.html" class="footer-journey-studio" style="color: #a78bfa !important; font-weight: 700;">Studio</a></li>
+                    <li><a href="build.html" class="footer-journey-build" style="color: #fb923c !important; font-weight: 700;">Build</a></li>
+                    <li><a href="marketing.html" class="footer-journey-marketing" style="color: #4ade80 !important; font-weight: 700;">Marketing</a></li>
+                    <li><a href="commerce.html" class="footer-journey-commerce" style="color: #fbbf24 !important; font-weight: 700;">Commerce</a></li>
+                    <li><a href="network.html" class="footer-journey-network" style="color: #60a5fa !important; font-weight: 700;">Network</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>CONNECT</h3>
+                <ul>
+                    <li><a href="mailto:hello@d2cwithahrik.com">hello@d2cwithahrik.com</a></li>
+                    <li><a href="connect.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="font-size: 13px; color: var(--text-secondary);">&copy; 2026 D2C WITH AHRIK. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="3d-animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

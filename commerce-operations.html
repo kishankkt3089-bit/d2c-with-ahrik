@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace Operations | Day-to-Day Digital Management | AHrik Commerce | D2C WITH AHRIK</title>
+    <meta name="description" content="24/7 marketplace operations management — seller account health, customer support, returns handling, pricing strategy, and compliance. AHrik Commerce owns your daily digital ops.">
+    <link rel="stylesheet" href="style.css?v=20260727_2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --pillar: #d97706; --pillar-light: #fbbf24; --pillar-dark: #b45309; --pillar-rgb: 217,119,6; --pillar-subtle: rgba(217,119,6,0.08); }
+        [data-theme="light"] { --pillar: #b45309; --pillar-light: #d97706; --pillar-subtle: rgba(217,119,6,0.12); }
+        .btn-primary { background: linear-gradient(135deg, #b45309, #d97706) !important; color: #fff !important; font-weight: 700 !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important; border: 1px solid rgba(217,119,6,0.6) !important; box-shadow: 0 4px 18px rgba(217,119,6,0.4) !important; }
+        .btn-primary:hover { background: linear-gradient(135deg, #d97706, #fbbf24) !important; box-shadow: 0 8px 28px rgba(217,119,6,0.6) !important; transform: translateY(-3px) scale(1.02) !important; }
+        .btn-secondary { background: rgba(217,119,6,0.08) !important; border: 1px solid rgba(217,119,6,0.3) !important; color: var(--text-primary) !important; }
+        .btn-secondary:hover { background: rgba(217,119,6,0.18) !important; border-color: #fbbf24 !important; color: #fbbf24 !important; transform: translateY(-3px) !important; }
+        .gradient-text { background: linear-gradient(135deg, #d97706, #fbbf24) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+        .svc-hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 140px 5% 80px; position: relative; z-index: 2; }
+        .svc-hero .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #fbbf24; margin-bottom: 20px; display: block; }
+        .svc-hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; line-height: 1.1; margin-bottom: 24px; max-width: 900px; }
+        .svc-hero .hero-sub { font-size: clamp(15px, 1.8vw, 18px); color: var(--text-secondary); max-width: 680px; margin: 0 auto 40px; line-height: 1.7; text-shadow: 0 2px 8px rgba(0,0,0,0.7); }
+        .hero-cta-row { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+        .stat-strip { display: flex; gap: 50px; justify-content: center; flex-wrap: wrap; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color); }
+        .stat-item .num { font-size: 36px; font-weight: 800; color: #fbbf24; line-height: 1; margin-bottom: 6px; }
+        .stat-item .lbl { font-size: 12px; color: var(--text-secondary); }
+        .svc-section { padding: 80px 5%; max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+        .eyebrow-sm { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #fbbf24; margin-bottom: 14px; display: block; }
+        .section-h2 { font-size: clamp(26px, 3.5vw, 42px); font-weight: 800; margin-bottom: 16px; }
+        .section-p { font-size: 17px; color: var(--text-secondary); max-width: 680px; line-height: 1.7; margin-bottom: 48px; }
+        .split { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+        @media (max-width: 900px) { .split { grid-template-columns: 1fr; gap: 40px; } }
+        .feature-tag { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #fbbf24; margin-bottom: 14px; display: block; }
+        .feature-h3 { font-size: clamp(22px, 3vw, 32px); font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+        .feature-p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+        .chip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; background: rgba(217,119,6,0.08); border: 1px solid rgba(217,119,6,0.2); border-radius: 30px; font-size: 13px; font-weight: 500; color: var(--text-primary); }
+        .chip i { color: #fbbf24; font-size: 11px; }
+        .feat-visual { background: var(--section-glass); border: 1px solid rgba(217,119,6,0.15); border-radius: 20px; padding: 40px; backdrop-filter: blur(12px); }
+        .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .metric-box { background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); border-radius: 14px; padding: 24px; text-align: center; transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important; }
+        .metric-box:hover { transform: translateY(-4px) scale(1.03) !important; border-color: #fbbf24 !important; box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 22px rgba(217,119,6,0.35) !important; }
+        .metric-box .big { font-size: 32px; font-weight: 800; color: #fbbf24; margin-bottom: 6px; line-height: 1; }
+        .metric-box .sm { font-size: 12px; color: #cbd5e1; font-weight: 500; }
+        .deliv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 40px; }
+        .deliv-item { background: var(--section-glass); border: 1px solid var(--border-color); border-left: 3px solid #d97706; border-radius: 12px; padding: 18px 22px; font-size: 14px; color: #e2e8f0; font-weight: 500; line-height: 1.5; transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important; display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
+        .deliv-item:hover { border-left-color: #fbbf24; border-color: rgba(251,191,36,0.4); color: #ffffff; transform: translateY(-4px) scale(1.015) !important; box-shadow: 0 12px 25px rgba(0,0,0,0.6), 0 0 22px rgba(217,119,6,0.35) !important; }
+        .deliv-item i { color: #fbbf24; margin-top: 2px; font-size: 13px; flex-shrink: 0; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; }
+        .step { padding: 30px; text-align: center; border-right: 1px solid var(--border-color); transition: all 0.3s ease; }
+        .step:hover { background: rgba(217,119,6,0.04); }
+        .step:last-child { border-right: none; }
+        .step-n { width: 48px; height: 48px; background: linear-gradient(135deg, #b45309, #d97706); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; margin: 0 auto 16px; box-shadow: 0 4px 15px rgba(217,119,6,0.4); }
+        .step h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: #ffffff; }
+        .step p { font-size: 13px; color: #cbd5e1; line-height: 1.5; }
+        .faq-wrap { max-width: 800px; margin-top: 40px; }
+        .faq-block { margin-bottom: 16px; border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden; background: var(--section-glass); transition: all 0.3s ease; }
+        .faq-block:hover { border-color: rgba(251,191,36,0.4); box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 0 15px rgba(217,119,6,0.2); }
+        .faq-q { padding: 20px 26px; font-size: 15px; font-weight: 700; color: #ffffff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-q i { color: #fbbf24; transition: transform 0.3s; flex-shrink: 0; }
+        .faq-a { padding: 0 26px 20px; font-size: 14px; color: #cbd5e1; line-height: 1.7; display: none; }
+        .faq-block.open .faq-q i { transform: rotate(45deg); }
+        .faq-block.open .faq-a { display: block; }
+        .cta-strip { background: linear-gradient(135deg, rgba(217,119,6,0.1), rgba(217,119,6,0.04)); border: 1px solid rgba(217,119,6,0.25); border-radius: 22px; padding: 50px 60px; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
+        .cta-strip h3 { font-size: 26px; font-weight: 800; margin-bottom: 10px; }
+        .cta-strip p { font-size: 15px; color: var(--text-secondary); max-width: 520px; }
+        .cta-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        .next-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--section-glass); border: 1px solid var(--border-color); border-radius: 10px; font-size: 13px; font-weight: 600; color: var(--text-secondary); text-decoration: none; transition: all 0.2s; backdrop-filter: blur(10px); }
+        .next-link:hover { border-color: #d97706; color: var(--text-primary); }
+        .next-link i { color: #fbbf24; font-size: 12px; }
+        .next-links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .pillar-footer-extra { padding: 60px 5% 30px; border-top: 1px solid var(--border-color); position: relative; z-index: 2; }
+        .footer-strip { max-width: 1280px; margin: 0 auto 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .footer-strip h4 { font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-bottom: 10px; }
+        .breadcrumb-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(217,119,6,0.08); border: 1px solid rgba(217,119,6,0.2); border-radius: 30px; font-size: 12px; color: #fbbf24; text-decoration: none; margin-bottom: 24px; transition: all 0.2s; }
+        .breadcrumb-link:hover { background: rgba(217,119,6,0.15); }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <nav class="navbar-wrapper">
+                <div class="navbar-left">
+            <div class="logo-dropdown-wrapper">
+                <a href="index.html" class="logo">D2C WITH AHRIK</a>
+                <button class="logo-dropdown-btn" id="logo-dropdown-btn" aria-label="Toggle Ecosystem Menu"><i class="fas fa-chevron-down"></i></button>
+                <div class="deepmind-dropdown-panel" id="deepmind-dropdown-panel">
+                    <span class="dropdown-category-title">SIX CORE PILLARS</span>
+                    <a href="base.html" class="deepmind-dropdown-item deepmind-item-base"><div class="deepmind-item-icon"><i class="fas fa-landmark"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Base</span><span class="deepmind-item-subtitle">Legal &amp; Financial Architecture</span></div></a>
+                    <a href="studio.html" class="deepmind-dropdown-item deepmind-item-studio"><div class="deepmind-item-icon"><i class="fas fa-palette"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Studio</span><span class="deepmind-item-subtitle">AI Visuals &amp; Brand Production</span></div></a>
+                    <a href="build.html" class="deepmind-dropdown-item deepmind-item-build"><div class="deepmind-item-icon"><i class="fas fa-code"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Build</span><span class="deepmind-item-subtitle">Storefronts &amp; 24/7 AI Automation</span></div></a>
+                    <a href="marketing.html" class="deepmind-dropdown-item deepmind-item-marketing"><div class="deepmind-item-icon"><i class="fas fa-chart-line"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Marketing</span><span class="deepmind-item-subtitle">Growth Funnels &amp; Retention</span></div></a>
+                    <a href="commerce.html" class="deepmind-dropdown-item deepmind-item-commerce"><div class="deepmind-item-icon"><i class="fas fa-shopping-bag"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Commerce</span><span class="deepmind-item-subtitle">Managed Marketplace Operations</span></div></a>
+                    <a href="network.html" class="deepmind-dropdown-item deepmind-item-network"><div class="deepmind-item-icon"><i class="fas fa-network-wired"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Network</span><span class="deepmind-item-subtitle">Investor Access &amp; Brand Alliances</span></div></a>
+                    <div class="dropdown-divider-line"></div>
+                    <span class="dropdown-category-title">EXPLORE AGENCY</span>
+                    <a href="services.html" class="deepmind-dropdown-item"><div class="deepmind-item-icon"><i class="fas fa-th-large"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">Services Matrix</span><span class="deepmind-item-subtitle">Full capabilities overview</span></div></a>
+                    <a href="portfolio.html" class="deepmind-dropdown-item"><div class="deepmind-item-icon"><i class="fas fa-briefcase"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">Case Studies &amp; Work</span><span class="deepmind-item-subtitle">Real D2C brand results</span></div></a>
+                </div>
+            </div>
+        </div>
+        <div class="pillars-box">
+            <a href="base.html">Base</a><a href="studio.html">Studio</a><a href="build.html">Build</a>
+            <a href="marketing.html">Marketing</a><a href="commerce.html">Commerce</a><a href="network.html">Network</a>
+        </div>
+        <div class="navbar-right">
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+            <div class="main-links">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a><a href="connect.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="svc-hero">
+        <div>
+            <a href="commerce.html" class="breadcrumb-link"><i class="fas fa-arrow-left"></i> AHRIK COMMERCE</a>
+            <span class="eyebrow">AHRIK COMMERCE &mdash; Commerce Layer 03</span>
+            <h1 class="animate-up">Marketplace Operations Are Relentless. <br><span class="gradient-text">We Handle Every Single One.</span></h1>
+            <p class="hero-sub animate-up">Customer queries at 2 AM. Pricing wars with competitors. Return abuse patterns. Account health alerts. Marketplace operations never stop &mdash; and neither do we. AHrik Marketplace Operations takes complete ownership of your day-to-day digital management so you can focus entirely on your product.</p>
+            <div class="hero-cta-row animate-up">
+                <a href="connect.html" class="btn-primary">Activate Managed Ops &rarr;</a>
+                <a href="commerce.html" class="btn-secondary"><i class="fas fa-shopping-bag"></i> All Commerce Services</a>
+            </div>
+            <div class="stat-strip animate-up">
+                <div class="stat-item"><div class="num">24/7</div><div class="lbl">Operations Coverage</div></div>
+                <div class="stat-item"><div class="num">&lt;2hr</div><div class="lbl">Query Response Time</div></div>
+                <div class="stat-item"><div class="num">100%</div><div class="lbl">Account Health Maintained</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="svc-section">
+        <div class="split">
+            <div class="feature-text">
+                <span class="feature-tag">The Ops Burden</span>
+                <h3 class="feature-h3">Every Unanswered Query, Every Missed Return Window Is Revenue Walking Away.</h3>
+                <p class="feature-p">A single negative review from delayed customer support tanks your Buy Box share. A missed policy update triggers account suspension. Price fluctuations from competitors erode your margins overnight. AHrik Marketplace Operations monitors, responds, and optimizes every operational touchpoint &mdash; 24/7, 365 days.</p>
+                <div class="chips">
+                    <span class="chip"><i class="fas fa-check"></i> 24/7 Customer Support</span>
+                    <span class="chip"><i class="fas fa-check"></i> Return &amp; Refund Management</span>
+                    <span class="chip"><i class="fas fa-check"></i> Account Health Monitoring</span>
+                    <span class="chip"><i class="fas fa-check"></i> Competitive Price Tracking</span>
+                </div>
+            </div>
+            <div class="feat-visual">
+                <div class="metric-grid">
+                    <div class="metric-box"><div class="big">24/7</div><div class="sm">Always-On Operations</div></div>
+                    <div class="metric-box"><div class="big">&lt;2hr</div><div class="sm">Avg. Response Time</div></div>
+                    <div class="metric-box"><div class="big">98%</div><div class="sm">Customer Satisfaction Rate</div></div>
+                    <div class="metric-box"><div class="big">0</div><div class="sm">Account Suspensions</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="svc-section" style="padding-top:0;">
+        <span class="eyebrow-sm">What You Get</span>
+        <h2 class="section-h2">Everything Included in <span class="gradient-text">Marketplace Operations</span></h2>
+        <p class="section-p">Complete day-to-day digital operations management across every marketplace &mdash; customer support, returns, pricing, compliance, and account health.</p>
+        <div class="deliv-grid">
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Seller Account Health Monitoring & Policy Protection</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> 24/7 Customer Buyer Query & Message Resolution</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Returns, Refunds & SAFE-T Claim Management</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Price War Tracking & Automated Repricer Setup</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Inventory Stock Level Monitoring & FBA Inbound Planning</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Listing Suspension & Performance Notification Appeals</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Order Dispatch SLA Tracking & Carrier Monitoring</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Monthly Operational Performance Reporting</div>
+        </div>
+    </section>
+
+    <section class="svc-section" style="background: var(--section-glass); border-radius: 24px; backdrop-filter: blur(12px); border: 1px solid var(--border-color);">
+        <span class="eyebrow-sm">How It Works</span>
+        <h2 class="section-h2">Ops Takeover in <span class="gradient-text">4 Phases</span></h2>
+        <div class="steps" style="margin-top: 40px;">
+            <div class="step">
+                <div class="step-n">1</div>
+                <h4>Operations Audit</h4>
+                <p>We audit your current account health, support SLAs, return rates, pricing strategy, and compliance status to identify immediate risk areas and optimization opportunities.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">2</div>
+                <h4>SOPs &amp; Playbook Setup</h4>
+                <p>Custom Standard Operating Procedures are built for every operational scenario &mdash; customer queries, returns, pricing changes, policy updates, and escalation protocols.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">3</div>
+                <h4>24/7 Operations Takeover</h4>
+                <p>Our dedicated ops team takes over complete management of your day-to-day marketplace operations with real-time monitoring, response systems, and escalation workflows.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">4</div>
+                <h4>Continuous Optimization</h4>
+                <p>Weekly performance reviews, monthly strategy sessions, and proactive issue prevention ensure your marketplace operations compound efficiency and revenue over time.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="svc-section">
+        <span class="eyebrow-sm">Common Questions</span>
+        <h2 class="section-h2">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <div class="faq-wrap">
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What does &ldquo;24/7 operations&rdquo; actually mean? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">Our operations team monitors your seller accounts around the clock. Customer queries are responded to within 2 hours, account health alerts are addressed immediately, and pricing changes are tracked in real-time. You get a dedicated ops manager plus a team that covers all time zones and marketplace SLA windows.</div>
+            </div>
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do you handle customer complaints and negative reviews? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">We have a structured escalation framework: Level 1 (standard queries) resolved within 2 hours, Level 2 (refunds/replacements) within 6 hours, Level 3 (A-to-Z claims) within 24 hours with documented resolution plans. For negative reviews, we respond professionally, resolve root causes, and follow up to request updated feedback.</div>
+            </div>
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you handle FBA/FBF inventory issues? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">Yes. We manage complete FBA (Fulfillment by Amazon) and FBF (Fulfillment by Flipkart) inventory reconciliation, including damaged/lost inventory claims, stranded inventory resolution, and removal order management. Our team ensures you recover every rupee from warehouse discrepancies.</div>
+            </div>
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can you prevent account suspensions? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">Prevention is our primary focus. We proactively monitor all account health metrics, policy compliance requirements, and performance thresholds. When we detect risk signals, we take corrective action before they trigger suspensions. In the rare event of a suspension, we handle the complete reinstatement process.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="svc-section">
+        <div class="cta-strip">
+            <div>
+                <h3>Stop Firefighting Marketplace Issues. Start Scaling Revenue.</h3>
+                <p>Every hour you spend on customer queries and account health is an hour not spent growing your brand. Let us own your operations &mdash; completely.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="connect.html" class="btn-primary">Activate Managed Ops &rarr;</a>
+                <a href="commerce-growth.html" class="btn-secondary">Next: Commerce Growth</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="pillar-footer-extra">
+        <div class="footer-strip">
+            <div>
+                <h4>Explore Other AHrik Commerce Services</h4>
+                <div class="next-links">
+                    <a href="commerce-launch.html" class="next-link"><i class="fas fa-store"></i> Commerce Launch</a>
+                    <a href="commerce-catalog.html" class="next-link"><i class="fas fa-tags"></i> Catalog Management</a>
+                    <a href="commerce-growth.html" class="next-link"><i class="fas fa-rocket"></i> Commerce Growth</a>
+                    <a href="commerce-intelligence.html" class="next-link"><i class="fas fa-chart-pie"></i> Commerce Intelligence</a>
+                </div>
+            </div>
+            <a href="services.html" class="btn-secondary"><i class="fas fa-th-large"></i> All Services</a>
+        </div>
+    </div>
+
+    <footer style="position: relative; z-index: 2;">
+        <div style="background: linear-gradient(135deg, rgba(217,119,6,0.1), rgba(217,119,6,0.03)); border-top: 1px solid rgba(217,119,6,0.2); padding: 50px 5% 40px;">
+            <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; align-items: start;">
+                <div>
+                    <a href="commerce.html" class="footer-logo footer-logo-commerce" style="font-size: 20px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: #fbbf24 !important; -webkit-text-fill-color: #fbbf24 !important; text-decoration: none; margin-bottom: 14px; display: block; text-shadow: 0 0 14px rgba(251, 191, 36, 0.4) !important;">AHRIK COMMERCE</a>
+                    <p style="font-size: 13px; font-weight: 700; color: #fbbf24; margin-bottom: 8px;">You Build Products. We Own Your Digital Growth.</p>
+                    <p style="color: var(--text-secondary); font-size: 13px; line-height: 1.65; margin-bottom: 18px;">AHrik Commerce takes complete ownership of your digital marketplace presence &mdash; from seller onboarding and catalog SEO to performance advertising and 24/7 customer support.</p>
+                    <a href="connect.html" class="btn-primary" style="font-size: 13px; padding: 10px 20px; display: inline-block;">Get Started &rarr;</a>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #fbbf24; text-transform: uppercase; margin-bottom: 18px;">Commerce Services</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom:10px;"><a href="commerce-launch.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='var(--text-secondary)'">Commerce Launch</a></li>
+                        <li style="margin-bottom:10px;"><a href="commerce-catalog.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='var(--text-secondary)'">Catalog Management</a></li>
+                        <li style="margin-bottom:10px;"><a href="commerce-operations.html" style="color:#fbbf24; text-decoration:none; font-size:14px; font-weight:600;">Marketplace Operations</a></li>
+                        <li style="margin-bottom:10px;"><a href="commerce-growth.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='var(--text-secondary)'">Commerce Growth</a></li>
+                        <li style="margin-bottom:10px;"><a href="commerce-intelligence.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='var(--text-secondary)'">Commerce Intelligence</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #fbbf24; text-transform: uppercase; margin-bottom: 18px;">Navigate</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom:10px;"><a href="index.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">Home</a></li>
+                        <li style="margin-bottom:10px;"><a href="about.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">About</a></li>
+                        <li style="margin-bottom:10px;"><a href="services.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">All Services</a></li>
+                        <li style="margin-bottom:10px;"><a href="portfolio.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">Portfolio</a></li>
+                        <li style="margin-bottom:10px;"><a href="connect.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 20px 5%; border-top: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <p style="font-size: 13px; color: var(--text-secondary);">&copy; 2026 D2C WITH AHRIK. All rights reserved.</p>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="width: 8px; height: 8px; background: #d97706; border-radius: 50%; display: inline-block;"></span>
+                <span style="font-size: 12px; color: var(--text-secondary);">AHrik Commerce &mdash; Service 03</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="3d-animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations Blueprint | AHrik Base | D2C WITH AHRIK</title>
+    <meta name="description" content="Supply chain mapping, SOP documentation, and operational blueprints that let your D2C brand scale without the founder becoming a bottleneck.">
+    <link rel="stylesheet" href="style.css?v=20260727_2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --pillar: #0891b2; --pillar-light: #22d3ee; --pillar-dark: #0e7490; --pillar-rgb: 8,145,178; --pillar-subtle: rgba(8,145,178,0.08); }
+        [data-theme="light"] { --pillar: #0e7490; --pillar-light: #0891b2; --pillar-subtle: rgba(8,145,178,0.12); }
+        .btn-primary { background: linear-gradient(135deg, #0e7490, #0891b2) !important; color: #fff !important; font-weight: 700 !important; text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important; border: 1px solid rgba(8,145,178,0.6) !important; box-shadow: 0 4px 18px rgba(8,145,178,0.4) !important; }
+        .btn-primary:hover { background: linear-gradient(135deg, #0891b2, #22d3ee) !important; box-shadow: 0 8px 28px rgba(8,145,178,0.6) !important; transform: translateY(-3px) scale(1.02) !important; }
+        .btn-secondary { background: rgba(8,145,178,0.08) !important; border: 1px solid rgba(8,145,178,0.3) !important; color: var(--text-primary) !important; }
+        .btn-secondary:hover { background: rgba(8,145,178,0.18) !important; border-color: #22d3ee !important; color: #22d3ee !important; transform: translateY(-3px) !important; }
+        .gradient-text { background: linear-gradient(135deg, #0891b2, #22d3ee) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+        .svc-hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 140px 5% 80px; position: relative; z-index: 2; }
+        .svc-hero .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #22d3ee; margin-bottom: 20px; display: block; }
+        .svc-hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 800; line-height: 1.1; margin-bottom: 24px; max-width: 900px; }
+        .svc-hero .hero-sub { font-size: clamp(15px, 1.8vw, 18px); color: var(--text-secondary); max-width: 680px; margin: 0 auto 40px; line-height: 1.7; }
+        .hero-cta-row { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+        .stat-strip { display: flex; gap: 50px; justify-content: center; flex-wrap: wrap; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color); }
+        .stat-item .num { font-size: 36px; font-weight: 800; color: #22d3ee; line-height: 1; margin-bottom: 6px; }
+        .stat-item .lbl { font-size: 12px; color: var(--text-secondary); }
+        .svc-section { padding: 80px 5%; max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+        .eyebrow-sm { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #22d3ee; margin-bottom: 14px; display: block; }
+        .section-h2 { font-size: clamp(26px, 3.5vw, 42px); font-weight: 800; margin-bottom: 16px; }
+        .section-p { font-size: 17px; color: var(--text-secondary); max-width: 680px; line-height: 1.7; margin-bottom: 48px; }
+        .split { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+        @media (max-width: 900px) { .split { grid-template-columns: 1fr; gap: 40px; } }
+        .feature-tag { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #22d3ee; margin-bottom: 14px; display: block; }
+        .feature-h3 { font-size: clamp(22px, 3vw, 32px); font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+        .feature-p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+        .chip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; background: rgba(8,145,178,0.08); border: 1px solid rgba(8,145,178,0.2); border-radius: 30px; font-size: 13px; font-weight: 500; color: var(--text-primary); }
+        .chip i { color: #22d3ee; font-size: 11px; }
+        .feat-visual { background: var(--section-glass); border: 1px solid rgba(8,145,178,0.15); border-radius: 20px; padding: 40px; backdrop-filter: blur(12px); }
+        .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .metric-box { background: rgba(8,145,178,0.06); border: 1px solid rgba(8,145,178,0.15); border-radius: 14px; padding: 24px; text-align: center; }
+        .metric-box .big { font-size: 32px; font-weight: 800; color: #22d3ee; margin-bottom: 6px; line-height: 1; }
+        .metric-box .sm { font-size: 12px; color: var(--text-secondary); }
+        .deliv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 40px; }
+        .deliv-item { background: var(--section-glass); border: 1px solid var(--border-color); border-left: 3px solid #0891b2; border-radius: 12px; padding: 18px 22px; font-size: 14px; color: var(--text-secondary); line-height: 1.5; transition: all 0.25s ease; display: flex; align-items: flex-start; gap: 12px; }
+        .deliv-item:hover { border-left-color: #22d3ee; color: var(--text-primary); transform: translateX(4px); }
+        .deliv-item i { color: #22d3ee; margin-top: 2px; font-size: 13px; flex-shrink: 0; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; }
+        .step { padding: 30px; text-align: center; border-right: 1px solid var(--border-color); }
+        .step:last-child { border-right: none; }
+        .step-n { width: 48px; height: 48px; background: linear-gradient(135deg, #0e7490, #0891b2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; margin: 0 auto 16px; }
+        .step h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .step p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+        .faq-wrap { max-width: 800px; margin-top: 40px; }
+        .faq-block { margin-bottom: 16px; border: 1px solid var(--border-color); border-radius: 14px; overflow: hidden; background: var(--section-glass); }
+        .faq-q { padding: 20px 26px; font-size: 15px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-q i { color: #22d3ee; transition: transform 0.3s; flex-shrink: 0; }
+        .faq-a { padding: 0 26px 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.7; display: none; }
+        .faq-block.open .faq-q i { transform: rotate(45deg); }
+        .faq-block.open .faq-a { display: block; }
+        .cta-strip { background: linear-gradient(135deg, rgba(8,145,178,0.1), rgba(8,145,178,0.04)); border: 1px solid rgba(8,145,178,0.25); border-radius: 22px; padding: 50px 60px; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
+        .cta-strip h3 { font-size: 26px; font-weight: 800; margin-bottom: 10px; }
+        .cta-strip p { font-size: 15px; color: var(--text-secondary); max-width: 520px; }
+        .cta-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+        .next-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--section-glass); border: 1px solid var(--border-color); border-radius: 10px; font-size: 13px; font-weight: 600; color: var(--text-secondary); text-decoration: none; transition: all 0.2s; backdrop-filter: blur(10px); }
+        .next-link:hover { border-color: #0891b2; color: var(--text-primary); }
+        .next-link i { color: #22d3ee; font-size: 12px; }
+        .next-links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .pillar-footer-extra { padding: 60px 5% 30px; border-top: 1px solid var(--border-color); position: relative; z-index: 2; }
+        .footer-strip { max-width: 1280px; margin: 0 auto 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .footer-strip h4 { font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-bottom: 10px; }
+        .breadcrumb-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(8,145,178,0.08); border: 1px solid rgba(8,145,178,0.2); border-radius: 30px; font-size: 12px; color: #22d3ee; text-decoration: none; margin-bottom: 24px; transition: all 0.2s; }
+        .breadcrumb-link:hover { background: rgba(8,145,178,0.15); }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <nav class="navbar-wrapper">
+        <div class="navbar-left">
+            <div class="logo-dropdown-wrapper">
+                <a href="index.html" class="logo">D2C WITH AHRIK</a>
+                <button class="logo-dropdown-btn" id="logo-dropdown-btn" aria-label="Toggle Menu"><i class="fas fa-chevron-down"></i></button>
+                <div class="deepmind-dropdown-panel" id="deepmind-dropdown-panel">
+                    <span class="dropdown-category-title">SIX CORE PILLARS</span>
+                    <a href="base.html" class="deepmind-dropdown-item deepmind-item-base"><div class="deepmind-item-icon"><i class="fas fa-landmark"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Base</span><span class="deepmind-item-subtitle">Legal &amp; Financial Architecture</span></div></a>
+                    <a href="studio.html" class="deepmind-dropdown-item deepmind-item-studio"><div class="deepmind-item-icon"><i class="fas fa-palette"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Studio</span><span class="deepmind-item-subtitle">AI Visuals &amp; Brand Production</span></div></a>
+                    <a href="build.html" class="deepmind-dropdown-item deepmind-item-build"><div class="deepmind-item-icon"><i class="fas fa-code"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Build</span><span class="deepmind-item-subtitle">Storefronts &amp; 24/7 AI Automation</span></div></a>
+                    <a href="marketing.html" class="deepmind-dropdown-item deepmind-item-marketing"><div class="deepmind-item-icon"><i class="fas fa-chart-line"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Marketing</span><span class="deepmind-item-subtitle">Growth Funnels &amp; Retention</span></div></a>
+                    <a href="commerce.html" class="deepmind-dropdown-item deepmind-item-commerce"><div class="deepmind-item-icon"><i class="fas fa-shopping-bag"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Commerce</span><span class="deepmind-item-subtitle">Managed Marketplace Operations</span></div></a>
+                    <a href="network.html" class="deepmind-dropdown-item deepmind-item-network"><div class="deepmind-item-icon"><i class="fas fa-network-wired"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">AHrik Network</span><span class="deepmind-item-subtitle">Investor Access &amp; Brand Alliances</span></div></a>
+                    <div class="dropdown-divider-line"></div>
+                    <span class="dropdown-category-title">EXPLORE AGENCY</span>
+                    <a href="services.html" class="deepmind-dropdown-item"><div class="deepmind-item-icon"><i class="fas fa-th-large"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">Services Matrix</span><span class="deepmind-item-subtitle">Full capabilities overview</span></div></a>
+                    <a href="portfolio.html" class="deepmind-dropdown-item"><div class="deepmind-item-icon"><i class="fas fa-briefcase"></i></div><div class="deepmind-item-content"><span class="deepmind-item-title">Case Studies &amp; Work</span><span class="deepmind-item-subtitle">Real D2C brand results</span></div></a>
+                </div>
+            </div>
+        </div>
+                <div class="pillars-box">
+            <a href="base.html">Base</a>
+            <a href="studio.html">Studio</a>
+            <a href="build.html">Build</a>
+            <a href="marketing.html">Marketing</a>
+            <a href="commerce.html">Commerce</a>
+            <a href="network.html">Network</a>
+        </div>
+        <div class="navbar-right">
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+            <div class="main-links">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a><a href="connect.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="svc-hero">
+        <div>
+            <a href="base.html" class="breadcrumb-link"><i class="fas fa-arrow-left"></i> AHrik Base</a>
+            <span class="eyebrow">AHrik Base &mdash; Foundation Layer 04</span>
+            <h1 class="animate-up">The Wrong Entity Structure Can Cost You <br><span class="gradient-text">Millions Later.</span></h1>
+            <p class="hero-sub animate-up">Operational chaos kills D2C growth faster than poor marketing. We map your supply chain, document your processes, and build the operational backbone that lets your business scale without you being the bottleneck.</p>
+            <div class="hero-cta-row animate-up">
+                <a href="connect.html" class="btn-primary">Build My Operations &rarr;</a>
+                <a href="base.html" class="btn-secondary"><i class="fas fa-landmark"></i> All Base Services</a>
+            </div>
+            <div class="stat-strip animate-up">
+                <div class="stat-item"><div class="num">80%</div><div class="lbl">Ops Tasks Made Repeatable</div></div>
+                <div class="stat-item"><div class="num">SOP</div><div class="lbl">Every Process Documented</div></div>
+                <div class="stat-item"><div class="num">0</div><div class="lbl">Bottleneck Points Left</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM / SOLUTION -->
+    <section class="svc-section">
+        <div class="split">
+            <div class="feature-text">
+                <span class="feature-tag">The Growth Ceiling</span>
+                <h3 class="feature-h3">Every Month of Unstructured Operations Is a Month of Wasted Capital.</h3>
+                <p class="feature-p">When your team cannot reorder inventory without asking you. When your supplier relationship depends on a WhatsApp chat with no agreement. When your returns process is improvised every time. These are operational liabilities that compound into growth ceilings. We eliminate them all.</p>
+                <div class="chips">
+                    <span class="chip"><i class="fas fa-check"></i> Supply Chain Map</span>
+                    <span class="chip"><i class="fas fa-check"></i> Vendor Agreements</span>
+                    <span class="chip"><i class="fas fa-check"></i> SOP Library</span>
+                    <span class="chip"><i class="fas fa-check"></i> Quality Control Framework</span>
+                </div>
+            </div>
+            <div class="feat-visual">
+                <div class="metric-grid">
+                    <div class="metric-box"><div class="big">80%</div><div class="sm">Manual Ops Reduced</div></div>
+                    <div class="metric-box"><div class="big">SOP</div><div class="sm">Every Process Documented</div></div>
+                    <div class="metric-box"><div class="big">3PL</div><div class="sm">Vetted Fulfillment Partners</div></div>
+                    <div class="metric-box"><div class="big">0</div><div class="sm">Founder Bottlenecks</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DELIVERABLES -->
+    <section class="svc-section" style="padding-top:0;">
+        <span class="eyebrow-sm">What You Get</span>
+        <h2 class="section-h2">Everything Included in <span class="gradient-text">Operations Blueprint</span></h2>
+        <p class="section-p">From supply chain design to SOP documentation, pre-launch audit to quality frameworks — everything your operations team needs to execute consistently without founder intervention.</p>
+        <div class="deliv-grid">
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Supply Chain Mapping & Vendor Sourcing Strategy</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Manufacturer & Supplier Agreement Templates</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> SOP Creation for All Key Operational Functions</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Inventory Management Framework & Reorder Logic</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Pre-Launch Brand Readiness Audit Checklist</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Quality Control Standards & Inspection Protocols</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Returns, Refund & Replacement Policy Setup</div>
+            <div class="deliv-item"><i class="fas fa-arrow-right"></i> Warehouse & 3PL Selection, Onboarding & SLA Agreements</div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="svc-section" style="background: var(--section-glass); border-radius: 24px; backdrop-filter: blur(12px); border: 1px solid var(--border-color);">
+        <span class="eyebrow-sm">How It Works</span>
+        <h2 class="section-h2">Operational Excellence in <span class="gradient-text">4 Structured Phases</span></h2>
+        <div class="steps" style="margin-top: 40px;">
+            <div class="step">
+                <div class="step-n">1</div>
+                <h4>Ops Discovery Session</h4>
+                <p>We audit your current operations — team structure, supplier relationships, fulfillment flow, and pain points — in a 2-hour deep-dive session.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">2</div>
+                <h4>Process Mapping</h4>
+                <p>We map every operational workflow from procurement to delivery to returns, identifying redundancies, bottlenecks, and single points of failure.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">3</div>
+                <h4>SOP Documentation</h4>
+                <p>Our operations team documents every process into a clear, executable SOP library your team can follow without asking the founder for guidance.</p>
+            </div>
+            <div class="step">
+                <div class="step-n">4</div>
+                <h4>Training &amp; Handover</h4>
+                <p>We hand over your complete operations manual, train your team on execution, and set up ongoing operational performance metrics for accountability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="svc-section">
+        <span class="eyebrow-sm">Common Questions</span>
+        <h2 class="section-h2">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <div class="faq-wrap">
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">We are pre-launch. Is it too early for an operations blueprint? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">Pre-launch is the best time. Building operational documentation before you scale means you never rebuild under pressure. Brands that operate on SOPs from Day 1 achieve 60-70% faster scaling velocity in months 6-18, because they never waste time re-solving problems they already solved once.</div>
+            </div>
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can you help us find manufacturers and 3PL partners? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">Yes. Our network includes vetted manufacturers across product categories (food, beauty, apparel, wellness) and 3PL fulfillment partners across India. We structure agreements with proper SLAs, quality standards, and penalty clauses — protecting your operational continuity.</div>
+            </div>
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What happens to my operations blueprint as we scale? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">SOPs are living documents. We build modular, version-controlled operational blueprints designed to be updated as your team and revenue grow. Our ongoing operations advisory ensures your systems scale with your business — not lag behind it.</div>
+            </div>
+            <div class="faq-block">
+                <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do you handle multi-location or multi-warehouse operations? <i class="fas fa-plus"></i></div>
+                <div class="faq-a">We design operations blueprints with multi-location scalability built in from Day 1. This includes warehouse zoning, regional 3PL frameworks, interstate GST implications, and inventory allocation logic — so expanding to a second warehouse or city is an operational increment, not a restart.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="svc-section">
+        <div class="cta-strip">
+            <div>
+                <h3>Build Operations That Scale While You Sleep.</h3>
+                <p>The D2C brands at INR 10 Cr ARR run on systems, not on founders. Let us build yours now — before chaos becomes the norm.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="connect.html" class="btn-primary">Book a Free Strategy Call &rarr;</a>
+                <a href="base.html" class="btn-secondary">Explore Base</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILLAR FOOTER -->
+    <div class="pillar-footer-extra">
+        <div class="footer-strip">
+            <div>
+                <h4>Explore Other AHrik Base Services</h4>
+                <div class="next-links">
+                    <a href="base-ip-legal.html" class="next-link"><i class="fas fa-gavel"></i> IP &amp; Legal</a>
+                    <a href="base-financial-arch.html" class="next-link"><i class="fas fa-chart-bar"></i> Financial Architecture</a>
+                    <a href="base-entity-setup.html" class="next-link"><i class="fas fa-building"></i> Entity Setup</a>
+                </div>
+            </div>
+            <a href="services.html" class="btn-secondary"><i class="fas fa-th-large"></i> All Services</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="position: relative; z-index: 2;">
+        <div style="background: linear-gradient(135deg, rgba(8,145,178,0.1), rgba(8,145,178,0.03)); border-top: 1px solid rgba(8,145,178,0.2); padding: 50px 5% 40px;">
+            <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; align-items: start;">
+                <div>
+                    <a href="base.html" style="font-size: 20px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: #22d3ee; text-decoration: none; margin-bottom: 14px; display: block; -webkit-text-fill-color: initial;">AHRIK BASE</a>
+                    <p style="font-size: 13px; font-weight: 700; color: #22d3ee; margin-bottom: 8px;">Bulletproof Legal &amp; Financial Architecture Before You Scale.</p>
+                    <p style="color: var(--text-secondary); font-size: 13px; line-height: 1.65; margin-bottom: 18px;">AHrik Base handles the non-negotiable groundwork every D2C founder needs &mdash; entity registration, trademark protection, GST compliance, financial structuring, and operational SOPs.</p>
+                    <a href="connect.html" class="btn-primary" style="font-size: 13px; padding: 10px 20px; display: inline-block;">Get Started &rarr;</a>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #22d3ee; text-transform: uppercase; margin-bottom: 18px;">Base Services</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom:10px;"><a href="base-entity-setup.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='var(--text-secondary)'">Business Entity Setup</a></li>
+                        <li style="margin-bottom:10px;"><a href="base-ip-legal.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='var(--text-secondary)'">IP Protection &amp; Legal</a></li>
+                        <li style="margin-bottom:10px;"><a href="base-financial-arch.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;" onmouseover="this.style.color='#22d3ee'" onmouseout="this.style.color='var(--text-secondary)'">Financial Architecture</a></li>
+                        <li style="margin-bottom:10px;"><a href="base-operations-bp.html" style="color:#22d3ee; text-decoration:none; font-size:14px; font-weight:600;">Operations Blueprint</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #22d3ee; text-transform: uppercase; margin-bottom: 18px;">Navigate</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom:10px;"><a href="index.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">Home</a></li>
+                        <li style="margin-bottom:10px;"><a href="about.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">About</a></li>
+                        <li style="margin-bottom:10px;"><a href="services.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">All Services</a></li>
+                        <li style="margin-bottom:10px;"><a href="portfolio.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">Portfolio</a></li>
+                        <li style="margin-bottom:10px;"><a href="connect.html" style="color:var(--text-secondary);text-decoration:none;font-size:14px;">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 20px 5%; border-top: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <p style="font-size: 13px; color: var(--text-secondary);">&copy; 2026 D2C WITH AHRIK. All rights reserved.</p>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="width: 8px; height: 8px; background: #0891b2; border-radius: 50%; display: inline-block;"></span>
+                <span style="font-size: 12px; color: var(--text-secondary);">AHrik Base Pillar 01</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="3d-animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+

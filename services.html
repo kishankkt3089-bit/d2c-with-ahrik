@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | D2C WITH AHRIK &mdash; Your End-to-End Growth Ecosystem</title>
+    <meta name="description" content="From brand identity to AI marketing, digital infrastructure to marketplace domination &mdash; AHrik's 6 specialized pillars work in absolute synergy to build your D2C empire.">
+    <link rel="stylesheet" href="style.css?v=20260727_2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== SERVICES PAGE SPECIFIC STYLES ===== */
+        .services-hero {
+            text-align: center;
+            padding: 160px 5% 80px;
+            position: relative;
+            z-index: 2;
+        }
+        .services-hero .eyebrow {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            margin-bottom: 20px;
+            display: block;
+        }
+        .services-hero h1 {
+            font-size: clamp(40px, 5.5vw, 68px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        .services-hero .subtitle {
+            max-width: 720px;
+            margin: 0 auto 40px;
+            font-size: clamp(16px, 2vw, 20px);
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ===== TAB NAVIGATION ===== */
+        .tabs-wrapper {
+            position: sticky;
+            top: 70px;
+            z-index: 50;
+            background: var(--section-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 5%;
+        }
+        .tabs-nav {
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .tabs-nav::-webkit-scrollbar { display: none; }
+        .tab-btn {
+            flex-shrink: 0;
+            padding: 18px 24px;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: var(--text-secondary);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+        .tab-btn:hover { color: var(--text-primary); }
+        .tab-btn.active {
+            color: var(--text-primary);
+            border-bottom-color: var(--text-gradient-1);
+        }
+        .tab-btn i { font-size: 15px; color: var(--accent-secondary); }
+        .tab-btn.active i { color: var(--text-gradient-1); }
+
+        /* Pillar Specific Permanent Signature Background Glow & Colored Underlines (ALL TABS PERMANENTLY HIGHLIGHTED) */
+        #tab-base { 
+            color: #22d3ee !important; 
+            font-weight: 700 !important; 
+            background: rgba(34, 211, 238, 0.12) !important; 
+            border-bottom: 3px solid #22d3ee !important; 
+        }
+        #tab-base i { color: #22d3ee !important; }
+        #tab-base:hover, #tab-base.active { 
+            background: rgba(34, 211, 238, 0.25) !important; 
+            box-shadow: 0 4px 20px rgba(34, 211, 238, 0.35) !important; 
+        }
+
+        #tab-studio { 
+            color: #a78bfa !important; 
+            font-weight: 700 !important; 
+            background: rgba(167, 139, 250, 0.12) !important; 
+            border-bottom: 3px solid #a78bfa !important; 
+        }
+        #tab-studio i { color: #a78bfa !important; }
+        #tab-studio:hover, #tab-studio.active { 
+            background: rgba(167, 139, 250, 0.25) !important; 
+            box-shadow: 0 4px 20px rgba(167, 139, 250, 0.35) !important; 
+        }
+
+        #tab-build { 
+            color: #fb923c !important; 
+            font-weight: 700 !important; 
+            background: rgba(251, 146, 60, 0.12) !important; 
+            border-bottom: 3px solid #fb923c !important; 
+        }
+        #tab-build i { color: #fb923c !important; }
+        #tab-build:hover, #tab-build.active { 
+            background: rgba(251, 146, 60, 0.25) !important; 
+            box-shadow: 0 4px 20px rgba(251, 146, 60, 0.35) !important; 
+        }
+
+        #tab-marketing { 
+            color: #4ade80 !important; 
+            font-weight: 700 !important; 
+            background: rgba(74, 222, 128, 0.12) !important; 
+            border-bottom: 3px solid #4ade80 !important; 
+        }
+        #tab-marketing i { color: #4ade80 !important; }
+        #tab-marketing:hover, #tab-marketing.active { 
+            background: rgba(74, 222, 128, 0.25) !important; 
+            box-shadow: 0 4px 20px rgba(74, 222, 128, 0.35) !important; 
+        }
+
+        #tab-commerce { 
+            color: #fbbf24 !important; 
+            font-weight: 700 !important; 
+            background: rgba(251, 191, 36, 0.12) !important; 
+            border-bottom: 3px solid #fbbf24 !important; 
+        }
+        #tab-commerce i { color: #fbbf24 !important; }
+        #tab-commerce:hover, #tab-commerce.active { 
+            background: rgba(251, 191, 36, 0.25) !important; 
+            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.35) !important; 
+        }
+
+        #tab-network { 
+            color: #60a5fa !important; 
+            font-weight: 700 !important; 
+            background: rgba(96, 165, 250, 0.12) !important; 
+            border-bottom: 3px solid #60a5fa !important; 
+        }
+        #tab-network i { color: #60a5fa !important; }
+        #tab-network:hover, #tab-network.active { 
+            background: rgba(96, 165, 250, 0.25) !important; 
+            box-shadow: 0 4px 20px rgba(96, 165, 250, 0.35) !important; 
+        }
+
+        /* ===== TAB CONTENT ===== */
+        .tab-content {
+            display: none;
+            padding: 80px 5%;
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .tab-content.active { display: block; }
+
+        /* ===== PILLAR HEADER ===== */
+        .pillar-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        @media (max-width: 900px) {
+            .pillar-header { grid-template-columns: 1fr; gap: 30px; }
+        }
+        .pillar-tag {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            margin-bottom: 14px;
+            display: block;
+        }
+        .pillar-header h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .pillar-header .promise {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        .outcome-list {
+            list-style: none;
+            padding: 0;
+        }
+        .outcome-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .outcome-list li i {
+            color: var(--text-gradient-1);
+            font-size: 14px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        .pillar-stat-box {
+            background: var(--section-glass);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .pillar-stat-box .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .stat-item { text-align: center; }
+        .stat-item .number {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--text-gradient-1), var(--text-gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        .stat-item .label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* ===== SERVICE CARDS GRID ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+        .service-card-premium {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 32px;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+            cursor: pointer !important;
+            position: relative;
+            z-index: 5;
+            overflow: hidden;
+            text-decoration: none !important;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card-premium * {
+            pointer-events: none;
+        }
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .service-card-premium h3 {
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #ffffff !important;
+        }
+        .service-card-premium p {
+            font-size: 14.5px;
+            color: #f1f5f9 !important;
+            line-height: 1.65;
+            margin-bottom: 22px;
+        }
+        .service-card-premium ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+        .service-card-premium ul li {
+            font-size: 13.5px;
+            color: #e2e8f0 !important;
+            margin-bottom: 10px;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.5;
+        }
+        .service-card-premium ul li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: var(--accent-primary);
+        }
+        .card-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: auto;
+            transition: all 0.25s ease;
+        }
+        .card-link-btn i {
+            transition: transform 0.25s ease;
+        }
+        .service-card-premium:hover .card-link-btn i {
+            transform: translateX(4px);
+        }
+
+        /* Base Cards Hover */
+        #content-base .service-card-premium:hover {
+            border-color: rgba(34, 211, 238, 0.6) !important;
+            transform: translateY(-6px) scale(1.015);
+            box-shadow: 0 16px 36px rgba(34, 211, 238, 0.25) !important;
+        }
+        #content-base .card-icon { background: rgba(34, 211, 238, 0.12); color: #22d3ee; }
+        #content-base .card-link-btn { color: #22d3ee; }
+
+        /* Studio Cards Hover */
+        #content-studio .service-card-premium:hover {
+            border-color: rgba(167, 139, 250, 0.6) !important;
+            transform: translateY(-6px) scale(1.015);
+            box-shadow: 0 16px 36px rgba(167, 139, 250, 0.25) !important;
+        }
+        #content-studio .card-icon { background: rgba(167, 139, 250, 0.12); color: #a78bfa; }
+        #content-studio .card-link-btn { color: #a78bfa; }
+
+        /* Build Cards Hover */
+        #content-build .service-card-premium:hover {
+            border-color: rgba(251, 146, 60, 0.6) !important;
+            transform: translateY(-6px) scale(1.015);
+            box-shadow: 0 16px 36px rgba(251, 146, 60, 0.25) !important;
+        }
+        #content-build .card-icon { background: rgba(251, 146, 60, 0.12); color: #fb923c; }
+        #content-build .card-link-btn { color: #fb923c; }
+
+        /* Marketing Cards Hover */
+        #content-marketing .service-card-premium:hover {
+            border-color: rgba(74, 222, 128, 0.6) !important;
+            transform: translateY(-6px) scale(1.015);
+            box-shadow: 0 16px 36px rgba(74, 222, 128, 0.25) !important;
+        }
+        #content-marketing .card-icon { background: rgba(74, 222, 128, 0.12); color: #4ade80; }
+        #content-marketing .card-link-btn { color: #4ade80; }
+
+        /* Commerce Cards Hover */
+        #content-commerce .service-card-premium:hover {
+            border-color: rgba(251, 191, 36, 0.6) !important;
+            transform: translateY(-6px) scale(1.015);
+            box-shadow: 0 16px 36px rgba(251, 191, 36, 0.25) !important;
+        }
+        #content-commerce .card-icon { background: rgba(251, 191, 36, 0.12); color: #fbbf24; }
+        #content-commerce .card-link-btn { color: #fbbf24; }
+
+        /* Network Cards Hover */
+        #content-network .service-card-premium:hover {
+            border-color: rgba(96, 165, 250, 0.6) !important;
+            transform: translateY(-6px) scale(1.015);
+            box-shadow: 0 16px 36px rgba(96, 165, 250, 0.25) !important;
+        }
+        #content-network .card-icon { background: rgba(96, 165, 250, 0.12); color: #60a5fa; }
+        #content-network .card-link-btn { color: #60a5fa; }
+
+        /* ===== PILLAR CTA STRIP ===== */
+        .pillar-cta-strip {
+            background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(192,132,252,0.08));
+            border: 1px solid rgba(192, 132, 252, 0.2);
+            border-radius: 20px;
+            padding: 40px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .pillar-cta-strip h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .pillar-cta-strip p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 500px;
+        }
+        .pillar-cta-strip .cta-actions {
+            display: flex;
+            gap: 16px;
+            flex-shrink: 0;
+            flex-wrap: wrap;
+        }
+
+        /* ===== WHY AHRIK SECTION ===== */
+        .why-section {
+            padding: 80px 5%;
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .why-section h2 {
+            text-align: center;
+            font-size: clamp(28px, 3.5vw, 42px);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        .why-section .sub {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            margin-bottom: 60px;
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .why-card {
+            background: var(--section-glass);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        .why-card .icon-wrap {
+            font-size: 32px;
+            color: var(--text-gradient-1);
+            margin-bottom: 16px;
+        }
+        .why-card h4 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .why-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ===== MASTER CTA ===== */
+        .master-cta {
+            text-align: center;
+            padding: 100px 5%;
+            position: relative;
+            z-index: 2;
+        }
+        .master-cta .eyebrow {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            margin-bottom: 16px;
+        }
+        .master-cta h2 {
+            font-size: clamp(32px, 4.5vw, 54px);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        .master-cta p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+        .master-cta-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar-wrapper">
+                <div class="navbar-left">
+            <div class="logo-dropdown-wrapper">
+                <a href="index.html" class="logo">D2C WITH AHRIK</a>
+                <button class="logo-dropdown-btn" id="logo-dropdown-btn" aria-label="Toggle Ecosystem Menu">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="deepmind-dropdown-panel" id="deepmind-dropdown-panel">
+                    <span class="dropdown-category-title">SIX CORE PILLARS</span>
+                    <a href="base.html" class="deepmind-dropdown-item deepmind-item-base">
+                        <div class="deepmind-item-icon"><i class="fas fa-landmark"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Base</span>
+                            <span class="deepmind-item-subtitle">Legal &amp; Financial Architecture</span>
+                        </div>
+                    </a>
+                    <a href="studio.html" class="deepmind-dropdown-item deepmind-item-studio">
+                        <div class="deepmind-item-icon"><i class="fas fa-palette"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Studio</span>
+                            <span class="deepmind-item-subtitle">AI Visuals &amp; Brand Production</span>
+                        </div>
+                    </a>
+                    <a href="build.html" class="deepmind-dropdown-item deepmind-item-build">
+                        <div class="deepmind-item-icon"><i class="fas fa-code"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Build</span>
+                            <span class="deepmind-item-subtitle">Storefronts &amp; 24/7 AI Automation</span>
+                        </div>
+                    </a>
+                    <a href="marketing.html" class="deepmind-dropdown-item deepmind-item-marketing">
+                        <div class="deepmind-item-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Marketing</span>
+                            <span class="deepmind-item-subtitle">Growth Funnels &amp; Retention</span>
+                        </div>
+                    </a>
+                    <a href="commerce.html" class="deepmind-dropdown-item deepmind-item-commerce">
+                        <div class="deepmind-item-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Commerce</span>
+                            <span class="deepmind-item-subtitle">Managed Marketplace Operations</span>
+                        </div>
+                    </a>
+                    <a href="network.html" class="deepmind-dropdown-item deepmind-item-network">
+                        <div class="deepmind-item-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Network</span>
+                            <span class="deepmind-item-subtitle">Investor Access &amp; Brand Alliances</span>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider-line"></div>
+                    <span class="dropdown-category-title">EXPLORE AGENCY</span>
+                    <a href="services.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-th-large"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Services Matrix</span>
+                            <span class="deepmind-item-subtitle">Full capabilities overview</span>
+                        </div>
+                    </a>
+                    <a href="portfolio.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Case Studies &amp; Work</span>
+                            <span class="deepmind-item-subtitle">Real D2C brand results</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>        <div class="pillars-box">
+            <a href="base.html">Base</a>
+            <a href="studio.html">Studio</a>
+            <a href="build.html">Build</a>
+            <a href="marketing.html">Marketing</a>
+            <a href="commerce.html">Commerce</a>
+            <a href="network.html">Network</a>
+        </div>
+        <div class="navbar-right">
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+            <div class="main-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="connect.html">Contact Us</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="services-hero">
+        <span class="eyebrow">Full-Spectrum D2C Architecture</span>
+        <h1 class="animate-up">Everything Your Brand Needs<br><span class="gradient-text">Under One Roof</span></h1>
+        <p class="subtitle animate-up delay-1">Most agencies do one thing. We do everything — and we do it in absolute sync. Six specialized pillars, one unified growth engine built to take your D2C brand from concept to commerce domination.</p>
+        <div class="animate-up delay-2">
+            <a href="connect.html" class="btn-primary"><i class="fas fa-paper-plane" style="margin-right: 8px; color: #ffffff;"></i> Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- TAB NAVIGATION -->
+    <div class="tabs-wrapper">
+        <nav class="tabs-nav" role="tablist" aria-label="Service Pillars">
+            <button class="tab-btn active" onclick="switchTab('base', this)" id="tab-base" aria-selected="true" role="tab">
+                <i class="fas fa-landmark"></i> AHrik Base
+            </button>
+            <button class="tab-btn" onclick="switchTab('studio', this)" id="tab-studio" aria-selected="false" role="tab">
+                <i class="fas fa-palette"></i> AHrik Studio
+            </button>
+            <button class="tab-btn" onclick="switchTab('build', this)" id="tab-build" aria-selected="false" role="tab">
+                <i class="fas fa-code"></i> AHrik Build
+            </button>
+            <button class="tab-btn" onclick="switchTab('marketing', this)" id="tab-marketing" aria-selected="false" role="tab">
+                <i class="fas fa-chart-line"></i> AHrik Marketing
+            </button>
+            <button class="tab-btn" onclick="switchTab('commerce', this)" id="tab-commerce" aria-selected="false" role="tab">
+                <i class="fas fa-shopping-bag"></i> AHrik Commerce
+            </button>
+            <button class="tab-btn" onclick="switchTab('network', this)" id="tab-network" aria-selected="false" role="tab">
+                <i class="fas fa-network-wired"></i> AHrik Network
+            </button>
+        </nav>
+    </div>
+
+    <!-- ======================== TAB: BASE ======================== -->
+    <div id="content-base" class="tab-content active">
+        <div class="pillar-header">
+            <div>
+                <span class="pillar-tag">Pillar 01 &mdash; Foundation</span>
+                <h2>Your Brand's<br><span class="gradient-text">Legal & Structural</span> Foundation</h2>
+                <p class="promise">Before you can scale, you need to stand on solid ground. AHrik Base gives your D2C business the legal backbone, financial infrastructure, and operational architecture that serious brands are built on &mdash; so you never have to pause growth to fix the fundamentals.</p>
+                <ul class="outcome-list">
+                    <li><i class="fas fa-check-circle"></i> Launch legally protected with the right business entity from day one</li>
+                    <li><i class="fas fa-check-circle"></i> Never lose sleep over compliance, trademark filings, or tax structures</li>
+                    <li><i class="fas fa-check-circle"></i> Walk into investor conversations with clean financials and airtight contracts</li>
+                    <li><i class="fas fa-check-circle"></i> Focus on building &mdash; we handle the infrastructure that keeps you in business</li>
+                </ul>
+                <div style="margin-top: 30px;">
+                    <a href="connect.html" class="btn-primary">Get Started with Base</a>
+                </div>
+            </div>
+            <div class="pillar-stat-box">
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="number">7</div>
+                        <div class="label">Days to Legal Entity Setup</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">100%</div>
+                        <div class="label">Compliance Managed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">0</div>
+                        <div class="label">Legal Blind Spots</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">1</div>
+                        <div class="label">Unified Partner for All Setup</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <a href="base-entity-setup.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-building"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #22d3ee; margin-bottom: 6px; display: block;">Foundation Layer 01</span>
+                <h3>Business Entity Setup</h3>
+                <p>The right structure changes everything — your taxes, your liability, your investor appeal. We set you up correctly from the start.</p>
+                <ul>
+                    <li>Private Limited / LLP / Sole Proprietorship Registration</li>
+                    <li>GST Registration &amp; Compliance Setup</li>
+                    <li>PAN, TAN &amp; Bank Account Configuration</li>
+                    <li>Startup India &amp; MSME Registration</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="base-ip-legal.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-gavel"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #22d3ee; margin-bottom: 6px; display: block;">Foundation Layer 02</span>
+                <h3>IP Protection &amp; Legal</h3>
+                <p>Your brand is an asset. Trademark it, protect it, and ensure every contract you sign serves your interests.</p>
+                <ul>
+                    <li>Trademark Filing &amp; Brand Protection</li>
+                    <li>Vendor &amp; Supplier Agreements</li>
+                    <li>Founder Agreements &amp; ESOP Structures</li>
+                    <li>NDA &amp; Confidentiality Frameworks</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="base-financial-arch.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #22d3ee; margin-bottom: 6px; display: block;">Foundation Layer 03</span>
+                <h3>Financial Architecture</h3>
+                <p>From bookkeeping to fundraise-ready financials — we build the financial systems that scale with your ambitions.</p>
+                <ul>
+                    <li>Accounting System Setup &amp; Bookkeeping</li>
+                    <li>Unit Economics &amp; P&amp;L Modelling</li>
+                    <li>Investor-Ready Financial Decks</li>
+                    <li>Payroll, TDS &amp; Statutory Compliance</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="base-operations-bp.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-sitemap"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #22d3ee; margin-bottom: 6px; display: block;">Foundation Layer 04</span>
+                <h3>Operations Blueprint</h3>
+                <p>A brand without operational clarity burns capital. We map your supply chain, processes, and SOP architecture before you go live.</p>
+                <ul>
+                    <li>Supply Chain Mapping &amp; Vendor Sourcing</li>
+                    <li>SOP Creation &amp; Process Documentation</li>
+                    <li>Inventory Management Framework</li>
+                    <li>Pre-Launch Readiness Audit</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+
+        <div class="pillar-cta-strip">
+            <div>
+                <h3>Ready to Build on Solid Ground?</h3>
+                <p>Most founders skip the foundation. The ones who don't are the ones who scale without breaking. Let's start yours right.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="base.html" class="btn-secondary">Explore Base</a>
+                <a href="connect.html" class="btn-primary">Get a Discovery Call</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== TAB: STUDIO ======================== -->
+    <div id="content-studio" class="tab-content">
+        <div class="pillar-header">
+            <div>
+                <span class="pillar-tag">Pillar 02 &mdash; Creative</span>
+                <h2>A Brand Is More Than a Logo.<br><span class="gradient-text">It's a Visual Empire.</span></h2>
+                <p class="promise">AHrik Studio is your AI-powered creative production house &mdash; where brand identity, visual storytelling, and digital experience design converge. We don't just make things look good. We make your brand impossible to ignore.</p>
+                <ul class="outcome-list">
+                    <li><i class="fas fa-check-circle"></i> A brand identity so cohesive, your customers recognize you before they read your name</li>
+                    <li><i class="fas fa-check-circle"></i> Product visuals that sell &mdash; not just showcase</li>
+                    <li><i class="fas fa-check-circle"></i> Motion content built for thumb-stopping performance on every platform</li>
+                    <li><i class="fas fa-check-circle"></i> AI-powered creative assets at a fraction of traditional studio costs</li>
+                </ul>
+                <div style="margin-top: 30px;">
+                    <a href="connect.html" class="btn-primary">Elevate Your Brand Visuals</a>
+                </div>
+            </div>
+            <div class="pillar-stat-box">
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="number">6x</div>
+                        <div class="label">Faster Creative Output with AI</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">100+</div>
+                        <div class="label">Creative Assets Per Sprint</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">360&deg;</div>
+                        <div class="label">Brand Identity Coverage</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">AI</div>
+                        <div class="label">Enhanced Every Deliverable</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <a href="studio-brand-identity.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-fingerprint"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #a78bfa; margin-bottom: 6px; display: block;">Creative Layer 01</span>
+                <h3>Brand Identity</h3>
+                <p>Your visual identity is your first impression, your silent salesperson, and your competitive moat — all in one.</p>
+                <ul>
+                    <li>Logo Design &amp; Full Brand Guidelines</li>
+                    <li>Packaging Design &amp; Label Development</li>
+                    <li>Brand Asset Library (Typography, Colors, Icons)</li>
+                    <li>Brand Audit &amp; Visual Refresh</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="studio-brand-comm.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #a78bfa; margin-bottom: 6px; display: block;">Creative Layer 02</span>
+                <h3>Brand Communication</h3>
+                <p>Every touchpoint is a conversion opportunity. We design creatives that stop the scroll and start the sale.</p>
+                <ul>
+                    <li>Social Media Creative Systems</li>
+                    <li>Performance Ad Creatives (Meta, Google)</li>
+                    <li>Print Design, Catalogues &amp; Pitch Decks</li>
+                    <li>Packaging Insert &amp; Offline Collateral</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="studio-product-visuals.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-camera"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #a78bfa; margin-bottom: 6px; display: block;">Creative Layer 03</span>
+                <h3>Product Visuals</h3>
+                <p>A product that looks premium, sells premium. We deliver studio-quality visuals — even without a physical shoot.</p>
+                <ul>
+                    <li>Product Photography &amp; Lifestyle Shoots</li>
+                    <li>AI Photoshoots &amp; 3D Product Rendering</li>
+                    <li>Fashion &amp; Model Photography</li>
+                    <li>E-commerce Optimized Image Sets</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="studio-visual-storytelling.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-film"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #a78bfa; margin-bottom: 6px; display: block;">Creative Layer 04</span>
+                <h3>Visual Storytelling</h3>
+                <p>Video is the highest-converting content format. We produce brand films to Reels — all optimized for performance.</p>
+                <ul>
+                    <li>Brand Films &amp; Long-form Videos</li>
+                    <li>Instagram Reels, Shorts &amp; TikToks</li>
+                    <li>Motion Graphics &amp; Explainer Videos</li>
+                    <li>AI Video, AI UGC &amp; AI Avatars</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="studio-ux-design.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-desktop"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #a78bfa; margin-bottom: 6px; display: block;">Creative Layer 05</span>
+                <h3>Experience Design</h3>
+                <p>Design-led experiences convert visitors into customers. We craft every digital touchpoint with conversion intent.</p>
+                <ul>
+                    <li>Website UI &amp; Landing Page Design</li>
+                    <li>App UI &amp; Dashboard Design</li>
+                    <li>High-Fidelity Prototyping</li>
+                    <li>AI Campaign Visuals &amp; Rendering</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+
+        <div class="pillar-cta-strip">
+            <div>
+                <h3>Your Brand Deserves to Be Seen.</h3>
+                <p>Great creative isn't an expense &mdash; it's the highest-return investment in your brand's growth stack.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="studio.html" class="btn-secondary">Explore Studio</a>
+                <a href="connect.html" class="btn-primary">Brief Our Creative Team</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== TAB: BUILD ======================== -->
+    <div id="content-build" class="tab-content">
+        <div class="pillar-header">
+            <div>
+                <span class="pillar-tag">Pillar 03 &mdash; Digital Infrastructure</span>
+                <h2>Your Digital Systems<br><span class="gradient-text">Should Work Harder</span> Than You Do.</h2>
+                <p class="promise">AHrik Build engineers the digital backbone your D2C brand needs to operate at scale. From high-converting storefronts to AI automation that eliminates 80% of manual workflows &mdash; we build systems that compound in value over time.</p>
+                <ul class="outcome-list">
+                    <li><i class="fas fa-check-circle"></i> A storefront designed to convert, not just display</li>
+                    <li><i class="fas fa-check-circle"></i> Automation pipelines that do the work while you sleep</li>
+                    <li><i class="fas fa-check-circle"></i> Integrations that unify your entire tech stack under one dashboard</li>
+                    <li><i class="fas fa-check-circle"></i> Scalable architecture that grows without breaking as you scale</li>
+                </ul>
+                <div style="margin-top: 30px;">
+                    <a href="connect.html" class="btn-primary">Build Your Digital Infrastructure</a>
+                </div>
+            </div>
+            <div class="pillar-stat-box">
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="number">80%</div>
+                        <div class="label">Manual Work Automated with AI</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">3x</div>
+                        <div class="label">Faster Time-to-Market</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">24/7</div>
+                        <div class="label">Systems That Never Sleep</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">API</div>
+                        <div class="label">Connected Across Your Stack</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <a href="build-storefront.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-globe"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fb923c; margin-bottom: 6px; display: block;">Digital Layer 01</span>
+                <h3>Web Experiences</h3>
+                <p>Your website is your most scalable salesperson. We build high-performance digital storefronts that convert at every touchpoint.</p>
+                <ul>
+                    <li>D2C Brand Websites &amp; Storefronts</li>
+                    <li>High-Converting Landing Pages</li>
+                    <li>CRO-Focused UX Architecture</li>
+                    <li>Performance &amp; Core Web Vitals Optimization</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="build-automation.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-robot"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fb923c; margin-bottom: 6px; display: block;">Digital Layer 02</span>
+                <h3>AI &amp; Automation</h3>
+                <p>Eliminate repetitive workflows. Install intelligent systems. Scale without proportionally scaling your team.</p>
+                <ul>
+                    <li>Marketing Automation Workflows</li>
+                    <li>AI Chatbots &amp; Customer Support Bots</li>
+                    <li>CRM Automation &amp; Lead Nurturing</li>
+                    <li>Inventory &amp; Order Management Automation</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="build-apps.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fb923c; margin-bottom: 6px; display: block;">Digital Layer 03</span>
+                <h3>Business Applications</h3>
+                <p>Off-the-shelf software boxes you in. We build custom tools built around how your business actually operates.</p>
+                <ul>
+                    <li>Custom Admin Panels &amp; Dashboards</li>
+                    <li>Mobile Apps (iOS &amp; Android)</li>
+                    <li>Internal Operations Tools</li>
+                    <li>Customer Loyalty &amp; Rewards Platforms</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="build-integrations.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-plug"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fb923c; margin-bottom: 6px; display: block;">Digital Layer 04</span>
+                <h3>Integrations &amp; Infrastructure</h3>
+                <p>Your tools shouldn't work in silos. We unify your entire ecosystem into one seamlessly connected stack.</p>
+                <ul>
+                    <li>ERP, CRM &amp; WMS Integrations</li>
+                    <li>Payment Gateway &amp; Logistics API Setup</li>
+                    <li>Marketplace API Integrations</li>
+                    <li>Data Pipelines &amp; Analytics Infrastructure</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+
+        <div class="pillar-cta-strip">
+            <div>
+                <h3>Stop Managing. Start Scaling.</h3>
+                <p>The brands winning in D2C aren't working harder &mdash; they've built smarter systems. Let's build yours.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="build.html" class="btn-secondary">Explore Build</a>
+                <a href="connect.html" class="btn-primary">Architect My Tech Stack</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== TAB: MARKETING ======================== -->
+    <div id="content-marketing" class="tab-content">
+        <div class="pillar-header">
+            <div>
+                <span class="pillar-tag">Pillar 04 &mdash; Growth</span>
+                <h2>AI-Powered Growth That<br><span class="gradient-text">Compounds Every Month.</span></h2>
+                <p class="promise">AHrik Marketing isn't a vendor &mdash; it's your full-time AI-powered growth partner. We engineer customer acquisition systems, retention loops, and revenue optimization frameworks that make growth a function of the system, not a streak of luck.</p>
+                <ul class="outcome-list">
+                    <li><i class="fas fa-check-circle"></i> Stop guessing which channels work. We install data-driven growth systems</li>
+                    <li><i class="fas fa-check-circle"></i> CAC drops as your marketing intelligence compounds over time</li>
+                    <li><i class="fas fa-check-circle"></i> Retention that makes every rupee of acquisition spend go further</li>
+                    <li><i class="fas fa-check-circle"></i> AI systems that optimize your campaigns around the clock &mdash; not just office hours</li>
+                </ul>
+                <div style="margin-top: 30px;">
+                    <a href="connect.html" class="btn-primary">Activate AI Growth Mode</a>
+                </div>
+            </div>
+            <div class="pillar-stat-box">
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="number">AI</div>
+                        <div class="label">Optimized Campaigns 24/7</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">8</div>
+                        <div class="label">Growth Verticals Covered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">LTV</div>
+                        <div class="label">Focused Retention Systems</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">Full</div>
+                        <div class="label">Funnel Ownership</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <a href="marketing-seo.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-chess"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #4ade80; margin-bottom: 6px; display: block;">Growth Layer 01</span>
+                <h3>Growth Strategy &amp; Organic Search</h3>
+                <p>Before we spend a rupee on ads, we build the GTM playbook that defines exactly who you're chasing, how you'll win, and how you'll stay ahead.</p>
+                <ul>
+                    <li>Go-to-Market (GTM) Strategy Design</li>
+                    <li>Competitor Analysis &amp; Market Positioning</li>
+                    <li>Target Persona Development</li>
+                    <li>Channel Mix Strategy &amp; Prioritization</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="marketing-performance.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-funnel-dollar"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #4ade80; margin-bottom: 6px; display: block;">Growth Layer 02</span>
+                <h3>Customer Acquisition</h3>
+                <p>We don't run ads. We engineer precision acquisition systems — built to find your buyer at the lowest possible cost and convert them on first contact.</p>
+                <ul>
+                    <li>Meta &amp; Google Performance Advertising</li>
+                    <li>Influencer &amp; Creator Campaign Management</li>
+                    <li>SEO &amp; Content-Led Organic Growth</li>
+                    <li>Landing Page CRO for Maximum Conversion</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="marketing-retention.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-redo-alt"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #4ade80; margin-bottom: 6px; display: block;">Growth Layer 03</span>
+                <h3>Customer Retention</h3>
+                <p>The biggest mistake D2C brands make: optimizing for first purchases. LTV is where real profitability lives — we build systems that bring customers back, automatically.</p>
+                <ul>
+                    <li>Email &amp; WhatsApp Retention Flows</li>
+                    <li>Loyalty Program Architecture</li>
+                    <li>Win-Back &amp; Re-engagement Campaigns</li>
+                    <li>Post-Purchase Experience Optimization</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="marketing-influencer.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-brain"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #4ade80; margin-bottom: 6px; display: block;">Growth Layer 04</span>
+                <h3>AI Marketing Intelligence</h3>
+                <p>We instrument your entire marketing stack with AI — from predictive analytics to automated creative testing — so your campaigns keep getting smarter.</p>
+                <ul>
+                    <li>AI-Powered Ad Creative Testing</li>
+                    <li>Predictive Customer Behaviour Modelling</li>
+                    <li>Attribution Modelling &amp; ROI Reporting</li>
+                    <li>Marketing Automation &amp; AI Workflows</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="marketing-cro.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-percentage"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #4ade80; margin-bottom: 6px; display: block;">Growth Layer 05</span>
+                <h3>Conversion Rate Optimization</h3>
+                <p>The best way to scale marketing ROI is to convert more of what you're already getting. We systematically optimize every step of your funnel.</p>
+                <ul>
+                    <li>Full-Funnel Conversion Audit</li>
+                    <li>Landing Page &amp; Homepage CRO</li>
+                    <li>Cart &amp; Checkout Abandonment Recovery</li>
+                    <li>Product Page Optimization</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+
+        <div class="pillar-cta-strip">
+            <div>
+                <h3>Growth Is a System. Not a Gamble.</h3>
+                <p>The D2C brands compounding their revenue month over month aren't luckier &mdash; they've installed the right growth architecture.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="marketing.html" class="btn-secondary">Explore Marketing</a>
+                <a href="connect.html" class="btn-primary">Build My Growth System</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== TAB: COMMERCE ======================== -->
+    <div id="content-commerce" class="tab-content">
+        <div class="pillar-header">
+            <div>
+                <span class="pillar-tag">Pillar 05 &mdash; Commerce Operations</span>
+                <h2>We Manage Your Marketplace.<br><span class="gradient-text">You Focus on Your Product.</span></h2>
+                <p class="promise">AHrik Commerce is your fully-managed marketplace growth partner. You handle what only you can &mdash; manufacturing, warehouse, dispatch. We take over everything else: listings, ads, operations, customer support, and analytics. No chaos. Just compounding revenue.</p>
+                <ul class="outcome-list">
+                    <li><i class="fas fa-check-circle"></i> Your products, live across major marketplaces within days &mdash; not months</li>
+                    <li><i class="fas fa-check-circle"></i> Listings that rank, not just exist. SEO-led catalog management that drives organic orders</li>
+                    <li><i class="fas fa-check-circle"></i> Marketplace ads managed with the precision of performance marketers</li>
+                    <li><i class="fas fa-check-circle"></i> Real-time dashboards so you always know exactly where your revenue is coming from</li>
+                </ul>
+                <div style="margin-top: 30px;">
+                    <a href="connect.html" class="btn-primary">Let AHrik Run Your Commerce</a>
+                </div>
+            </div>
+            <div class="pillar-stat-box">
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="number">7</div>
+                        <div class="label">Days to Marketplace Launch</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">24/7</div>
+                        <div class="label">Customer Support Managed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">100%</div>
+                        <div class="label">Marketplace Operations Owned</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">0</div>
+                        <div class="label">Operational Load on You</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <a href="commerce-launch.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-store"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 6px; display: block;">Commerce Layer 01</span>
+                <h3>Commerce Launch</h3>
+                <p>Getting onboarded to a marketplace correctly the first time saves months of painful corrections. We do it right — from day one.</p>
+                <ul>
+                    <li>Marketplace Onboarding (Amazon, Flipkart, Meesho, etc.)</li>
+                    <li>Seller Central Setup &amp; Verification</li>
+                    <li>Store Configuration &amp; Brand Registry</li>
+                    <li>Initial Catalog Upload &amp; Quality Check</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="commerce-catalog.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-tags"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 6px; display: block;">Commerce Layer 02</span>
+                <h3>Catalog Management</h3>
+                <p>A great product with a mediocre listing loses to a mediocre product with a great listing. We build listings that rank and convert.</p>
+                <ul>
+                    <li>SEO-Optimized Product Listings</li>
+                    <li>A+ Content / Enhanced Brand Content</li>
+                    <li>Ongoing Catalog Updates &amp; Variations</li>
+                    <li>Keyword Research &amp; Search Ranking Strategy</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="commerce-operations.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-headset"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 6px; display: block;">Commerce Layer 03</span>
+                <h3>Marketplace Operations</h3>
+                <p>The day-to-day of marketplace selling is complex, repetitive, and critical. We own all of it so you don't have to.</p>
+                <ul>
+                    <li>Seller Account Health Management</li>
+                    <li>24/7 Customer Support &amp; Query Resolution</li>
+                    <li>Return Handling &amp; Refund Processing</li>
+                    <li>Price Management &amp; Competitive Monitoring</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="commerce-growth.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 6px; display: block;">Commerce Layer 04</span>
+                <h3>Commerce Growth</h3>
+                <p>Presence on a marketplace isn't enough. We activate every growth lever available — advertising, ranking, promotions — to build market share.</p>
+                <ul>
+                    <li>Sponsored Ads &amp; Marketplace PPC Management</li>
+                    <li>Deal of the Day, Lightning Deals &amp; Promotions</li>
+                    <li>Organic Ranking Acceleration</li>
+                    <li>Revenue Analytics &amp; KPI Dashboards</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="commerce-intelligence.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 6px; display: block;">Commerce Layer 05</span>
+                <h3>Commerce Intelligence</h3>
+                <p>You can't optimize what you don't measure. We deliver complete visibility into every revenue metric that matters to your brand.</p>
+                <ul>
+                    <li>Real-Time Revenue &amp; Order Dashboards</li>
+                    <li>KPI Monitoring &amp; Performance Reviews</li>
+                    <li>Competitor Benchmarking &amp; Market Share Analysis</li>
+                    <li>SKU-Level Profitability Reporting</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+
+        <div class="pillar-cta-strip">
+            <div>
+                <h3>Your Products. Our Marketplace Expertise.</h3>
+                <p>The best founders we work with focus 100% on their product. We handle 100% of their marketplace growth. That's the partnership.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="commerce.html" class="btn-secondary">Explore Commerce</a>
+                <a href="connect.html" class="btn-primary">Activate Managed Commerce</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== TAB: NETWORK ======================== -->
+    <div id="content-network" class="tab-content">
+        <div class="pillar-header">
+            <div>
+                <span class="pillar-tag">Pillar 06 &mdash; Capital & Connections</span>
+                <h2>Scale Beyond Revenue.<br><span class="gradient-text">Access Capital & Ecosystems</span> That Accelerate Growth.</h2>
+                <p class="promise">AHrik Network is where D2C brands access what money alone can't buy: the right investors, the right distribution partnerships, the right people in the room. When you've built the machine, we help you fuel it &mdash; with capital, connections, and strategic alliances that create unfair competitive advantages.</p>
+                <ul class="outcome-list">
+                    <li><i class="fas fa-check-circle"></i> Walk into investor meetings with a pitch that tells your story compellingly</li>
+                    <li><i class="fas fa-check-circle"></i> Access curated distribution channels and retail networks beyond online</li>
+                    <li><i class="fas fa-check-circle"></i> Strategic brand partnerships that multiply your reach without multiplying your spend</li>
+                    <li><i class="fas fa-check-circle"></i> An ecosystem designed to make your brand unforgettable at every level</li>
+                </ul>
+                <div style="margin-top: 30px;">
+                    <a href="connect.html" class="btn-primary">Tap Into the Network</a>
+                </div>
+            </div>
+            <div class="pillar-stat-box">
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="number">VC</div>
+                        <div class="label">Investor Network Access</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">Multi</div>
+                        <div class="label">Channel Distribution</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">360&deg;</div>
+                        <div class="label">Brand Partnership Support</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="number">Series A</div>
+                        <div class="label">Fundraise Readiness</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <a href="network-investor.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #60a5fa; margin-bottom: 6px; display: block;">Network Layer 01</span>
+                <h3>Fundraise Readiness</h3>
+                <p>Capital follows compelling stories backed by clean data. We prepare your brand for investor conversations at every stage.</p>
+                <ul>
+                    <li>Investor Pitch Deck Development</li>
+                    <li>Financial Model &amp; Unit Economics Narrative</li>
+                    <li>Due Diligence Documentation</li>
+                    <li>Angel, Seed &amp; Series A Strategy</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="network-retail.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #60a5fa; margin-bottom: 6px; display: block;">Network Layer 02</span>
+                <h3>Distribution Partnerships</h3>
+                <p>The fastest-growing D2C brands don't rely on just one channel. We open doors to multi-channel distribution that diversifies your revenue.</p>
+                <ul>
+                    <li>Modern Trade &amp; Retail Network Access</li>
+                    <li>Quick Commerce &amp; Hyperlocal Expansion</li>
+                    <li>Export &amp; Cross-Border Distribution</li>
+                    <li>Wholesale &amp; B2B Channel Development</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="network-alliances.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-handshake"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #60a5fa; margin-bottom: 6px; display: block;">Network Layer 03</span>
+                <h3>Strategic Brand Alliances</h3>
+                <p>The right partnership can do in 30 days what advertising takes 12 months to achieve. We architect brand collaborations that create real market impact.</p>
+                <ul>
+                    <li>Co-Branding &amp; Collaboration Strategy</li>
+                    <li>Influencer &amp; Celebrity Brand Partnerships</li>
+                    <li>Cross-Brand Bundle &amp; Bundle Deals</li>
+                    <li>Corporate Gifting &amp; B2B Alliance Programs</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+            <a href="network-pr.html" class="service-card-premium">
+                <div class="card-icon"><i class="fas fa-star"></i></div>
+                <span style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #60a5fa; margin-bottom: 6px; display: block;">Network Layer 04</span>
+                <h3>Community &amp; PR</h3>
+                <p>Brands that are talked about grow without proportional ad spend. We build your brand's earned media presence and community flywheel.</p>
+                <ul>
+                    <li>PR Strategy &amp; Media Outreach</li>
+                    <li>Community Building (Discord, Telegram, WhatsApp)</li>
+                    <li>Awards, Certifications &amp; Brand Credibility</li>
+                    <li>Founder Personal Brand Development</li>
+                </ul>
+                <div class="card-link-btn">Learn More <i class="fas fa-arrow-right"></i></div>
+            </a>
+        </div>
+
+        <div class="pillar-cta-strip">
+            <div>
+                <h3>The Next Phase of Your Brand Starts Here.</h3>
+                <p>When your product is ready and your systems are built &mdash; the network is what separates a great brand from a generational one.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="network.html" class="btn-secondary">Explore Network</a>
+                <a href="connect.html" class="btn-primary">Access the Network</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHY AHRIK -->
+    <section class="why-section">
+        <h2>Why Founders Choose <span class="gradient-text">AHrik</span></h2>
+        <p class="sub">We aren't a vendor. We're the growth partner that other agencies aren't equipped to be.</p>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="icon-wrap"><i class="fas fa-sync-alt"></i></div>
+                <h4>All 6 Pillars Work in Sync</h4>
+                <p>When Studio, Build, and Marketing all operate under one roof, your brand moves faster with zero message gaps or agency miscommunication.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap"><i class="fas fa-microchip"></i></div>
+                <h4>AI-Powered Across Every Pillar</h4>
+                <p>From AI photoshoots to automated marketing to AI commerce operations &mdash; we bring next-generation technology to every layer of your growth.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap"><i class="fas fa-user-tie"></i></div>
+                <h4>We Inhabit Your Brand</h4>
+                <p>We don't manage campaigns from the outside. We embed ourselves into your brand's operations, thinking, and growth strategy like a co-founder would.</p>
+            </div>
+            <div class="why-card">
+                <div class="icon-wrap"><i class="fas fa-chart-area"></i></div>
+                <h4>Built for Scale, Not Just Start</h4>
+                <p>Our systems are designed to compound &mdash; the longer we work together, the more efficient your growth becomes and the lower your cost per acquisition drops.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MASTER CTA -->
+    <section class="master-cta">
+        <span class="eyebrow">Ready to Scale Your D2C Brand?</span>
+        <h2>Let's Build Your<br><span class="gradient-text">Growth Architecture</span></h2>
+        <p>Tell us where you are &mdash; whether you're pre-launch or &#8377;2Cr/mo &mdash; and we'll map exactly which pillars will get you to the next level, faster.</p>
+        <div class="master-cta-actions">
+            <a href="connect.html" class="btn-primary">Schedule a Discovery Call</a>
+            <a href="about.html" class="btn-secondary">Our Story</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div>
+                <h2>Stay Connected</h2>
+                <p>Join our inner circle. Get exclusive insights on D2C growth, AI marketing, and brand architecture delivered straight to your inbox.</p>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your work email">
+                <button class="btn-primary">Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-col" style="max-width: 250px;">
+                <a href="index.html" class="footer-logo" style="background: linear-gradient(135deg, #c084fc, #f472b6) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; font-weight: 800 !important;">D2C WITH AHRIK</a>
+                <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6; margin-top: 15px;">A D2C brand-building agency. We don't just consult on brands &mdash; we inhabit them.</p>
+            </div>
+            <div class="footer-col">
+                <h3>NAVIGATE</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>THE JOURNEY</h3>
+                <ul>
+                    <li><a href="base.html" class="footer-journey-base" style="color: #22d3ee !important; font-weight: 700;">Base</a></li>
+                    <li><a href="studio.html" class="footer-journey-studio" style="color: #a78bfa !important; font-weight: 700;">Studio</a></li>
+                    <li><a href="build.html" class="footer-journey-build" style="color: #fb923c !important; font-weight: 700;">Build</a></li>
+                    <li><a href="marketing.html" class="footer-journey-marketing" style="color: #4ade80 !important; font-weight: 700;">Marketing</a></li>
+                    <li><a href="commerce.html" class="footer-journey-commerce" style="color: #fbbf24 !important; font-weight: 700;">Commerce</a></li>
+                    <li><a href="network.html" class="footer-journey-network" style="color: #60a5fa !important; font-weight: 700;">Network</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>CONNECT</h3>
+                <ul>
+                    <li><a href="mailto:hello@d2cwithahrik.com">hello@d2cwithahrik.com</a></li>
+                    <li><a href="connect.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="font-size: 13px; color: var(--text-secondary);">&copy; 2026 D2C WITH AHRIK. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="3d-animation.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function switchTab(pillar, btn) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            // Deactivate all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('active');
+                el.setAttribute('aria-selected', 'false');
+            });
+            // Activate selected
+            document.getElementById('content-' + pillar).classList.add('active');
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+            // Smooth scroll to top of tab content
+            document.querySelector('.tabs-wrapper').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

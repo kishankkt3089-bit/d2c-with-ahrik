@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHrik Commerce | Managed Marketplace Growth Partner | D2C WITH AHRIK</title>
+    <meta name="description" content="AHrik Commerce manages your entire marketplace operations &mdash; from onboarding and catalog SEO to ads and customer support &mdash; while you focus on your product.">
+    <link rel="stylesheet" href="style.css?v=20260727_2">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+                /* === Commerce PILLAR DUAL-COLOR BUTTON & CARD THEME === */
+        :root { 
+            --pillar-dark: #b45309; 
+            --pillar: #d97706; 
+            --pillar-light: #fbbf24; 
+            --pillar-rgb: 217,119,6;
+            --pillar-subtle: rgba(217,119,6, 0.08); 
+        }
+        [data-theme="light"] { 
+            --pillar-dark: #d97706; 
+            --pillar: #b45309; 
+            --pillar-light: #b45309; 
+            --pillar-subtle: rgba(217,119,6, 0.12); 
+        }
+                .btn-primary {
+            background: linear-gradient(135deg, #b45309 0%, #d97706 100%) !important;
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.5px !important;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+            border: 1px solid rgba(217,119,6, 0.6) !important;
+            box-shadow: 0 4px 18px rgba(217,119,6, 0.4) !important;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+            color: #ffffff !important;
+            border-color: #fbbf24 !important;
+            box-shadow: 0 8px 25px rgba(217,119,6, 0.65), 0 0 15px rgba(217,119,6, 0.3) !important;
+            transform: translateY(-3px) scale(1.02) !important;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #d97706, #fbbf24) !important;
+            border-color: #fbbf24 !important;
+            box-shadow: 0 8px 30px rgba(217,119,6, 0.7), 0 0 15px rgba(217,119,6, 0.4) !important;
+            transform: translateY(-3px) scale(1.02) !important;
+        }
+        .btn-secondary {
+            background: rgba(217,119,6, 0.08) !important;
+            border: 1px solid rgba(217,119,6, 0.3) !important;
+            color: var(--text-primary) !important;
+            backdrop-filter: blur(12px) !important;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+        }
+        .btn-secondary:hover {
+            background: rgba(217,119,6, 0.18) !important;
+            border-color: #fbbf24 !important;
+            box-shadow: 0 6px 22px rgba(217,119,6, 0.3) !important;
+            transform: translateY(-3px) !important;
+            color: #fbbf24 !important;
+        }
+        /* === Commerce PILLAR THEME ===*/
+        :root { --pillar: #d97706; --pillar-light: #fbbf24; }
+        [data-theme="light"] { 
+            --pillar-dark: #d97706; 
+            --pillar: #b45309; 
+            --pillar-light: #b45309; 
+            --pillar-subtle: rgba(217,119,6, 0.12); 
+        }
+        .pillar-page-hero .eyebrow, .section-eyebrow { color: #fbbf24 !important; }
+        .hero-stat .num, .visual-metric .big { background: linear-gradient(135deg, #d97706, #fbbf24) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+        .card-icon-lg { background: rgba(217,119,6,0.08) !important; border-color: rgba(217,119,6,0.25) !important; color: #fbbf24 !important; }
+        .prem-card::after { background: linear-gradient(90deg, #d97706, #fbbf24) !important; }
+        .prem-card:hover { border-color: rgba(217,119,6,0.4) !important; }
+        .prem-card .card-promise { border-left-color: #d97706 !important; }
+        .chip { background: rgba(217,119,6,0.08) !important; border-color: rgba(217,119,6,0.25) !important; }
+        .chip i, .feature-text .tag { color: #fbbf24 !important; }
+        .step-num { background: linear-gradient(135deg, #d97706, #fbbf24) !important; }
+        .cta-strip { background: linear-gradient(135deg, rgba(217,119,6,0.08), rgba(251,191,36,0.06)) !important; border-color: rgba(217,119,6,0.25) !important; }
+        .next-pillar-link:hover { border-color: #d97706 !important; }
+        .gradient-text { background: linear-gradient(135deg, #d97706, #fbbf24) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+        .resp-box.ahrik { border-color: rgba(217,119,6,0.25) !important; }
+        .resp-box.ahrik h4 { color: #fbbf24 !important; }
+        .pillar-page-hero { min-height: 92vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 140px 5% 80px; position: relative; z-index: 2; }
+        .pillar-page-hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent-secondary); margin-bottom: 20px; display: block; }
+        .pillar-page-hero h1 { font-size: clamp(42px, 6vw, 72px); font-weight: 800; line-height: 1.08; margin-bottom: 24px; max-width: 900px; }
+        .pillar-page-hero .hero-sub { font-size: clamp(16px, 1.8vw, 20px); color: var(--text-secondary); max-width: 680px; margin: 0 auto 40px; line-height: 1.7; }
+        .hero-cta-row { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+        .hero-stat-strip { display: flex; gap: 50px; justify-content: center; flex-wrap: wrap; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color); }
+        .hero-stat .num { font-size: 38px; font-weight: 800; background: linear-gradient(135deg, var(--text-gradient-1), var(--text-gradient-2)); -webkit-background-clip: text; -webkit-text-fill-color: initial; color: #fbbf24; line-height: 1; margin-bottom: 6px; }
+        .hero-stat .lbl { font-size: 13px; color: var(--text-secondary); }
+        .pillar-section { padding: 80px 5%; max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+        .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-secondary); margin-bottom: 14px; display: block; }
+        .section-title { font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; margin-bottom: 16px; }
+        .section-sub { font-size: 17px; color: var(--text-secondary); max-width: 680px; line-height: 1.7; margin-bottom: 50px; }
+        .prem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        .prem-card { background: var(--section-glass); border: 1px solid var(--border-color); border-radius: 18px; padding: 32px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important; position: relative; overflow: hidden; }
+        .prem-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #d97706, #fbbf24); opacity: 0; transition: opacity 0.3s; }
+        .prem-card:hover { transform: translateY(-8px) scale(1.02) !important; border-color: #fbbf24 !important; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 35px rgba(217, 119, 6, 0.4) !important; }
+        .prem-card:hover::after { opacity: 1; }
+        .card-icon-lg { width: 54px; height: 54px; background: rgba(217,119,6,0.1) !important; border: 1px solid rgba(217,119,6,0.3) !important; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fbbf24 !important; margin-bottom: 22px; }
+        .prem-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; color: #ffffff; }
+        .prem-card .card-promise { font-size: 14px; color: #cbd5e1; line-height: 1.6; margin-bottom: 20px; border-left: 3px solid #d97706; padding-left: 12px; }
+        .prem-card ul { list-style: none; padding: 0; }
+        .prem-card ul li { font-size: 13.5px; color: #e2e8f0; margin-bottom: 10px; padding-left: 18px; position: relative; line-height: 1.5; font-weight: 500; }
+        .prem-card ul li::before { content: '\2192'; position: absolute; left: 0; color: #fbbf24; font-weight: 700; }
+        .split-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; margin-bottom: 80px; }
+        @media (max-width: 900px) { .split-feature { grid-template-columns: 1fr; gap: 40px; } }
+        .feature-text .tag { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #fbbf24; margin-bottom: 14px; display: block; }
+        .feature-text h3 { font-size: clamp(24px, 3vw, 34px); font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+        .feature-text p { font-size: 16px; color: #cbd5e1; line-height: 1.7; margin-bottom: 24px; }
+        .outcome-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+        .chip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; background: rgba(217,119,6,0.08); border: 1px solid rgba(217,119,6,0.25); border-radius: 30px; font-size: 13px; font-weight: 500; color: #ffffff; }
+        .chip i { color: #fbbf24; font-size: 11px; }
+        .feature-visual { background: var(--section-glass); border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .visual-metric-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .visual-metric { background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); border-radius: 14px; padding: 24px; text-align: center; }
+        .visual-metric .big { font-size: 36px; font-weight: 800; color: #fbbf24; line-height: 1; margin-bottom: 6px; }
+        .visual-metric .sm { font-size: 12px; color: #cbd5e1; }
+        .resp-split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 60px; }
+        @media (max-width: 768px) { .resp-split { grid-template-columns: 1fr; } }
+        .resp-box { padding: 34px; border-radius: 18px; border: 1.5px solid var(--border-color); backdrop-filter: blur(12px); transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important; cursor: pointer; }
+        .resp-box.client { background: rgba(245, 158, 11, 0.07); border-color: rgba(245, 158, 11, 0.3); }
+        .resp-box.client:hover { transform: translateY(-6px) scale(1.018) !important; border-color: #f59e0b !important; box-shadow: 0 18px 45px rgba(0,0,0,0.65), 0 0 35px rgba(245, 158, 11, 0.45) !important; }
+        .resp-box.ahrik { background: rgba(217, 119, 6, 0.07); border-color: rgba(251, 191, 36, 0.3); }
+        .resp-box.ahrik:hover { transform: translateY(-6px) scale(1.018) !important; border-color: #fbbf24 !important; box-shadow: 0 18px 45px rgba(0,0,0,0.65), 0 0 35px rgba(251, 191, 36, 0.45) !important; }
+        .resp-box h4 { font-size: 17px; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; letter-spacing: 0.3px; }
+        .resp-box.client h4 { color: #f59e0b !important; }
+        .resp-box.ahrik h4 { color: #fbbf24 !important; }
+        .resp-box ul { list-style: none; padding: 0; }
+        .resp-box ul li { font-size: 14.5px; color: #f1f5f9; margin-bottom: 12px; padding-left: 22px; position: relative; font-weight: 500; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+        .resp-box.client ul li::before { content: '\2192'; position: absolute; left: 0; color: #f59e0b; font-weight: 800; font-size: 14px; }
+        .resp-box.ahrik ul li::before { content: '\2713'; position: absolute; left: 0; color: #fbbf24; font-weight: 800; font-size: 14px; }
+        .cta-strip { background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(192,132,252,0.08)); border: 1px solid rgba(192,132,252,0.2); border-radius: 22px; padding: 50px 60px; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
+        .cta-strip h3 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .cta-strip p { font-size: 15px; color: var(--text-secondary); max-width: 520px; line-height: 1.6; }
+        .cta-strip-actions { display: flex; gap: 16px; flex-wrap: wrap; flex-shrink: 0; }
+        .pillar-footer-extra { padding: 60px 5% 30px; border-top: 1px solid var(--border-color); position: relative; z-index: 2; }
+        .pillar-next-strip { max-width: 1280px; margin: 0 auto 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .pillar-next-strip h4 { font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-bottom: 10px; }
+        .next-pillar-links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .next-pillar-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--section-glass); border: 1px solid var(--border-color); border-radius: 10px; font-size: 13px; font-weight: 600; color: var(--text-secondary); text-decoration: none; transition: all 0.2s; backdrop-filter: blur(10px); }
+        .next-pillar-link:hover { border-color: var(--text-gradient-1); color: var(--text-primary); }
+        .next-pillar-link i { color: var(--accent-secondary); font-size: 12px; }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <nav class="navbar-wrapper">
+                <div class="navbar-left">
+            <div class="logo-dropdown-wrapper">
+                <a href="index.html" class="logo">D2C WITH AHRIK</a>
+                <button class="logo-dropdown-btn" id="logo-dropdown-btn" aria-label="Toggle Ecosystem Menu">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="deepmind-dropdown-panel" id="deepmind-dropdown-panel">
+                    <span class="dropdown-category-title">SIX CORE PILLARS</span>
+                    <a href="base.html" class="deepmind-dropdown-item deepmind-item-base">
+                        <div class="deepmind-item-icon"><i class="fas fa-landmark"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Base</span>
+                            <span class="deepmind-item-subtitle">Legal &amp; Financial Architecture</span>
+                        </div>
+                    </a>
+                    <a href="studio.html" class="deepmind-dropdown-item deepmind-item-studio">
+                        <div class="deepmind-item-icon"><i class="fas fa-palette"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Studio</span>
+                            <span class="deepmind-item-subtitle">AI Visuals &amp; Brand Production</span>
+                        </div>
+                    </a>
+                    <a href="build.html" class="deepmind-dropdown-item deepmind-item-build">
+                        <div class="deepmind-item-icon"><i class="fas fa-code"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Build</span>
+                            <span class="deepmind-item-subtitle">Storefronts &amp; 24/7 AI Automation</span>
+                        </div>
+                    </a>
+                    <a href="marketing.html" class="deepmind-dropdown-item deepmind-item-marketing">
+                        <div class="deepmind-item-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Marketing</span>
+                            <span class="deepmind-item-subtitle">Growth Funnels &amp; Retention</span>
+                        </div>
+                    </a>
+                    <a href="commerce.html" class="deepmind-dropdown-item deepmind-item-commerce">
+                        <div class="deepmind-item-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Commerce</span>
+                            <span class="deepmind-item-subtitle">Managed Marketplace Operations</span>
+                        </div>
+                    </a>
+                    <a href="network.html" class="deepmind-dropdown-item deepmind-item-network">
+                        <div class="deepmind-item-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">AHrik Network</span>
+                            <span class="deepmind-item-subtitle">Investor Access &amp; Brand Alliances</span>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider-line"></div>
+                    <span class="dropdown-category-title">EXPLORE AGENCY</span>
+                    <a href="services.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-th-large"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Services Matrix</span>
+                            <span class="deepmind-item-subtitle">Full capabilities overview</span>
+                        </div>
+                    </a>
+                    <a href="portfolio.html" class="deepmind-dropdown-item">
+                        <div class="deepmind-item-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="deepmind-item-content">
+                            <span class="deepmind-item-title">Case Studies &amp; Work</span>
+                            <span class="deepmind-item-subtitle">Real D2C brand results</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>        <div class="pillars-box">
+            <a href="base.html">Base</a>
+            <a href="studio.html">Studio</a>
+            <a href="build.html">Build</a>
+            <a href="marketing.html">Marketing</a>
+            <a href="commerce.html">Commerce</a>
+            <a href="network.html">Network</a>
+        </div>
+        <div class="navbar-right">
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation Menu"><i class="fas fa-bars"></i></button>
+            <div class="main-links">
+                <a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a><a href="connect.html">Contact Us</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <section class="pillar-page-hero">
+        <div>
+            <span class="eyebrow">Pillar 05 &mdash; Managed Digital Commerce Operations</span>
+            <h1 class="animate-up">You Build Great Products.<br><span class="gradient-text">We Drive Your Entire Digital Growth.</span></h1>
+            <p class="hero-sub animate-up delay-1" style="text-shadow: 0 2px 8px rgba(0,0,0,0.7);">Your only job: manufacture quality products and manage physical dispatch. AHrik Commerce takes complete ownership of your entire digital marketplace presence &mdash; from seller onboarding and catalog SEO to performance advertising, 24/7 customer support, and revenue analytics. Zero digital chaos. Just compounding marketplace revenue.</p>
+            <div class="hero-cta-row animate-up delay-2">
+                <a href="connect.html" class="btn-primary">Activate Managed Commerce</a>
+                <a href="#commerce-services" class="btn-secondary"><i class="fas fa-rocket"></i> Explore Commerce Services</a>
+            </div>
+            <div class="hero-stat-strip animate-up delay-2">
+                <div class="hero-stat"><div class="num">100%</div><div class="lbl">Digital Operations Owned by AHrik</div></div>
+                <div class="hero-stat"><div class="num">5+</div><div class="lbl">Marketplaces Managed</div></div>
+                <div class="hero-stat"><div class="num">24/7</div><div class="lbl">Customer Support Handled</div></div>
+                <div class="hero-stat"><div class="num">0</div><div class="lbl">Digital Load on Your Team</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESPONSIBILITY SPLIT -->
+    <section class="pillar-section">
+        <span class="section-eyebrow">The Digital-Ops Partnership</span>
+        <h2 class="section-title">You Manage Physical Ops. <span class="gradient-text">We Own Complete Digital Growth.</span></h2>
+        <p class="section-sub">Clear division of ownership: You manufacture quality products and manage inventory; we take complete responsibility for your digital growth &mdash; from brand building to marketplace sales. No overlap. No confusion. Just scalable results.</p>
+        <div class="resp-split">
+            <div class="resp-box client">
+                <h4><i class="fas fa-industry"></i> You Handle &mdash; Physical Operations</h4>
+                <ul>
+                    <li>Product Manufacturing &amp; Quality Control</li>
+                    <li>Packaging &amp; Labeling Standards</li>
+                    <li>Warehouse &amp; Inventory Storage</li>
+                    <li>Order Dispatch &amp; Courier Fulfillment</li>
+                    <li>Returns Processing &amp; Refurbishment</li>
+                </ul>
+            </div>
+            <div class="resp-box ahrik">
+                <h4><i class="fas fa-bolt"></i> AHrik Owns &mdash; Complete Digital Operations</h4>
+                <ul>
+                    <li>Marketplace Onboarding &amp; Seller Account Setup</li>
+                    <li>SEO-Led Catalog Creation &amp; Listing Optimization</li>
+                    <li>A+ Content, EBC &amp; Brand Store Design</li>
+                    <li>Sponsored Ads, Deals &amp; Performance Advertising</li>
+                    <li>24/7 Customer Query Resolution &amp; Support</li>
+                    <li>Pricing Strategy &amp; Competitive Monitoring</li>
+                    <li>Return &amp; Refund Handling (Digital Side)</li>
+                    <li>Revenue Analytics, KPI Dashboards &amp; Growth Strategy</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="pillar-section" style="padding-top: 0;" id="commerce-services">
+        <span class="section-eyebrow">Digital Commerce Solutions</span>
+        <h2 class="section-title">Complete Digital Commerce Lifecycle. <span class="gradient-text">One Dedicated Partner.</span></h2>
+        <p class="section-sub">From marketplace onboarding to revenue analytics &mdash; we own every digital touchpoint of your commerce journey so your products keep selling, ranking, and growing.</p>
+        <div class="prem-grid">
+            <a href="commerce-launch.html" class="prem-card" id="commerce-launch" style="text-decoration:none; color:inherit; cursor:pointer;">
+                <div class="card-icon-lg"><i class="fas fa-store"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 8px; display: block;">Commerce Layer 01</span>
+                <h3>Commerce Launch</h3>
+                <p class="card-promise">Getting your marketplace presence right from Day 1 saves months of corrections and lost revenue. We do it right &mdash; on every platform.</p>
+                <ul>
+                    <li>Marketplace Onboarding (Amazon, Flipkart, Meesho, JioMart)</li>
+                    <li>Seller Central Setup, KYC &amp; Verification</li>
+                    <li>Store Configuration &amp; Brand Registry</li>
+                    <li>Initial Catalog Upload, Bulk Listing &amp; QC</li>
+                    <li>Marketplace Policy Compliance Audit</li>
+                </ul>
+                <span style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;font-weight:600;color:#fbbf24;">Learn More <i class="fas fa-arrow-right" style="font-size:11px;"></i></span>
+            </a>
+            <a href="commerce-catalog.html" class="prem-card" id="catalog-management" style="text-decoration:none; color:inherit; cursor:pointer;">
+                <div class="card-icon-lg"><i class="fas fa-tags"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 8px; display: block;">Commerce Layer 02</span>
+                <h3>Catalog Management</h3>
+                <p class="card-promise">A great product with a mediocre listing loses every time. We build listings that rank organically and convert at first sight.</p>
+                <ul>
+                    <li>SEO-Optimized Product Titles, Bullets &amp; Descriptions</li>
+                    <li>A+ Content &amp; Enhanced Brand Content (EBC)</li>
+                    <li>Keyword Research &amp; Search Ranking Strategy</li>
+                    <li>Ongoing Catalog Updates, Variations &amp; SKU Management</li>
+                    <li>Storefront &amp; Brand Store Design</li>
+                </ul>
+                <span style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;font-weight:600;color:#fbbf24;">Learn More <i class="fas fa-arrow-right" style="font-size:11px;"></i></span>
+            </a>
+            <a href="commerce-operations.html" class="prem-card" id="marketplace-ops" style="text-decoration:none; color:inherit; cursor:pointer;">
+                <div class="card-icon-lg"><i class="fas fa-headset"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 8px; display: block;">Commerce Layer 03</span>
+                <h3>Marketplace Operations</h3>
+                <p class="card-promise">Day-to-day marketplace operations are complex, repetitive, and non-negotiable. We own all of it so you never have to.</p>
+                <ul>
+                    <li>Seller Account Health &amp; Performance Management</li>
+                    <li>24/7 Customer Query Resolution &amp; Support</li>
+                    <li>Return &amp; Refund Handling</li>
+                    <li>Price Management &amp; Competitive Monitoring</li>
+                    <li>Dispute Resolution &amp; Policy Compliance</li>
+                </ul>
+                <span style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;font-weight:600;color:#fbbf24;">Learn More <i class="fas fa-arrow-right" style="font-size:11px;"></i></span>
+            </a>
+            <a href="commerce-growth.html" class="prem-card" id="commerce-growth" style="text-decoration:none; color:inherit; cursor:pointer;">
+                <div class="card-icon-lg"><i class="fas fa-rocket"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 8px; display: block;">Commerce Layer 04</span>
+                <h3>Commerce Growth</h3>
+                <p class="card-promise">Presence on a marketplace isn&rsquo;t enough. We activate every growth lever to build market share, rank products, and drive profitable orders.</p>
+                <ul>
+                    <li>Sponsored Products, Brands &amp; Display Ads Management</li>
+                    <li>Deal of the Day, Lightning Deals &amp; Coupons</li>
+                    <li>Organic Ranking Acceleration &amp; Keyword Dominance</li>
+                    <li>Bundle &amp; Cross-Sell Strategy</li>
+                    <li>Seasonal Campaign Planning &amp; Execution</li>
+                </ul>
+                <span style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;font-weight:600;color:#fbbf24;">Learn More <i class="fas fa-arrow-right" style="font-size:11px;"></i></span>
+            </a>
+            <a href="commerce-intelligence.html" class="prem-card" id="commerce-intelligence" style="text-decoration:none; color:inherit; cursor:pointer;">
+                <div class="card-icon-lg"><i class="fas fa-chart-pie"></i></div>
+                <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 8px; display: block;">Commerce Layer 05</span>
+                <h3>Commerce Intelligence</h3>
+                <p class="card-promise">You can&rsquo;t optimize what you don&rsquo;t measure. We deliver complete visibility into every revenue metric that matters to your brand.</p>
+                <ul>
+                    <li>Real-Time Revenue &amp; Order Dashboards</li>
+                    <li>KPI Monitoring &amp; Performance Reviews</li>
+                    <li>Competitor Benchmarking &amp; Market Share Analysis</li>
+                    <li>SKU-Level Profitability Reporting</li>
+                    <li>Monthly Growth Planning &amp; Strategy Sessions</li>
+                </ul>
+                <span style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:13px;font-weight:600;color:#fbbf24;">Learn More <i class="fas fa-arrow-right" style="font-size:11px;"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <section class="pillar-section" style="padding-top: 0;">
+        <div class="cta-strip">
+            <div>
+                <h3>You Craft the Product. We Scale the Revenue.</h3>
+                <p>The brands winning on Amazon and Flipkart aren&rsquo;t doing it alone. They&rsquo;ve partnered with a team that owns every digital touchpoint &mdash; from onboarding to analytics. That&rsquo;s AHrik Commerce.</p>
+            </div>
+            <div class="cta-strip-actions">
+                <a href="network.html" class="btn-secondary">Next: Network <i class="fas fa-arrow-right"></i></a>
+                <a href="connect.html" class="btn-primary">Activate Managed Commerce</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="pillar-footer-extra">
+        <div class="pillar-next-strip">
+            <div>
+                <h4>Continue Your AHrik Journey</h4>
+                <div class="next-pillar-links">
+                    <a href="base.html" class="next-pillar-link"><i class="fas fa-landmark"></i> Base</a>
+                    <a href="studio.html" class="next-pillar-link"><i class="fas fa-palette"></i> Studio</a>
+                    <a href="build.html" class="next-pillar-link"><i class="fas fa-code"></i> Build</a>
+                    <a href="marketing.html" class="next-pillar-link"><i class="fas fa-chart-line"></i> Marketing</a>
+                    <a href="network.html" class="next-pillar-link"><i class="fas fa-network-wired"></i> Network</a>
+                </div>
+            </div>
+            <a href="services.html" class="btn-secondary"><i class="fas fa-th-large"></i> All Services</a>
+        </div>
+    </div>
+
+        <footer style="position: relative; z-index: 2;">
+        <div style="background: linear-gradient(135deg, rgba(217,119,6,0.1), rgba(251,191,36,0.05)); border-top: 1px solid rgba(217,119,6,0.2); padding: 70px 5% 60px;">
+            <div class="pillar-banner-split-grid" style="max-width: 1280px; margin: 0 auto; display: grid; gap: 60px; align-items: start;">
+                <div>
+                    <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(217,119,6,0.1); border: 1px solid rgba(217,119,6,0.25); border-radius: 30px; padding: 8px 18px; margin-bottom: 24px;">
+                        <i class="fas fa-shopping-bag" style="color: #fbbf24; font-size: 13px;"></i>
+                        <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #fbbf24; text-transform: uppercase;">AHrik Commerce</span>
+                    </div>
+                    <h2 style="font-size: clamp(26px, 3.5vw, 38px); font-weight: 800; margin-bottom: 16px; line-height: 1.2;">Your Fully-Managed Marketplace <span style="color: #fbbf24; background: none; -webkit-text-fill-color: initial; color: #fbbf24;">Partner.</span></h2>
+                    <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; max-width: 520px; margin-bottom: 28px;">AHrik Commerce takes complete ownership of your marketplace presence — from seller onboarding and catalog SEO to performance advertising and 24/7 customer support. You manufacture, we sell. You build product quality, we build market share. A partnership that creates unstoppable revenue growth.</p>
+                    <a href="connect.html" class="btn-primary" style="background: linear-gradient(135deg, #b45309, #d97706); border-color: rgba(217,119,6, 0.6); box-shadow: 0 4px 18px rgba(217,119,6, 0.45); color: #ffffff; font-weight: 700; text-shadow: 0 1px 3px rgba(0,0,0,0.6);">Get Started</a>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div style="background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #fbbf24; background: none; -webkit-text-fill-color: initial; color: #fbbf24; margin-bottom: 6px;">7</div><div style="font-size: 12px; color: var(--text-secondary);">Days to Marketplace Launch</div></div><div style="background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #fbbf24; background: none; -webkit-text-fill-color: initial; color: #fbbf24; margin-bottom: 6px;">24/7</div><div style="font-size: 12px; color: var(--text-secondary);">Customer Support Managed</div></div><div style="background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #fbbf24; background: none; -webkit-text-fill-color: initial; color: #fbbf24; margin-bottom: 6px;">100%</div><div style="font-size: 12px; color: var(--text-secondary);">Marketplace Ops Owned</div></div><div style="background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); border-radius: 14px; padding: 22px; text-align: center;"><div style="font-size: 32px; font-weight: 800; color: #fbbf24; background: none; -webkit-text-fill-color: initial; color: #fbbf24; margin-bottom: 6px;">0</div><div style="font-size: 12px; color: var(--text-secondary);">Operational Load on You</div></div>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 50px 5% 30px; border-top: 1px solid var(--border-color);">
+            <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr; gap: 40px;">
+                                                <div>
+                    <a href="commerce.html" class="footer-logo footer-logo-commerce" style="font-size: 18px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: #fbbf24 !important; -webkit-text-fill-color: #fbbf24 !important; text-decoration: none; margin-bottom: 14px; display: block; background: none !important; border: none !important; padding: 0 !important; border-radius: 0 !important; box-shadow: none !important; filter: none !important; text-shadow: 0 0 14px rgba(251, 191, 36, 0.4) !important;">AHRIK COMMERCE</a>
+                    <p style="font-size: 14.5px; font-weight: 600; color: var(--text-primary); margin-bottom: 10px; line-height: 1.5; letter-spacing: 0.3px;">We Own Your Marketplace Operations. You Focus on Product.</p>
+                    <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.7; margin-bottom: 22px;">AHrik Commerce manages your entire presence across Amazon, Flipkart, Quick Commerce, and regional platforms. From SEO catalog listings and A+ content to sponsored ads and 24/7 customer support, we build marketplace dominance while you focus on product quality.</p>
+                    <div class="newsletter-form" style="flex-direction: column; gap: 10px; align-items: stretch;">
+                        <input type="email" placeholder="Enter your work email" style="width: 100%;">
+                        <button class="btn-primary" style="background: linear-gradient(135deg, #d97706, #fbbf24); border-color: rgba(217,119,6, 0.6); box-shadow: 0 4px 15px rgba(217,119,6, 0.4); color: #ffffff; font-weight: 700;">Get Insights</button>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #fbbf24; text-transform: uppercase; margin-bottom: 18px;">Commerce Services</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="commerce-launch.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='var(--text-secondary)'">Commerce Launch</a></li>
+                        <li style="margin-bottom: 10px;"><a href="commerce-catalog.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='var(--text-secondary)'">Catalog Management</a></li>
+                        <li style="margin-bottom: 10px;"><a href="commerce-operations.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='var(--text-secondary)'">Marketplace Operations</a></li>
+                        <li style="margin-bottom: 10px;"><a href="commerce-growth.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='var(--text-secondary)'">Commerce Growth</a></li>
+                        <li style="margin-bottom: 10px;"><a href="commerce-intelligence.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#fbbf24'" onmouseout="this.style.color='var(--text-secondary)'">Commerce Intelligence</a></li>
+                    </ul>
+                </div>
+                <div>
+                                        <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--pillar-light, var(--text-primary)); text-transform: uppercase; margin-bottom: 18px;">The Journey</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 8px;"><a href="base.html" class="footer-journey-base" style="color: #22d3ee !important; -webkit-text-fill-color: #22d3ee !important; text-decoration: none; font-size: 14px; font-weight: 700;">Base &rarr; Foundation</a></li>
+                        <li style="margin-bottom: 8px;"><a href="studio.html" class="footer-journey-studio" style="color: #a78bfa !important; -webkit-text-fill-color: #a78bfa !important; text-decoration: none; font-size: 14px; font-weight: 700;">Studio &rarr; Creative</a></li>
+                        <li style="margin-bottom: 8px;"><a href="build.html" class="footer-journey-build" style="color: #fb923c !important; -webkit-text-fill-color: #fb923c !important; text-decoration: none; font-size: 14px; font-weight: 700;">Build &rarr; Digital</a></li>
+                        <li style="margin-bottom: 8px;"><a href="marketing.html" class="footer-journey-marketing" style="color: #4ade80 !important; -webkit-text-fill-color: #4ade80 !important; text-decoration: none; font-size: 14px; font-weight: 700;">Marketing &rarr; Growth</a></li>
+                        <li style="margin-bottom: 8px;"><a href="commerce.html" class="footer-journey-commerce" style="color: #fbbf24 !important; -webkit-text-fill-color: #fbbf24 !important; text-decoration: none; font-size: 14px; font-weight: 700;">Commerce &rarr; Revenue</a></li>
+                        <li style="margin-bottom: 8px;"><a href="network.html" class="footer-journey-network" style="color: #60a5fa !important; -webkit-text-fill-color: #60a5fa !important; text-decoration: none; font-size: 14px; font-weight: 700;">Network &rarr; Capital</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #fbbf24; text-transform: uppercase; margin-bottom: 18px;">Navigate</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="index.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Home</a></li>
+                        <li style="margin-bottom: 10px;"><a href="about.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">About</a></li>
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">All Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="portfolio.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Portfolio</a></li>
+                        <li style="margin-bottom: 10px;"><a href="connect.html" style="color: var(--text-secondary); text-decoration: none; font-size: 14px;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #fbbf24; text-transform: uppercase; margin-bottom: 18px;">Connect</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="mailto:hello@d2cwithahrik.com" style="color: var(--text-secondary); text-decoration: none; font-size: 13px;">hello@d2cwithahrik.com</a></li>
+                        <li style="margin-bottom: 16px; font-size: 13px; color: var(--text-secondary);">Response SLA: under 24 Hours</li>
+                    </ul>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="#" style="width: 36px; height: 36px; background: rgba(217,119,6,0.1); border: 1px solid rgba(217,119,6,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fbbf24;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="width: 36px; height: 36px; background: rgba(217,119,6,0.1); border: 1px solid rgba(217,119,6,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fbbf24;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="width: 36px; height: 36px; background: rgba(217,119,6,0.1); border: 1px solid rgba(217,119,6,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fbbf24;"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 20px 5%; border-top: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; max-width: 1280px; margin: 0 auto;">
+            <p style="font-size: 13px; color: var(--text-secondary);">&copy; 2026 D2C WITH AHRIK. All rights reserved.</p>
+            
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="3d-animation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
