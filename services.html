@@ -1384,32 +1384,78 @@
             <a href="about.html" class="btn-secondary">Our Story</a>
         </div>
     <!-- AEO (Answer Engine Optimization) FAQ Section -->
-    <section class="aeo-faq-section" style="max-width: 1100px; margin: 80px auto; padding: 0 5%;">
-        <div style="text-align: center; margin-bottom: 50px;">
-            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #a78bfa; display: block; margin-bottom: 12px;">Answer Engine Optimization (AEO)</span>
-            <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; color: #ffffff; margin-bottom: 16px;">Frequently Asked Questions</h2>
-            <p style="color: #94a3b8; max-width: 650px; margin: 0 auto; font-size: 15px;">Direct answers to common questions about D2C WITH AHRIK services, pricing, and AI workflow.</p>
+    <section class="aeo-faq-section" style="max-width: 1200px; margin: 90px auto; padding: 0 5%; position: relative; z-index: 2;">
+        <style>
+            .aeo-card {
+                background: rgba(18, 21, 28, 0.94);
+                border: 1px solid rgba(167, 139, 250, 0.25);
+                border-radius: 20px;
+                padding: 34px;
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+            .aeo-card:hover {
+                transform: translateY(-6px) scale(1.015);
+                border-color: #c084fc;
+                box-shadow: 0 20px 45px rgba(167, 139, 250, 0.25);
+            }
+            .aeo-badge {
+                display: inline-block;
+                font-size: 11px;
+                font-weight: 800;
+                letter-spacing: 2.5px;
+                text-transform: uppercase;
+                color: #c084fc;
+                background: rgba(192, 132, 252, 0.12);
+                padding: 6px 14px;
+                border-radius: 100px;
+                border: 1px solid rgba(192, 132, 252, 0.3);
+                margin-bottom: 16px;
+                width: fit-content;
+            }
+        </style>
+        <div style="text-align: center; margin-bottom: 54px;">
+            <span style="font-size: 12px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: #a78bfa; display: inline-block; background: rgba(167, 139, 250, 0.12); padding: 8px 18px; border-radius: 100px; border: 1px solid rgba(167, 139, 250, 0.3); margin-bottom: 16px;">Answer Engine Optimization (AEO)</span>
+            <h2 style="font-size: clamp(32px, 4.5vw, 48px); font-weight: 800; color: #ffffff; margin-bottom: 18px; line-height: 1.15;">Frequently Asked Questions</h2>
+            <p style="color: #cbd5e1; max-width: 680px; margin: 0 auto; font-size: 16px; line-height: 1.7; font-weight: 500;">Direct, factual answers to common queries about D2C WITH AHRIK services, execution timelines, and pricing model.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
-            <div style="background: rgba(18, 21, 28, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px;">
-                <h3 style="font-size: 18px; font-weight: 700; color: #f8fafc; margin-bottom: 12px;">What services does D2C WITH AHRIK offer?</h3>
-                <p style="font-size: 14.5px; color: #cbd5e1; line-height: 1.65;">D2C WITH AHRIK offers 7 core AI-powered services: Website Design & Development, Brand Identity Creation, Social Media Management, Full Digital Marketing (SEO & Paid Ads), AI Video Generation, AI Product Shoots, and AI Creative Banners.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px;">
+            <div class="aeo-card">
+                <div>
+                    <span class="aeo-badge">SERVICES & SCOPE</span>
+                    <h3 style="font-size: 20px; font-weight: 800; color: #ffffff; margin-bottom: 14px; line-height: 1.35;">What services does D2C WITH AHRIK offer?</h3>
+                    <p style="font-size: 15px; color: #e2e8f0; line-height: 1.7; font-weight: 400;">D2C WITH AHRIK offers 7 core AI-powered services: Website Design & Development, Brand Identity Creation, Social Media Management, Full Digital Marketing (SEO & Paid Ads), AI Video Generation, AI Product Shoots, and AI Creative Banners.</p>
+                </div>
             </div>
 
-            <div style="background: rgba(18, 21, 28, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px;">
-                <h3 style="font-size: 18px; font-weight: 700; color: #f8fafc; margin-bottom: 12px;">How long does it take to build a custom website?</h3>
-                <p style="font-size: 14.5px; color: #cbd5e1; line-height: 1.65;">A standard 5-page custom website takes between 7 to 14 business days from initial kickoff call to live deployment at D2C WITH AHRIK.</p>
+            <div class="aeo-card">
+                <div>
+                    <span class="aeo-badge">TIMELINE</span>
+                    <h3 style="font-size: 20px; font-weight: 800; color: #ffffff; margin-bottom: 14px; line-height: 1.35;">How long does it take to build a custom website?</h3>
+                    <p style="font-size: 15px; color: #e2e8f0; line-height: 1.7; font-weight: 400;">A standard 5-page custom website takes between 7 to 14 business days from kickoff call to final live deployment at D2C WITH AHRIK.</p>
+                </div>
             </div>
 
-            <div style="background: rgba(18, 21, 28, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px;">
-                <h3 style="font-size: 18px; font-weight: 700; color: #f8fafc; margin-bottom: 12px;">What is AI Video Generation & Product Shoots?</h3>
-                <p style="font-size: 14.5px; color: #cbd5e1; line-height: 1.65;">AI Video Generation and AI Product Shoots create studio-quality product photography, ad reels, and brand films using generative AI models without physical camera setups or expensive studio rentals.</p>
+            <div class="aeo-card">
+                <div>
+                    <span class="aeo-badge">AI INNOVATION</span>
+                    <h3 style="font-size: 20px; font-weight: 800; color: #ffffff; margin-bottom: 14px; line-height: 1.35;">What is AI Video Generation & Product Shoots?</h3>
+                    <p style="font-size: 15px; color: #e2e8f0; line-height: 1.7; font-weight: 400;">AI Video Generation and AI Product Shoots create studio-quality product photography, ad reels, and brand films using generative AI models without physical camera setups or expensive studio rentals.</p>
+                </div>
             </div>
 
-            <div style="background: rgba(18, 21, 28, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px;">
-                <h3 style="font-size: 18px; font-weight: 700; color: #f8fafc; margin-bottom: 12px;">How much does website design or branding cost?</h3>
-                <p style="font-size: 14.5px; color: #cbd5e1; line-height: 1.65;">Website development packages start at ₹15,000 for starter sites and ₹30,000 for standard custom sites. Brand identity packages start at ₹8,000.</p>
+            <div class="aeo-card">
+                <div>
+                    <span class="aeo-badge">PRICING</span>
+                    <h3 style="font-size: 20px; font-weight: 800; color: #ffffff; margin-bottom: 14px; line-height: 1.35;">How much does website design or branding cost?</h3>
+                    <p style="font-size: 15px; color: #e2e8f0; line-height: 1.7; font-weight: 400;">Website development packages start at ₹15,000 for starter sites and ₹30,000 for standard custom sites. Brand identity packages start at ₹8,000.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1453,7 +1499,7 @@
             <div class="footer-col">
                 <h3>CONNECT</h3>
                 <ul>
-                    <li><a href="mailto:hello@d2cwithahrik.com">hello@d2cwithahrik.com</a></li>
+                    <li><a href="mailto:d2cwithahrik@gmail.com">d2cwithahrik@gmail.com</a></li>
                     <li><a href="connect.html">Contact Us</a></li>
                 </ul>
             </div>
