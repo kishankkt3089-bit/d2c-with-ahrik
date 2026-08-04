@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://d2c-with-ahrik-snowy.vercel.app/sitemap.xml
+Sitemap: https://d2cwithahrik.com/sitemap.xml
