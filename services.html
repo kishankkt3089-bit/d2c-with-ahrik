@@ -1382,51 +1382,86 @@
         <div class="master-cta-actions">
             <a href="connect.html" class="btn-primary">Schedule a Discovery Call</a>
             <a href="about.html" class="btn-secondary">Our Story</a>
-        </div>
-    </section>
-
-    <!-- AEO (Answer Engine Optimization) FAQ Section -->
-    <section class="aeo-faq-section" style="max-width: 1200px; margin: 100px auto; padding: 0 5%; position: relative; z-index: 2;">
-        <div style="text-align: center; margin-bottom: 50px;">
+    <!-- AEO (Answer Engine Optimization) FAQ Section - Accordion Style -->
+    <section class="aeo-faq-section" style="max-width: 900px; margin: 100px auto; padding: 0 5%; position: relative; z-index: 2;">
+        <div style="text-align: center; margin-bottom: 40px;">
             <span style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #c084fc; display: inline-block; margin-bottom: 12px; background: rgba(192, 132, 252, 0.1); padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(192, 132, 252, 0.25);">Answer Engine Optimization (AEO)</span>
-            <h2 style="font-size: clamp(32px, 4.5vw, 48px); font-weight: 800; color: #ffffff; margin-bottom: 16px; line-height: 1.2;">Frequently Asked Questions</h2>
-            <p style="color: #cbd5e1; max-width: 680px; margin: 0 auto; font-size: 16px; line-height: 1.6; font-weight: 400;">Direct, transparent answers to common questions about D2C WITH AHRIK services, project timelines, and AI-powered workflows.</p>
+            <h2 style="font-size: clamp(32px, 4.5vw, 44px); font-weight: 800; color: #ffffff; margin-bottom: 16px; line-height: 1.2;">Frequently Asked Questions</h2>
+            <p style="color: #cbd5e1; max-width: 650px; margin: 0 auto; font-size: 16px; line-height: 1.6;">Everything you need to know about D2C WITH AHRIK services, project timelines, and AI-powered workflows.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
-            <div style="background: rgba(18, 22, 32, 0.95); border: 1px solid rgba(192, 132, 252, 0.25); border-radius: 20px; padding: 36px; backdrop-filter: blur(16px); transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
-                    <i class="fas fa-layer-group" style="color: #c084fc; font-size: 20px;"></i>
-                    <h3 style="font-size: 19px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">What services does D2C WITH AHRIK offer?</h3>
+        <div class="faq-accordion-container" style="display: flex; flex-direction: column; gap: 16px;">
+
+            <!-- FAQ Item 1 -->
+            <div class="faq-accordion-item" style="background: rgba(18, 22, 32, 0.95); border: 1px solid rgba(192, 132, 252, 0.25); border-radius: 14px; overflow: hidden; transition: all 0.3s ease;">
+                <button onclick="toggleFaq(this)" style="width: 100%; text-align: left; padding: 22px 28px; background: transparent; border: none; color: #ffffff; font-size: 18px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Inter', sans-serif;">
+                    <span><i class="fas fa-layer-group" style="color: #c084fc; margin-right: 12px;"></i> What services does D2C WITH AHRIK offer?</span>
+                    <i class="fas fa-chevron-down faq-icon" style="color: #c084fc; transition: transform 0.3s ease; font-size: 16px;"></i>
+                </button>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 28px; background: rgba(0, 0, 0, 0.2);">
+                    <p style="font-size: 15px; color: #cbd5e1; line-height: 1.7; padding-bottom: 22px; margin: 0;">D2C WITH AHRIK offers 7 core AI-powered growth services: Website Design & Development, Brand Identity Creation, Social Media Management, Full Digital Marketing (SEO & Paid Ads), AI Video Generation, AI Product Shoots, and AI Creative Designs.</p>
                 </div>
-                <p style="font-size: 15px; color: #e2e8f0; line-height: 1.7; font-weight: 400; margin: 0;">D2C WITH AHRIK offers 7 core AI-powered growth services: Website Design & Development, Brand Identity Creation, Social Media Management, Full Digital Marketing (SEO & Paid Ads), AI Video Generation, AI Product Shoots, and AI Creative Designs.</p>
             </div>
 
-            <div style="background: rgba(18, 22, 32, 0.95); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 20px; padding: 36px; backdrop-filter: blur(16px); transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
-                    <i class="fas fa-clock" style="color: #38bdf8; font-size: 20px;"></i>
-                    <h3 style="font-size: 19px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">How long does it take to build a custom website?</h3>
+            <!-- FAQ Item 2 -->
+            <div class="faq-accordion-item" style="background: rgba(18, 22, 32, 0.95); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 14px; overflow: hidden; transition: all 0.3s ease;">
+                <button onclick="toggleFaq(this)" style="width: 100%; text-align: left; padding: 22px 28px; background: transparent; border: none; color: #ffffff; font-size: 18px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Inter', sans-serif;">
+                    <span><i class="fas fa-clock" style="color: #38bdf8; margin-right: 12px;"></i> How long does it take to build a custom website?</span>
+                    <i class="fas fa-chevron-down faq-icon" style="color: #38bdf8; transition: transform 0.3s ease; font-size: 16px;"></i>
+                </button>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 28px; background: rgba(0, 0, 0, 0.2);">
+                    <p style="font-size: 15px; color: #cbd5e1; line-height: 1.7; padding-bottom: 22px; margin: 0;">A standard 5-page custom website takes between 7 to 14 business days from initial kickoff call to live deployment at D2C WITH AHRIK.</p>
                 </div>
-                <p style="font-size: 15px; color: #e2e8f0; line-height: 1.7; font-weight: 400; margin: 0;">A standard 5-page custom website takes between 7 to 14 business days from kickoff call to live deployment at D2C WITH AHRIK.</p>
             </div>
 
-            <div style="background: rgba(18, 22, 32, 0.95); border: 1px solid rgba(74, 222, 128, 0.25); border-radius: 20px; padding: 36px; backdrop-filter: blur(16px); transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
-                    <i class="fas fa-robot" style="color: #4ade80; font-size: 20px;"></i>
-                    <h3 style="font-size: 19px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">What is AI Video Generation & Product Shoots?</h3>
+            <!-- FAQ Item 3 -->
+            <div class="faq-accordion-item" style="background: rgba(18, 22, 32, 0.95); border: 1px solid rgba(74, 222, 128, 0.25); border-radius: 14px; overflow: hidden; transition: all 0.3s ease;">
+                <button onclick="toggleFaq(this)" style="width: 100%; text-align: left; padding: 22px 28px; background: transparent; border: none; color: #ffffff; font-size: 18px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Inter', sans-serif;">
+                    <span><i class="fas fa-robot" style="color: #4ade80; margin-right: 12px;"></i> What is AI Video Generation & Product Shoots?</span>
+                    <i class="fas fa-chevron-down faq-icon" style="color: #4ade80; transition: transform 0.3s ease; font-size: 16px;"></i>
+                </button>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 28px; background: rgba(0, 0, 0, 0.2);">
+                    <p style="font-size: 15px; color: #cbd5e1; line-height: 1.7; padding-bottom: 22px; margin: 0;">AI Video Generation and AI Product Shoots create studio-quality product photography, ad reels, and brand films using generative AI models without physical camera setups or expensive studio rentals.</p>
                 </div>
-                <p style="font-size: 15px; color: #e2e8f0; line-height: 1.7; font-weight: 400; margin: 0;">AI Video Generation and AI Product Shoots create studio-quality product photos, ad reels, and brand films using generative AI models without physical camera setups or expensive studio rentals.</p>
             </div>
 
-            <div style="background: rgba(18, 22, 32, 0.95); border: 1px solid rgba(251, 146, 60, 0.25); border-radius: 20px; padding: 36px; backdrop-filter: blur(16px); transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);">
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
-                    <i class="fas fa-tags" style="color: #fb923c; font-size: 20px;"></i>
-                    <h3 style="font-size: 19px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3;">How much does website design or branding cost?</h3>
+            <!-- FAQ Item 4 -->
+            <div class="faq-accordion-item" style="background: rgba(18, 22, 32, 0.95); border: 1px solid rgba(251, 146, 60, 0.25); border-radius: 14px; overflow: hidden; transition: all 0.3s ease;">
+                <button onclick="toggleFaq(this)" style="width: 100%; text-align: left; padding: 22px 28px; background: transparent; border: none; color: #ffffff; font-size: 18px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Inter', sans-serif;">
+                    <span><i class="fas fa-tags" style="color: #fb923c; margin-right: 12px;"></i> How much does website design or branding cost?</span>
+                    <i class="fas fa-chevron-down faq-icon" style="color: #fb923c; transition: transform 0.3s ease; font-size: 16px;"></i>
+                </button>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 28px; background: rgba(0, 0, 0, 0.2);">
+                    <p style="font-size: 15px; color: #cbd5e1; line-height: 1.7; padding-bottom: 22px; margin: 0;">Website development packages start at &#8377;15,000 for starter sites and &#8377;30,000 for standard custom sites. Brand identity packages start at &#8377;8,000.</p>
                 </div>
-                <p style="font-size: 15px; color: #e2e8f0; line-height: 1.7; font-weight: 400; margin: 0;">Website development packages start at &#8377;15,000 for starter sites and &#8377;30,000 for standard custom sites. Brand identity packages start at &#8377;8,000.</p>
             </div>
+
         </div>
     </section>
+
+    <script>
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            const icon = btn.querySelector('.faq-icon');
+            const isOpen = item.classList.contains('active');
+
+            // Close all items
+            document.querySelectorAll('.faq-accordion-item').forEach(el => {
+                el.classList.remove('active');
+                el.querySelector('.faq-answer').style.maxHeight = null;
+                const ic = el.querySelector('.faq-icon');
+                if (ic) ic.style.transform = 'rotate(0deg)';
+            });
+
+            // Open clicked item if it wasn't open
+            if (!isOpen) {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
 
     <footer>
         <div class="footer-top">
