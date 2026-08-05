@@ -1,38 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" shape-rendering="geometricPrecision">
   <defs>
+    <!-- Background Gradient (Deep Luxury Dark) -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f1117" />
-      <stop offset="50%" stop-color="#181c28" />
-      <stop offset="100%" stop-color="#0a0c10" />
+      <stop offset="50%" stop-color="#141824" />
+      <stop offset="100%" stop-color="#090b0e" />
     </linearGradient>
-    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#c084fc" />
-      <stop offset="50%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#4ade80" />
+
+    <!-- Main "A" Monogram Gradient (Vibrant Purple to Electric Cyan) -->
+    <linearGradient id="aGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="40%" stop-color="#c084fc" />
+      <stop offset="70%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#06b6d4" />
     </linearGradient>
-    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2" />
+
+    <!-- Glowing Outer Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.95" />
     </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+
+    <!-- Floating Orange Crossbar Accent Gradient -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff7e00" />
+      <stop offset="50%" stop-color="#fb923c" />
+      <stop offset="100%" stop-color="#ffb703" />
+    </linearGradient>
+
+    <!-- Soft Glow Filter for Monogram -->
+    <filter id="glowA" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="12" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
-  </defs>
-  
-  <!-- Outer Rounded Background Ring -->
-  <rect x="16" y="16" width="480" height="480" rx="120" fill="url(#bgGrad)" stroke="url(#brandGrad)" stroke-width="12" />
-  
-  <!-- Glowing Inner Ring -->
-  <circle cx="256" cy="256" r="210" fill="none" stroke="url(#accentGlow)" stroke-width="6" />
 
-  <!-- D2C Text & Icon Monogram -->
-  <g filter="url(#glow)">
-    <!-- Letter D -->
-    <path d="M 120 160 L 210 160 C 270 160, 310 195, 310 256 C 310 317, 270 352, 210 352 L 120 352 Z M 165 204 L 165 308 L 205 308 C 240 308, 260 288, 260 256 C 260 224, 240 204, 205 204 Z" fill="url(#brandGrad)" />
-    
-    <!-- AI Spark Stars -->
-    <path d="M 360 140 L 368 165 L 393 173 L 368 181 L 360 206 L 352 181 L 327 173 L 352 165 Z" fill="#38bdf8" />
-    <path d="M 380 320 L 385 335 L 400 340 L 385 345 L 380 360 L 375 345 L 360 340 L 375 335 Z" fill="#c084fc" />
-  </g>
+    <!-- High-Intensity Glow Filter for Floating Orange Pill -->
+    <filter id="glowOrange" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur1" />
+      <feGaussianBlur stdDeviation="4" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Container with Dark Theme Background & Glowing Gradient Border -->
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="12" />
+
+  <!-- Inner Glass Shadow Ring for Depth -->
+  <rect x="36" y="36" width="440" height="440" rx="100" fill="none" stroke="rgba(255, 255, 255, 0.06)" stroke-width="3" />
+
+  <!-- Creative Stylized Monogram "A" with Inward Chevron Cutouts -->
+  <path d="M 256 104 L 396 392 L 344 340 L 292 392 L 256 254 L 220 392 L 168 340 L 116 392 Z" 
+        fill="url(#aGrad)" 
+        filter="url(#glowA)" />
+
+  <!-- Floating Glowing Orange Crossbar Pill Accent -->
+  <rect x="216" y="294" width="80" height="15" rx="7.5" fill="url(#orangeGrad)" filter="url(#glowOrange)" />
 </svg>
