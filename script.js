@@ -93,7 +93,7 @@ window.onclick = function(event) {
     }
 }
 
-// === SMOOTH ZOOM UP & RADIAL LIGHT SPOTLIGHT ===
+// === SMOOTH ZOOM UP & RADIAL LIGHT SPOTLIGHT (Replaced aggressive 3D Tilt) ===
 document.querySelectorAll('.prem-card, .pillar-card-home, .comp-box, .service-card, .metric-box, .visual-metric, .deliv-item, .stat-card-home, .feature-visual, .direct-info-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -101,111 +101,49 @@ document.querySelectorAll('.prem-card, .pillar-card-home, .comp-box, .service-ca
         const y = e.clientY - rect.top;
         const pctX = (x / rect.width) * 100;
         const pctY = (y / rect.height) * 100;
-        card.style.setProperty('--mx', pctX.toFixed(1) + '%');
+    card.style.setProperty('--mx', pctX.toFixed(1) + '%');
         card.style.setProperty('--my', pctY.toFixed(1) + '%');
     });
 });
 
-// === NEWSLETTER SUBMIT HANDLER (NO POPUP ALERTS, SLEEK INLINE FEEDBACK) ===
-function handleNewsletterSubmit(event) {
-    if (event) {
-        if (event.preventDefault) event.preventDefault();
-        if (event.stopPropagation) event.stopPropagation();
-    }
-    const btn = (event && event.target) ? (event.target.tagName === 'BUTTON' ? event.target : event.target.closest('button')) : document.querySelector('.newsletter-form button');
-    const form = btn ? btn.closest('.newsletter-form') : document.querySelector('.newsletter-form');
-    const input = form ? form.querySelector('input') : document.querySelector('.newsletter-form input');
-    const email = input ? input.value.trim() : '';
+// === NEWSLETTER SUBSCRIBE HANDLER ===
+function handleNewsletterSubmit(event, formId) {
+    event.preventDefault();
 
-    // Validation: Inline Red Border Glow (Zero intrusive browser alert popups)
-    if (!email || !email.includes('@') || !email.includes('.')) {
-        if (input) {
-            input.focus();
-            input.style.borderColor = '#ef4444';
-            input.style.boxShadow = '0 0 12px rgba(239, 68, 68, 0.5)';
-            const oldPlaceholder = input.placeholder;
-            input.placeholder = 'Please enter a valid email address!';
-            setTimeout(() => {
-                input.style.borderColor = '';
-                input.style.boxShadow = '';
-                input.placeholder = oldPlaceholder;
-            }, 3000);
-        }
-        return false;
+    const form = document.getElementById(formId);
+    const msgId = formId.replace('newsletter-form', 'newsletter-msg');
+    const emailId = formId.replace('newsletter-form', 'newsletter-email');
+
+    const emailInput = document.getElementById(emailId);
+    const msgEl = document.getElementById(msgId);
+
+    if (!emailInput || !emailInput.value) return;
+
+    const email = emailInput.value.trim();
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        emailInput.style.borderColor = '#f87171';
+        emailInput.placeholder = 'Please enter a valid email!';
+        emailInput.value = '';
+        return;
     }
 
-    if (btn) {
-        const originalText = 'Subscribe';
-
-        // 1. Instant Success Visual Feedback
-        btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-        btn.style.color = '#ffffff';
-        btn.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
-        if (input) {
-            input.value = '';
-            input.style.borderColor = '';
-            input.style.boxShadow = '';
-        }
-
-        // 2. Non-blocking Background Mail Dispatch to d2cwithahrik@gmail.com
-        try {
-            const formData = new FormData();
-            formData.append('email', email);
-            formData.append('_subject', '🔥 New Newsletter Subscriber — D2C WITH AHRIK');
-            formData.append('_captcha', 'false');
-            formData.append('_template', 'table');
-            formData.append('form_name', 'Footer Newsletter');
-            formData.append('agency', 'D2C WITH AHRIK');
-
-            fetch('https://formsubmit.co/ajax/d2cwithahrik@gmail.com', {
-                method: 'POST',
-                headers: { 'Accept': 'application/json' },
-                body: formData
-            }).catch(err => console.log('Mail dispatch note:', err));
-        } catch(err) {
-            console.log('Dispatch note:', err);
-        }
-
-        // 3. Non-blocking GA4 Tracking
-        try {
-            if (typeof gtag === 'function') {
-                gtag('event', 'newsletter_signup', {
-                    'event_category': 'engagement',
-                    'event_label': 'Footer Newsletter',
-                    'user_email': email
-                });
-            }
-        } catch(err) {}
-
-        // 4. Reset Button after 3 Seconds
-        setTimeout(() => {
-            if (btn) {
-                btn.style.background = '';
-                btn.style.color = '';
-                btn.innerHTML = originalText;
-            }
-        }, 3000);
+    // Fire GA4 event if available
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'newsletter_subscribe', {
+            event_category: 'engagement',
+            event_label: email
+        });
     }
-    return false;
+
+    // Show success state
+    form.style.display = 'none';
+    if (msgEl) {
+        msgEl.style.display = 'block';
+    }
 }
 
-// Auto-attach listeners on DOM content loaded
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.newsletter-form').forEach(form => {
-        const button = form.querySelector('button');
-        if (button) {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                handleNewsletterSubmit({ preventDefault: () => {}, target: form });
-            });
-        }
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            handleNewsletterSubmit(e);
-        });
-    });
-});
 
 
