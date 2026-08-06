@@ -556,10 +556,10 @@
                 <h2>Stay Connected</h2>
                 <p>Join our inner circle. Get exclusive insights on D2C growth, AI marketing, and brand architecture delivered straight to your inbox.</p>
             </div>
-            <form class="newsletter-form" onsubmit="return handleNewsletterSubmit(event)">
-                <input type="email" placeholder="Enter your work email" required>
-                <button type="submit" class="btn-primary">Subscribe</button>
-            </form>
+            <div class="newsletter-form" style="display: flex; gap: 10px; position: relative; z-index: 20;">
+                <input type="email" placeholder="Enter your work email" style="pointer-events: auto; position: relative; z-index: 20;">
+                <button type="button" onclick="return handleNewsletterSubmit(event)" class="btn-primary" style="cursor: pointer !important; pointer-events: auto !important; position: relative; z-index: 20;">Subscribe</button>
+            </div>
         </div>
         
         <div class="footer-grid">
@@ -611,9 +611,64 @@
         </div>
     </footer>
 
+    <script>
+    function handleNewsletterSubmit(event) {
+        if (event) {
+            if (event.preventDefault) event.preventDefault();
+            if (event.stopPropagation) event.stopPropagation();
+        }
+        var target = (event && event.target) ? event.target : document.activeElement;
+        var form = target ? (target.closest('.newsletter-form') || target.closest('footer')) : document.querySelector('.newsletter-form');
+        if (!form) form = document.querySelector('.newsletter-form');
+        
+        var input = form ? form.querySelector('input') : null;
+        var button = form ? form.querySelector('button') : null;
+        var email = input ? input.value.trim() : '';
+
+        if (!email || email.indexOf('@') === -1) {
+            alert('Please enter a valid work email address.');
+            if (input) input.focus();
+            return false;
+        }
+
+        if (button) {
+            var originalText = button.innerHTML;
+            button.disabled = true;
+            button.style.opacity = '0.9';
+            button.style.cursor = 'wait';
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+
+            setTimeout(function() {
+                button.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+                button.style.color = '#ffffff';
+                button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+                if (input) input.value = '';
+
+                if (typeof gtag === 'function') {
+                    gtag('event', 'newsletter_signup', {
+                        'event_category': 'engagement',
+                        'event_label': 'Footer Newsletter',
+                        'user_email': email
+                    });
+                }
+
+                setTimeout(function() {
+                    button.disabled = false;
+                    button.style.background = '';
+                    button.style.color = '';
+                    button.style.opacity = '1';
+                    button.style.cursor = 'pointer';
+                    button.innerHTML = originalText;
+                }, 3500);
+            }, 600);
+        }
+        return false;
+    }
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="3d-animation.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260806_2"></script>
 </body>
 </html>
 
