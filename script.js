@@ -133,20 +133,22 @@ function handleNewsletterSubmit(event) {
         button.style.cursor = 'wait';
         button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
 
-        // Real Submission to Formspree Endpoint for instant Gmail notification to d2cwithahrik@gmail.com
-        fetch('https://formspree.io/f/d2cwithahrik@gmail.com', {
+        // Real Submission to FormSubmit Endpoint for direct Gmail delivery to d2cwithahrik@gmail.com
+        fetch('https://formsubmit.co/ajax/d2cwithahrik@gmail.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
+                _subject: '🔥 New Newsletter Subscriber — D2C WITH AHRIK',
+                _captcha: 'false',
                 email: email,
-                form_type: 'Footer Newsletter Subscription',
+                form_name: 'Footer Newsletter',
                 agency: 'D2C WITH AHRIK',
-                timestamp: new Date().toLocaleString()
+                submitted_at: new Date().toLocaleString()
             })
-        }).catch(err => console.log('Mail dispatch:', err));
+        }).catch(err => console.log('Mail dispatch error:', err));
 
         setTimeout(() => {
             button.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
