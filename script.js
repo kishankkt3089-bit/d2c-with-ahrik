@@ -106,31 +106,46 @@ document.querySelectorAll('.prem-card, .pillar-card-home, .comp-box, .service-ca
     });
 });
 
-// === NEWSLETTER SUBMIT HANDLER (INSTANT FAIL-SAFE + GA4 & MAIL DISPATCH) ===
+// === NEWSLETTER SUBMIT HANDLER (NO POPUP ALERTS, SLEEK INLINE FEEDBACK) ===
 function handleNewsletterSubmit(event) {
     if (event) {
         if (event.preventDefault) event.preventDefault();
         if (event.stopPropagation) event.stopPropagation();
     }
-    const form = document.querySelector('.newsletter-form') || (event && event.target ? event.target.closest('footer') : null);
+    const btn = (event && event.target) ? (event.target.tagName === 'BUTTON' ? event.target : event.target.closest('button')) : document.querySelector('.newsletter-form button');
+    const form = btn ? btn.closest('.newsletter-form') : document.querySelector('.newsletter-form');
     const input = form ? form.querySelector('input') : document.querySelector('.newsletter-form input');
-    const button = form ? form.querySelector('button') : document.querySelector('.newsletter-form button');
     const email = input ? input.value.trim() : '';
 
-    if (!email || !email.includes('@')) {
-        alert('Please enter a valid work email address.');
-        if (input) input.focus();
+    // Validation: Inline Red Border Glow (Zero intrusive browser alert popups)
+    if (!email || !email.includes('@') || !email.includes('.')) {
+        if (input) {
+            input.focus();
+            input.style.borderColor = '#ef4444';
+            input.style.boxShadow = '0 0 12px rgba(239, 68, 68, 0.5)';
+            const oldPlaceholder = input.placeholder;
+            input.placeholder = 'Please enter a valid email address!';
+            setTimeout(() => {
+                input.style.borderColor = '';
+                input.style.boxShadow = '';
+                input.placeholder = oldPlaceholder;
+            }, 3000);
+        }
         return false;
     }
 
-    if (button) {
+    if (btn) {
         const originalText = 'Subscribe';
 
-        // 1. Instant Synchronous Visual Feedback (0ms delay)
-        button.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-        button.style.color = '#ffffff';
-        button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
-        if (input) input.value = '';
+        // 1. Instant Success Visual Feedback
+        btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+        btn.style.color = '#ffffff';
+        btn.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+        if (input) {
+            input.value = '';
+            input.style.borderColor = '';
+            input.style.boxShadow = '';
+        }
 
         // 2. Non-blocking Background Mail Dispatch to d2cwithahrik@gmail.com
         try {
@@ -151,7 +166,7 @@ function handleNewsletterSubmit(event) {
             console.log('Dispatch note:', err);
         }
 
-        // 3. Non-blocking GA4 Event Tracking
+        // 3. Non-blocking GA4 Tracking
         try {
             if (typeof gtag === 'function') {
                 gtag('event', 'newsletter_signup', {
@@ -162,12 +177,12 @@ function handleNewsletterSubmit(event) {
             }
         } catch(err) {}
 
-        // 4. Automatic Button Reset After 3 Seconds
+        // 4. Reset Button after 3 Seconds
         setTimeout(() => {
-            if (button) {
-                button.style.background = '';
-                button.style.color = '';
-                button.innerHTML = originalText;
+            if (btn) {
+                btn.style.background = '';
+                btn.style.color = '';
+                btn.innerHTML = originalText;
             }
         }, 3000);
     }
