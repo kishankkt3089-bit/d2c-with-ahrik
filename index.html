@@ -638,6 +638,21 @@
             button.style.cursor = 'wait';
             button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
 
+            // Real Submission to Formspree Endpoint for instant Gmail notification to d2cwithahrik@gmail.com
+            fetch('https://formspree.io/f/d2cwithahrik@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    form_type: 'Footer Newsletter Subscription',
+                    agency: 'D2C WITH AHRIK',
+                    timestamp: new Date().toLocaleString()
+                })
+            }).catch(function(err) { console.log('Mail dispatch:', err); });
+
             setTimeout(function() {
                 button.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
                 button.style.color = '#ffffff';

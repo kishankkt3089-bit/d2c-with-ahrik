@@ -106,13 +106,14 @@ document.querySelectorAll('.prem-card, .pillar-card-home, .comp-box, .service-ca
     });
 });
 
-// === NEWSLETTER SUBMIT HANDLER (BULLETPROOF ACROSS ALL PAGES) ===
+// === NEWSLETTER SUBMIT HANDLER (REAL EMAIL ALERT + GA4 TRACKING) ===
 function handleNewsletterSubmit(event) {
     if (event) {
-        event.preventDefault();
-        event.stopPropagation();
+        if (event.preventDefault) event.preventDefault();
+        if (event.stopPropagation) event.stopPropagation();
     }
-    const form = event && event.target ? (event.target.closest('.newsletter-form') || event.target) : document.querySelector('.newsletter-form');
+    const target = (event && event.target) ? event.target : document.activeElement;
+    const form = target ? (target.closest('.newsletter-form') || target.closest('footer')) : document.querySelector('.newsletter-form');
     if (!form) return false;
 
     const input = form.querySelector('input');
@@ -120,7 +121,7 @@ function handleNewsletterSubmit(event) {
     const email = input ? input.value.trim() : '';
 
     if (!email || !email.includes('@')) {
-        alert('Please enter a valid email address.');
+        alert('Please enter a valid work email address.');
         if (input) input.focus();
         return false;
     }
@@ -129,7 +130,23 @@ function handleNewsletterSubmit(event) {
         const originalText = button.innerHTML;
         button.disabled = true;
         button.style.opacity = '0.9';
+        button.style.cursor = 'wait';
         button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+
+        // Real Submission to Formspree Endpoint for instant Gmail notification to d2cwithahrik@gmail.com
+        fetch('https://formspree.io/f/d2cwithahrik@gmail.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                email: email,
+                form_type: 'Footer Newsletter Subscription',
+                agency: 'D2C WITH AHRIK',
+                timestamp: new Date().toLocaleString()
+            })
+        }).catch(err => console.log('Mail dispatch:', err));
 
         setTimeout(() => {
             button.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
@@ -150,8 +167,9 @@ function handleNewsletterSubmit(event) {
                 button.style.background = '';
                 button.style.color = '';
                 button.style.opacity = '1';
+                button.style.cursor = 'pointer';
                 button.innerHTML = originalText;
-            }, 3500);
+            }, 4000);
         }, 600);
     }
     return false;
