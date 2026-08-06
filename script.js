@@ -106,7 +106,7 @@ document.querySelectorAll('.prem-card, .pillar-card-home, .comp-box, .service-ca
     });
 });
 
-// === NEWSLETTER SUBMIT HANDLER (REAL EMAIL ALERT + GA4 TRACKING) ===
+// === NEWSLETTER SUBMIT HANDLER (BULLETPROOF FORM DATA + GA4 TRACKING) ===
 function handleNewsletterSubmit(event) {
     if (event) {
         if (event.preventDefault) event.preventDefault();
@@ -133,23 +133,27 @@ function handleNewsletterSubmit(event) {
         button.style.cursor = 'wait';
         button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
 
-        // Real Submission to FormSubmit Endpoint for direct Gmail delivery to d2cwithahrik@gmail.com
-        fetch('https://formsubmit.co/ajax/d2cwithahrik@gmail.com', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                _subject: '🔥 New Newsletter Subscriber — D2C WITH AHRIK',
-                _captcha: 'false',
-                email: email,
-                form_name: 'Footer Newsletter',
-                agency: 'D2C WITH AHRIK',
-                submitted_at: new Date().toLocaleString()
-            })
-        }).catch(err => console.log('Mail dispatch error:', err));
+        // 1. Dispatch Form Data to FormSubmit Endpoint
+        try {
+            const formData = new FormData();
+            formData.append('email', email);
+            formData.append('_subject', '🔥 New Newsletter Subscriber — D2C WITH AHRIK');
+            formData.append('_captcha', 'false');
+            formData.append('_template', 'table');
+            formData.append('form_name', 'Footer Newsletter');
+            formData.append('agency', 'D2C WITH AHRIK');
 
+            fetch('https://formsubmit.co/ajax/d2cwithahrik@gmail.com', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: formData
+            }).then(res => console.log('Mail dispatched:', res.status))
+              .catch(err => console.log('FormSubmit note:', err));
+        } catch(err) {
+            console.log('Dispatch error:', err);
+        }
+
+        // 2. Guaranteed UI State Reset (Never gets stuck on Subscribing...)
         setTimeout(() => {
             button.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
             button.style.color = '#ffffff';
@@ -171,7 +175,7 @@ function handleNewsletterSubmit(event) {
                 button.style.opacity = '1';
                 button.style.cursor = 'pointer';
                 button.innerHTML = originalText;
-            }, 4000);
+            }, 3500);
         }, 600);
     }
     return false;
