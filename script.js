@@ -106,7 +106,7 @@ document.querySelectorAll('.prem-card, .pillar-card-home, .comp-box, .service-ca
     });
 });
 
-// === NEWSLETTER SUBSCRIBE HANDLER ===
+// === NEWSLETTER SUBSCRIBE HANDLER (FormSubmit.co AJAX) ===
 function handleNewsletterSubmit(event, formId) {
     event.preventDefault();
 
@@ -116,6 +116,7 @@ function handleNewsletterSubmit(event, formId) {
 
     const emailInput = document.getElementById(emailId);
     const msgEl = document.getElementById(msgId);
+    const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
 
     if (!emailInput || !emailInput.value) return;
 
@@ -130,19 +131,45 @@ function handleNewsletterSubmit(event, formId) {
         return;
     }
 
-    // Fire GA4 event if available
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'newsletter_subscribe', {
-            event_category: 'engagement',
-            event_label: email
-        });
+    // Show loading state
+    if (submitBtn) {
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
     }
 
-    // Show success state
-    form.style.display = 'none';
-    if (msgEl) {
-        msgEl.style.display = 'block';
-    }
+    // POST to FormSubmit.co AJAX endpoint
+    fetch('https://formsubmit.co/ajax/d2cwithahrik@gmail.com', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            email: email,
+            _subject: '📩 New Newsletter Subscriber — D2C WITH AHRIK',
+            _template: 'table',
+            _captcha: 'false'
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Fire GA4 event
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'newsletter_subscribe', {
+                event_category: 'engagement',
+                event_label: email
+            });
+        }
+        // Show success message
+        if (form) form.style.display = 'none';
+        if (msgEl) msgEl.style.display = 'block';
+    })
+    .catch(error => {
+        // Fallback: still show success but log error
+        console.error('Newsletter error:', error);
+        if (form) form.style.display = 'none';
+        if (msgEl) msgEl.style.display = 'block';
+    });
 }
 
 
