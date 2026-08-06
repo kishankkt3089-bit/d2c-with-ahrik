@@ -93,7 +93,7 @@ window.onclick = function(event) {
     }
 }
 
-// === SMOOTH ZOOM UP & RADIAL LIGHT SPOTLIGHT (Replaced aggressive 3D Tilt) ===
+// === SMOOTH ZOOM UP & RADIAL LIGHT SPOTLIGHT ===
 document.querySelectorAll('.prem-card, .pillar-card-home, .comp-box, .service-card, .metric-box, .visual-metric, .deliv-item, .stat-card-home, .feature-visual, .direct-info-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -103,6 +103,76 @@ document.querySelectorAll('.prem-card, .pillar-card-home, .comp-box, .service-ca
         const pctY = (y / rect.height) * 100;
         card.style.setProperty('--mx', pctX.toFixed(1) + '%');
         card.style.setProperty('--my', pctY.toFixed(1) + '%');
+    });
+});
+
+// === NEWSLETTER SUBMIT HANDLER (BULLETPROOF ACROSS ALL PAGES) ===
+function handleNewsletterSubmit(event) {
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    const form = event && event.target ? (event.target.closest('.newsletter-form') || event.target) : document.querySelector('.newsletter-form');
+    if (!form) return false;
+
+    const input = form.querySelector('input');
+    const button = form.querySelector('button');
+    const email = input ? input.value.trim() : '';
+
+    if (!email || !email.includes('@')) {
+        alert('Please enter a valid email address.');
+        if (input) input.focus();
+        return false;
+    }
+
+    if (button) {
+        const originalText = button.innerHTML;
+        button.disabled = true;
+        button.style.opacity = '0.9';
+        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+
+        setTimeout(() => {
+            button.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+            button.style.color = '#ffffff';
+            button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+            if (input) input.value = '';
+
+            if (typeof gtag === 'function') {
+                gtag('event', 'newsletter_signup', {
+                    'event_category': 'engagement',
+                    'event_label': 'Footer Newsletter',
+                    'user_email': email
+                });
+            }
+
+            setTimeout(() => {
+                button.disabled = false;
+                button.style.background = '';
+                button.style.color = '';
+                button.style.opacity = '1';
+                button.innerHTML = originalText;
+            }, 3500);
+        }, 600);
+    }
+    return false;
+}
+
+// Auto-attach listeners on DOM content loaded
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.newsletter-form').forEach(form => {
+        const button = form.querySelector('button');
+        if (button) {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleNewsletterSubmit({ preventDefault: () => {}, target: form });
+            });
+        }
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            handleNewsletterSubmit(e);
+        });
     });
 });
 

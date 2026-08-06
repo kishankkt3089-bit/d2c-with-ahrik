@@ -282,10 +282,10 @@
                 <h2>Stay Connected</h2>
                 <p>Join our inner circle. Get exclusive insights on D2C growth, AI marketing, and brand architecture delivered straight to your inbox.</p>
             </div>
-            <div class="newsletter-form">
-                <input type="email" placeholder="Enter your work email">
-                <button class="btn-primary">Subscribe</button>
-            </div>
+            <form class="newsletter-form" onsubmit="return handleNewsletterSubmit(event)">
+                <input type="email" placeholder="Enter your work email" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
         </div>
         
         <div class="footer-grid">

@@ -829,6 +829,8 @@ footer {
 .newsletter-form {
     display: flex;
     gap: 10px;
+    position: relative;
+    z-index: 10;
 }
 
 .newsletter-form input {
@@ -840,10 +842,20 @@ footer {
     font-size: 14px;
     outline: none;
     min-width: 250px;
+    position: relative;
+    z-index: 10;
+    pointer-events: auto !important;
 }
 
 .newsletter-form input:focus {
     border-color: var(--accent-primary);
+}
+
+.newsletter-form button {
+    cursor: pointer !important;
+    position: relative;
+    z-index: 10;
+    pointer-events: auto !important;
 }
 
 .footer-grid {
