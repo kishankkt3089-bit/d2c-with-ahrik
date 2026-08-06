@@ -106,18 +106,15 @@ document.querySelectorAll('.prem-card, .pillar-card-home, .comp-box, .service-ca
     });
 });
 
-// === NEWSLETTER SUBMIT HANDLER (BULLETPROOF FORM DATA + GA4 TRACKING) ===
+// === NEWSLETTER SUBMIT HANDLER (INSTANT FAIL-SAFE + GA4 & MAIL DISPATCH) ===
 function handleNewsletterSubmit(event) {
     if (event) {
         if (event.preventDefault) event.preventDefault();
         if (event.stopPropagation) event.stopPropagation();
     }
-    const target = (event && event.target) ? event.target : document.activeElement;
-    const form = target ? (target.closest('.newsletter-form') || target.closest('footer')) : document.querySelector('.newsletter-form');
-    if (!form) return false;
-
-    const input = form.querySelector('input');
-    const button = form.querySelector('button');
+    const form = document.querySelector('.newsletter-form') || (event && event.target ? event.target.closest('footer') : null);
+    const input = form ? form.querySelector('input') : document.querySelector('.newsletter-form input');
+    const button = form ? form.querySelector('button') : document.querySelector('.newsletter-form button');
     const email = input ? input.value.trim() : '';
 
     if (!email || !email.includes('@')) {
@@ -127,13 +124,15 @@ function handleNewsletterSubmit(event) {
     }
 
     if (button) {
-        const originalText = button.innerHTML;
-        button.disabled = true;
-        button.style.opacity = '0.9';
-        button.style.cursor = 'wait';
-        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+        const originalText = 'Subscribe';
 
-        // 1. Dispatch Form Data to FormSubmit Endpoint
+        // 1. Instant Synchronous Visual Feedback (0ms delay)
+        button.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+        button.style.color = '#ffffff';
+        button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+        if (input) input.value = '';
+
+        // 2. Non-blocking Background Mail Dispatch to d2cwithahrik@gmail.com
         try {
             const formData = new FormData();
             formData.append('email', email);
@@ -147,19 +146,13 @@ function handleNewsletterSubmit(event) {
                 method: 'POST',
                 headers: { 'Accept': 'application/json' },
                 body: formData
-            }).then(res => console.log('Mail dispatched:', res.status))
-              .catch(err => console.log('FormSubmit note:', err));
+            }).catch(err => console.log('Mail dispatch note:', err));
         } catch(err) {
-            console.log('Dispatch error:', err);
+            console.log('Dispatch note:', err);
         }
 
-        // 2. Guaranteed UI State Reset (Never gets stuck on Subscribing...)
-        setTimeout(() => {
-            button.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-            button.style.color = '#ffffff';
-            button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
-            if (input) input.value = '';
-
+        // 3. Non-blocking GA4 Event Tracking
+        try {
             if (typeof gtag === 'function') {
                 gtag('event', 'newsletter_signup', {
                     'event_category': 'engagement',
@@ -167,16 +160,16 @@ function handleNewsletterSubmit(event) {
                     'user_email': email
                 });
             }
+        } catch(err) {}
 
-            setTimeout(() => {
-                button.disabled = false;
+        // 4. Automatic Button Reset After 3 Seconds
+        setTimeout(() => {
+            if (button) {
                 button.style.background = '';
                 button.style.color = '';
-                button.style.opacity = '1';
-                button.style.cursor = 'pointer';
                 button.innerHTML = originalText;
-            }, 3500);
-        }, 600);
+            }
+        }, 3000);
     }
     return false;
 }

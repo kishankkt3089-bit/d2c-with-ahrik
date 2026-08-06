@@ -617,12 +617,9 @@
             if (event.preventDefault) event.preventDefault();
             if (event.stopPropagation) event.stopPropagation();
         }
-        var target = (event && event.target) ? event.target : document.activeElement;
-        var form = target ? (target.closest('.newsletter-form') || target.closest('footer')) : document.querySelector('.newsletter-form');
-        if (!form) form = document.querySelector('.newsletter-form');
-        
-        var input = form ? form.querySelector('input') : null;
-        var button = form ? form.querySelector('button') : null;
+        var form = document.querySelector('.newsletter-form') || (event && event.target ? event.target.closest('footer') : null);
+        var input = form ? form.querySelector('input') : document.querySelector('.newsletter-form input');
+        var button = form ? form.querySelector('button') : document.querySelector('.newsletter-form button');
         var email = input ? input.value.trim() : '';
 
         if (!email || email.indexOf('@') === -1) {
@@ -632,56 +629,50 @@
         }
 
         if (button) {
-            var originalText = button.innerHTML;
-            button.disabled = true;
-            button.style.opacity = '0.9';
-            button.style.cursor = 'wait';
-            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
+            var originalText = 'Subscribe';
 
-            // 1. Dispatch Form Data to FormSubmit Endpoint
-        try {
-            var formData = new FormData();
-            formData.append('email', email);
-            formData.append('_subject', '🔥 New Newsletter Subscriber — D2C WITH AHRIK');
-            formData.append('_captcha', 'false');
-            formData.append('_template', 'table');
-            formData.append('form_name', 'Footer Newsletter');
-            formData.append('agency', 'D2C WITH AHRIK');
-
-            fetch('https://formsubmit.co/ajax/d2cwithahrik@gmail.com', {
-                method: 'POST',
-                headers: { 'Accept': 'application/json' },
-                body: formData
-            }).then(function(res) { console.log('Mail dispatched:', res.status); })
-              .catch(function(err) { console.log('FormSubmit note:', err); });
-        } catch(e) {
-            console.log('Dispatch note:', e);
-        }
-
-        // 2. Guaranteed UI State Reset (Never gets stuck on Subscribing...)
-        setTimeout(function() {
+            // 1. Instant Synchronous Visual Feedback (0ms delay)
             button.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
             button.style.color = '#ffffff';
             button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
             if (input) input.value = '';
 
-            if (typeof gtag === 'function') {
-                gtag('event', 'newsletter_signup', {
-                    'event_category': 'engagement',
-                    'event_label': 'Footer Newsletter',
-                    'user_email': email
-                });
-            }
+            // 2. Non-blocking Background Mail Dispatch to d2cwithahrik@gmail.com
+            try {
+                var formData = new FormData();
+                formData.append('email', email);
+                formData.append('_subject', '🔥 New Newsletter Subscriber — D2C WITH AHRIK');
+                formData.append('_captcha', 'false');
+                formData.append('_template', 'table');
+                formData.append('form_name', 'Footer Newsletter');
+                formData.append('agency', 'D2C WITH AHRIK');
 
+                fetch('https://formsubmit.co/ajax/d2cwithahrik@gmail.com', {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: formData
+                }).catch(function(e){});
+            } catch(e) {}
+
+            // 3. Non-blocking GA4 Event Tracking
+            try {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'newsletter_signup', {
+                        'event_category': 'engagement',
+                        'event_label': 'Footer Newsletter',
+                        'user_email': email
+                    });
+                }
+            } catch(e) {}
+
+            // 4. Automatic Button Reset After 3 Seconds
             setTimeout(function() {
-                button.disabled = false;
-                button.style.background = '';
-                button.style.color = '';
-                button.style.opacity = '1';
-                button.style.cursor = 'pointer';
-                button.innerHTML = originalText;
-            }, 3500);
-        }, 600);
+                if (button) {
+                    button.style.background = '';
+                    button.style.color = '';
+                    button.innerHTML = originalText;
+                }
+            }, 3000);
         }
         return false;
     }
