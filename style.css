@@ -67,13 +67,13 @@
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
 }
 
-[data-theme="dark"] footer a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]) {
+[data-theme="dark"] footer a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):not([class*="social-"]) {
     color: #f8fafc !important;
     font-weight: 500 !important;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-[data-theme="dark"] footer a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):hover {
+[data-theme="dark"] footer a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):not([class*="social-"]):hover {
     color: #ffffff !important;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.6) !important;
 }
@@ -910,44 +910,164 @@ footer .footer-logo:hover {
     transform: none !important;
 }
 
+/* ==========================================================================
+   STUNNING & STABLE BRAND-COLORED SOCIAL BUTTONS
+   ========================================================================== */
 .footer-socials {
-    display: flex;
-    gap: 15px;
+    display: flex !important;
+    gap: 12px !important;
+    align-items: center !important;
 }
 
-.footer-socials a {
-    font-size: 20px;
-    transition: transform 0.25s ease, filter 0.25s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
+.footer-socials a,
+footer .footer-socials a,
+[data-theme="dark"] footer .footer-socials a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 12px !important;
+    font-size: 20px !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    text-decoration: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+    transform: none !important;
 }
 
-.footer-socials a:hover {
-    transform: translateY(-3px) scale(1.12) !important;
-    filter: brightness(1.2);
-    background: rgba(255,255,255,0.1);
-}
-
-/* Brand Colors — always visible, never overridable */
-.footer-socials a.social-x         { color: #e2e8f0 !important; border-color: rgba(226,232,240,0.2) !important; -webkit-text-fill-color: unset !important; }
-.footer-socials a.social-instagram  { color: #e1306c !important; border-color: rgba(225,48,108,0.3) !important; -webkit-text-fill-color: unset !important; }
-.footer-socials a.social-youtube    { color: #ff0000 !important; border-color: rgba(255,0,0,0.3) !important;     -webkit-text-fill-color: unset !important; }
-.footer-socials a.social-linkedin   { color: #0a66c2 !important; border-color: rgba(10,102,194,0.3) !important;  -webkit-text-fill-color: unset !important; }
-.footer-socials a.social-facebook   { color: #1877f2 !important; border-color: rgba(24,119,242,0.3) !important;  -webkit-text-fill-color: unset !important; }
-
-/* Ensure icon glyphs inherit color */
-.footer-socials a i {
-    color: inherit !important;
-    -webkit-text-fill-color: currentColor !important;
+.footer-socials a i,
+footer .footer-socials a i,
+[data-theme="dark"] footer .footer-socials a i {
+    font-size: 20px !important;
+    line-height: 1 !important;
+    transition: transform 0.3s ease !important;
     background: none !important;
-    -webkit-background-clip: unset !important;
-    background-clip: unset !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+}
+
+.footer-socials a:hover,
+footer .footer-socials a:hover {
+    transform: translateY(-4px) scale(1.08) !important;
+}
+
+.footer-socials a:hover i {
+    transform: scale(1.15) !important;
+}
+
+/* X / Twitter — Crisp White on dark glass */
+.footer-socials a.social-x,
+footer .footer-socials a.social-x {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+.footer-socials a.social-x i {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+.footer-socials a.social-x:hover {
+    background: rgba(255, 255, 255, 0.22) !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Instagram — Iconic Vivid Pink Accent */
+.footer-socials a.social-instagram,
+footer .footer-socials a.social-instagram {
+    background: rgba(225, 48, 108, 0.14) !important;
+    border: 1px solid rgba(225, 48, 108, 0.38) !important;
+    color: #f472b6 !important;
+    -webkit-text-fill-color: #f472b6 !important;
+}
+.footer-socials a.social-instagram i {
+    color: #f472b6 !important;
+    -webkit-text-fill-color: #f472b6 !important;
+}
+.footer-socials a.social-instagram:hover {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045) !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    box-shadow: 0 0 20px rgba(225, 48, 108, 0.6) !important;
+}
+.footer-socials a.social-instagram:hover i {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* YouTube — Pure Vivid Red */
+.footer-socials a.social-youtube,
+footer .footer-socials a.social-youtube {
+    background: rgba(255, 0, 0, 0.14) !important;
+    border: 1px solid rgba(255, 0, 0, 0.38) !important;
+    color: #ff3333 !important;
+    -webkit-text-fill-color: #ff3333 !important;
+}
+.footer-socials a.social-youtube i {
+    color: #ff3333 !important;
+    -webkit-text-fill-color: #ff3333 !important;
+}
+.footer-socials a.social-youtube:hover {
+    background: #ff0000 !important;
+    border-color: #ff0000 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.65) !important;
+}
+.footer-socials a.social-youtube:hover i {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* LinkedIn — Official LinkedIn Blue */
+.footer-socials a.social-linkedin,
+footer .footer-socials a.social-linkedin {
+    background: rgba(10, 102, 194, 0.16) !important;
+    border: 1px solid rgba(10, 102, 194, 0.42) !important;
+    color: #38bdf8 !important;
+    -webkit-text-fill-color: #38bdf8 !important;
+}
+.footer-socials a.social-linkedin i {
+    color: #38bdf8 !important;
+    -webkit-text-fill-color: #38bdf8 !important;
+}
+.footer-socials a.social-linkedin:hover {
+    background: #0a66c2 !important;
+    border-color: #0a66c2 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    box-shadow: 0 0 20px rgba(10, 102, 194, 0.65) !important;
+}
+.footer-socials a.social-linkedin:hover i {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Facebook — Official Facebook Blue */
+.footer-socials a.social-facebook,
+footer .footer-socials a.social-facebook {
+    background: rgba(24, 119, 242, 0.16) !important;
+    border: 1px solid rgba(24, 119, 242, 0.42) !important;
+    color: #60a5fa !important;
+    -webkit-text-fill-color: #60a5fa !important;
+}
+.footer-socials a.social-facebook i {
+    color: #60a5fa !important;
+    -webkit-text-fill-color: #60a5fa !important;
+}
+.footer-socials a.social-facebook:hover {
+    background: #1877f2 !important;
+    border-color: #1877f2 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    box-shadow: 0 0 20px rgba(24, 119, 242, 0.65) !important;
+}
+.footer-socials a.social-facebook:hover i {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
 }
 
 .footer-bottom p {
@@ -1037,17 +1157,17 @@ footer .footer-logo:hover {
 }
 
 /* ===== FOOTER LINKS & THE JOURNEY PILLAR HIGHLIGHTS ===== */
-footer a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]), 
-.pillar-footer-extra a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]), 
-.footer-grid a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]) {
+footer a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):not([class*="social-"]), 
+.pillar-footer-extra a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):not([class*="social-"]), 
+.footer-grid a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):not([class*="social-"]) {
     color: #f8fafc !important;
     font-weight: 500 !important;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
     display: inline-block;
 }
 
-footer a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):hover, 
-.pillar-footer-extra a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):hover {
+footer a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):not([class*="social-"]):hover, 
+.pillar-footer-extra a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):not([class*="social-"]):hover {
     color: #ffffff !important;
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.8) !important;
     transform: translateX(4px);
