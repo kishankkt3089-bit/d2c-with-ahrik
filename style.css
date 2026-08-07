@@ -934,12 +934,21 @@ footer .footer-logo:hover {
     background: rgba(255,255,255,0.1);
 }
 
-/* Brand Colors — always visible */
-.footer-socials a.social-x         { color: #f8fafc; }
-.footer-socials a.social-instagram  { color: #e1306c; }
-.footer-socials a.social-youtube    { color: #ff0000; }
-.footer-socials a.social-linkedin   { color: #0a66c2; }
-.footer-socials a.social-facebook   { color: #1877f2; }
+/* Brand Colors — always visible, never overridable */
+.footer-socials a.social-x         { color: #e2e8f0 !important; border-color: rgba(226,232,240,0.2) !important; -webkit-text-fill-color: unset !important; }
+.footer-socials a.social-instagram  { color: #e1306c !important; border-color: rgba(225,48,108,0.3) !important; -webkit-text-fill-color: unset !important; }
+.footer-socials a.social-youtube    { color: #ff0000 !important; border-color: rgba(255,0,0,0.3) !important;     -webkit-text-fill-color: unset !important; }
+.footer-socials a.social-linkedin   { color: #0a66c2 !important; border-color: rgba(10,102,194,0.3) !important;  -webkit-text-fill-color: unset !important; }
+.footer-socials a.social-facebook   { color: #1877f2 !important; border-color: rgba(24,119,242,0.3) !important;  -webkit-text-fill-color: unset !important; }
+
+/* Ensure icon glyphs inherit color */
+.footer-socials a i {
+    color: inherit !important;
+    -webkit-text-fill-color: currentColor !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+}
 
 .footer-bottom p {
     color: var(--text-secondary);
@@ -1930,8 +1939,7 @@ footer {
 
 /* 1. Logo Gradient Hover for NAVIGATE, CONNECT & Footer Links */
 .footer-col ul li a:hover,
-.footer-bottom a:hover,
-.footer-socials a:hover {
+.footer-bottom a:hover {
     color: #c084fc !important;
     background: linear-gradient(135deg, #c084fc, #f472b6) !important;
     -webkit-background-clip: text !important;
