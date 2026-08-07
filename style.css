@@ -916,14 +916,30 @@ footer .footer-logo:hover {
 }
 
 .footer-socials a {
-    color: var(--text-secondary);
-    font-size: 18px;
-    transition: color 0.2s;
+    font-size: 20px;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .footer-socials a:hover {
-    color: var(--text-primary);
+    transform: translateY(-3px) scale(1.12) !important;
+    filter: brightness(1.2);
+    background: rgba(255,255,255,0.1);
 }
+
+/* Brand Colors — always visible */
+.footer-socials a.social-x         { color: #f8fafc; }
+.footer-socials a.social-instagram  { color: #e1306c; }
+.footer-socials a.social-youtube    { color: #ff0000; }
+.footer-socials a.social-linkedin   { color: #0a66c2; }
+.footer-socials a.social-facebook   { color: #1877f2; }
 
 .footer-bottom p {
     color: var(--text-secondary);
@@ -1827,8 +1843,7 @@ footer .footer-col ul li a[href*="network"]:hover,
 
 /* ===== LOGO GRADIENT HOVER EFFECT FOR REMAINING FOOTER LINKS ===== */
 footer .footer-col ul li a:not([class*="footer-journey-"]):hover,
-footer .footer-bottom a:hover,
-footer .footer-socials a:hover {
+footer .footer-bottom a:not(.footer-socials a):hover {
     background: linear-gradient(135deg, var(--text-gradient-1, #c084fc), var(--text-gradient-2, #f472b6)) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
@@ -1836,14 +1851,6 @@ footer .footer-socials a:hover {
     font-weight: 700 !important;
     transform: translateX(4px) !important;
     transition: all 0.25s ease !important;
-}
-
-footer .footer-socials a:hover i {
-    background: linear-gradient(135deg, var(--text-gradient-1, #c084fc), var(--text-gradient-2, #f472b6)) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    transform: scale(1.25) !important;
 }
 
 
