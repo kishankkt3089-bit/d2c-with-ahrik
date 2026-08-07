@@ -53,6 +53,48 @@
         .port-cta-box { background: linear-gradient(135deg, rgba(38, 18, 68, 0.95), rgba(15, 17, 21, 0.98)); border: 2px solid rgba(192, 132, 252, 0.6); border-radius: 24px; padding: 50px 40px; text-align: center; max-width: 960px; margin: 40px auto 80px; backdrop-filter: blur(20px); position: relative; z-index: 2; }
         .port-cta-box h3 { font-size: clamp(26px, 3.5vw, 40px); font-weight: 800; color: #ffffff; margin-bottom: 16px; }
         .port-cta-box p { font-size: 16.5px; color: #cbd5e1; max-width: 720px; margin: 0 auto 30px; line-height: 1.7; }
+
+        /* FOUNDING CLIENT SECTION */
+        .founding-section { padding: 20px 5% 80px; position: relative; z-index: 2; }
+        .founding-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; max-width: 1280px; margin: 0 auto; }
+        .founding-card { background: rgba(18, 21, 28, 0.95); border: 1px solid var(--border-color); border-radius: 24px; padding: 38px 32px; backdrop-filter: blur(20px); transition: transform 0.35s ease, box-shadow 0.35s ease; display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden; }
+        .founding-card:hover { transform: translateY(-8px) !important; }
+        .founding-card h3 { font-size: 22px; font-weight: 800; color: #ffffff; margin: 0; }
+        .founding-card p { font-size: 14.5px; color: #94a3b8; line-height: 1.7; margin: 0; flex: 1; }
+        .founding-icon-wrap { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+        .founding-badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-top: 4px; align-self: flex-start; }
+        /* Card 1 - Cyan */
+        .founding-card-1 { border-color: rgba(34, 211, 238, 0.25); }
+        .founding-card-1:hover { box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(34,211,238,0.2) !important; border-color: rgba(34,211,238,0.5) !important; }
+        .founding-icon-1 { background: rgba(34, 211, 238, 0.15); color: #22d3ee; }
+        .founding-badge-1 { background: rgba(34, 211, 238, 0.1); border: 1px solid rgba(34,211,238,0.35); color: #22d3ee; }
+        /* Card 2 - Amber */
+        .founding-card-2 { border-color: rgba(251, 191, 36, 0.25); }
+        .founding-card-2:hover { box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(251,191,36,0.2) !important; border-color: rgba(251,191,36,0.5) !important; }
+        .founding-icon-2 { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
+        .founding-badge-2 { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251,191,36,0.35); color: #fbbf24; }
+        /* Card 3 - Purple */
+        .founding-card-3 { border-color: rgba(167, 139, 250, 0.25); }
+        .founding-card-3:hover { box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(167,139,250,0.2) !important; border-color: rgba(167,139,250,0.5) !important; }
+        .founding-icon-3 { background: rgba(167, 139, 250, 0.15); color: #a78bfa; }
+        .founding-badge-3 { background: rgba(167, 139, 250, 0.1); border: 1px solid rgba(167,139,250,0.35); color: #a78bfa; }
+        /* Card 4 - Green */
+        .founding-card-4 { border-color: rgba(74, 222, 128, 0.25); }
+        .founding-card-4:hover { box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(74,222,128,0.2) !important; border-color: rgba(74,222,128,0.5) !important; }
+        .founding-icon-4 { background: rgba(74, 222, 128, 0.15); color: #4ade80; }
+        .founding-badge-4 { background: rgba(74, 222, 128, 0.1); border: 1px solid rgba(74,222,128,0.35); color: #4ade80; }
+
+        /* PROCESS SECTION */
+        .process-section { padding: 80px 5%; position: relative; z-index: 2; }
+        .process-inner { max-width: 860px; margin: 0 auto; }
+        .process-steps { display: flex; flex-direction: column; gap: 0; }
+        .process-step { display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: flex-start; position: relative; }
+        .step-num { width: 72px; height: 72px; border-radius: 20px; background: linear-gradient(135deg, rgba(192,132,252,0.2), rgba(244,114,182,0.15)); border: 2px solid rgba(192,132,252,0.4); display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 900; color: #c084fc; flex-shrink: 0; letter-spacing: -1px; }
+        .step-content { padding: 12px 0 40px; }
+        .step-title { font-size: 20px; font-weight: 800; color: #ffffff; margin-bottom: 10px; }
+        .step-desc { font-size: 15px; color: #94a3b8; line-height: 1.75; }
+        .step-connector { position: absolute; left: 36px; top: 72px; width: 2px; height: calc(100% - 32px); background: linear-gradient(to bottom, rgba(192,132,252,0.4), rgba(192,132,252,0.05)); }
+        @media (max-width: 600px) { .founding-grid { grid-template-columns: 1fr; } .process-step { grid-template-columns: 60px 1fr; gap: 16px; } .step-num { width: 56px; height: 56px; font-size: 18px; } .step-connector { left: 28px; } }
     </style>
 </head>
 <body>
@@ -154,160 +196,100 @@
     <!-- PORTFOLIO HERO SECTION -->
     <header class="port-hero">
         <div class="hero-content">
-            <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-primary); margin-bottom: 14px; display: block;">OUR CAPABILITY ARCHITECTURE</span>
-            <h1>How We Build <span class="gradient-text">D2C Brands End-to-End</span></h1>
-            <p>Each card below reflects the real frameworks, tools, and processes we execute across our 6 pillars. We're at our founding stage — detailed client case studies will be published here as engagements complete. Our approach is what we stand behind.</p>
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-primary); margin-bottom: 14px; display: block;">FOUNDING CLIENT PROGRAM</span>
+            <h1>We're Building Our First<br><span class="gradient-text">Success Stories —</span><br>Starting With Yours</h1>
+            <p>D2C WITH AHRIK just launched. Instead of recycled case studies, we're offering something better: founder-level attention, our full 6-pillar system, and founding-client pricing — for the brands who join us first.</p>
         </div>
         <div class="hero-glow"></div>
     </header>
 
-    <!-- CAPABILITY SHOWCASE GRID -->
-    <section class="port-grid">
+    <!-- FOUNDING CLIENT BENEFITS SECTION -->
+    <section class="founding-section">
+        <div class="founding-grid">
 
-        <!-- CARD 01: FULL ECOSYSTEM LAUNCH -->
-        <div class="port-card">
-            <div>
-                <div>
-                    <span class="port-tag">Beauty &amp; Personal Care</span>
-                    <span class="port-scale" style="color:#c084fc;">Full 6-Pillar</span>
+            <div class="founding-card founding-card-1">
+                <div class="founding-icon-wrap founding-icon-1">
+                    <i class="fas fa-user-tie"></i>
                 </div>
-                <h3>Zero-to-One Brand Launch</h3>
-                <p>Our complete framework for taking a beauty or skincare brand from concept to live DTC + Quick Commerce presence — including legal entity setup, FSSAI compliance, AI visual production, Shopify storefront, Meta ad launch, and Blinkit onboarding.</p>
-                <div class="pillars-used">
-                    <span class="pillar-chip" style="color: #22d3ee; border-color: rgba(34, 211, 238, 0.4);">Base</span>
-                    <span class="pillar-chip" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">Studio</span>
-                    <span class="pillar-chip" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">Build</span>
-                    <span class="pillar-chip" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.4);">Marketing</span>
-                    <span class="pillar-chip" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);">Commerce</span>
-                    <span class="pillar-chip" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.4);">Network</span>
-                </div>
+                <h3>Direct Founder Access</h3>
+                <p>No account managers, no middlemen. You work directly with the person building this agency — every decision, every strategy call, every creative review.</p>
+                <div class="founding-badge founding-badge-1">Guaranteed for Cohort 1</div>
             </div>
-            <div class="results-box" style="border-color: rgba(192, 132, 252, 0.25);">
-                <div style="text-align: center; padding: 10px 0;">
-                    <div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #c084fc; margin-bottom: 8px;">Client Case Study</div>
-                    <div style="font-size: 15px; font-weight: 700; color: #f8fafc;">Unlocking Soon</div>
-                    <div style="font-size: 12.5px; color: #94a3b8; margin-top: 6px; line-height: 1.5;">First engagement currently in active delivery.</div>
+
+            <div class="founding-card founding-card-2">
+                <div class="founding-icon-wrap founding-icon-2">
+                    <i class="fas fa-tag"></i>
                 </div>
+                <h3>Founding-Cohort Pricing</h3>
+                <p>Our first clients get priority rates that won't be repeated once we scale. These are locked in for the full life of your engagement — not a one-time discount.</p>
+                <div class="founding-badge founding-badge-2">Rate Locked For Life</div>
             </div>
+
+            <div class="founding-card founding-card-3">
+                <div class="founding-icon-wrap founding-icon-3">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3>Full 6-Pillar System, Day One</h3>
+                <p>You get the complete methodology — Base, Studio, Build, Marketing, Commerce, Network — not a scaled-down "starter" version. Everything, from day one.</p>
+                <div class="founding-badge founding-badge-3">All 6 Pillars Activated</div>
+            </div>
+
+            <div class="founding-card founding-card-4">
+                <div class="founding-icon-wrap founding-icon-4">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Co-Built Case Study</h3>
+                <p>Your results become our first official case study (with your permission) — meaning your success gets extra strategic attention, because it matters to both of us.</p>
+                <div class="founding-badge founding-badge-4">Your Brand. Our Story.</div>
+            </div>
+
         </div>
+    </section>
 
-        <!-- CARD 02: AI STUDIO + SHOPIFY BUILD -->
-        <div class="port-card">
-            <div>
-                <div>
-                    <span class="port-tag">Fashion &amp; Apparel</span>
-                    <span class="port-scale" style="color:#a78bfa;">Studio + Build</span>
-                </div>
-                <h3>AI Visual Production &amp; Headless Store</h3>
-                <p>How we replace expensive traditional photo shoots with 48-hour AI-powered product imagery, model composites, and lifestyle visuals — then deploy them on a conversion-optimised headless Shopify storefront with 24/7 AI sales bot.</p>
-                <div class="pillars-used">
-                    <span class="pillar-chip" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">Studio</span>
-                    <span class="pillar-chip" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">Build</span>
-                    <span class="pillar-chip" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.4);">Marketing</span>
-                </div>
-            </div>
-            <div class="results-box" style="border-color: rgba(167, 139, 250, 0.25);">
-                <div style="text-align: center; padding: 10px 0;">
-                    <div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #a78bfa; margin-bottom: 8px;">Client Case Study</div>
-                    <div style="font-size: 15px; font-weight: 700; color: #f8fafc;">Unlocking Soon</div>
-                    <div style="font-size: 12.5px; color: #94a3b8; margin-top: 6px; line-height: 1.5;">Capability deployed — results being documented.</div>
-                </div>
-            </div>
-        </div>
+    <!-- HOW WE WORK — PROCESS SECTION -->
+    <section class="process-section">
+        <div class="process-inner">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--accent-primary); margin-bottom: 14px; display: block; text-align: center;">OUR PROCESS</span>
+            <h2 style="text-align: center; font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; color: #fff; margin-bottom: 12px;">How We Work <span class="gradient-text">With You</span></h2>
+            <p style="text-align: center; color: #94a3b8; font-size: 16px; max-width: 620px; margin: 0 auto 56px; line-height: 1.7;">A clear, honest 4-phase journey — no bloated onboarding, no unnecessary delays. From your first call to your first growth loop.</p>
 
-        <!-- CARD 03: MARKETPLACE GROWTH PLAYBOOK -->
-        <div class="port-card">
-            <div>
-                <div>
-                    <span class="port-tag">Health, Supplements &amp; Wellness</span>
-                    <span class="port-scale" style="color:#fbbf24;">Commerce</span>
-                </div>
-                <h3>Amazon &amp; Marketplace Ranking Engine</h3>
-                <p>Our step-by-step approach to Amazon SP-API catalog architecture, FSSAI compliance armoring, keyword-led SEO listing builds, and PPC campaign structuring to drive organic rank improvements and repeat purchase rates in the supplements category.</p>
-                <div class="pillars-used">
-                    <span class="pillar-chip" style="color: #22d3ee; border-color: rgba(34, 211, 238, 0.4);">Base</span>
-                    <span class="pillar-chip" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.4);">Marketing</span>
-                    <span class="pillar-chip" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);">Commerce</span>
-                </div>
-            </div>
-            <div class="results-box" style="border-color: rgba(251, 191, 36, 0.25);">
-                <div style="text-align: center; padding: 10px 0;">
-                    <div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 8px;">Client Case Study</div>
-                    <div style="font-size: 15px; font-weight: 700; color: #f8fafc;">Unlocking Soon</div>
-                    <div style="font-size: 12.5px; color: #94a3b8; margin-top: 6px; line-height: 1.5;">Framework proven — engagement data being compiled.</div>
-                </div>
-            </div>
-        </div>
+            <div class="process-steps">
 
-        <!-- CARD 04: QUICK COMMERCE ENTRY -->
-        <div class="port-card">
-            <div>
-                <div>
-                    <span class="port-tag">Food, Beverage &amp; FMCG</span>
-                    <span class="port-scale" style="color:#fbbf24;">Commerce</span>
+                <div class="process-step">
+                    <div class="step-num">01</div>
+                    <div class="step-content">
+                        <div class="step-title">Discovery Call</div>
+                        <div class="step-desc">We diagnose exactly which pillars your brand needs — no generic packages, no upsell pressure. Just an honest assessment of where you are and what will move the needle.</div>
+                    </div>
+                    <div class="step-connector"></div>
                 </div>
-                <h3>Quick Commerce City-by-City Expansion</h3>
-                <p>Our playbook for onboarding FMCG and beverage brands onto Zepto, Blinkit, and Instamart — covering catalog requirements, dark store placement strategy, pricing architecture, and SKU velocity optimisation across metro cities.</p>
-                <div class="pillars-used">
-                    <span class="pillar-chip" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">Studio</span>
-                    <span class="pillar-chip" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">Build</span>
-                    <span class="pillar-chip" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);">Commerce</span>
-                </div>
-            </div>
-            <div class="results-box" style="border-color: rgba(251, 191, 36, 0.25);">
-                <div style="text-align: center; padding: 10px 0;">
-                    <div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fbbf24; margin-bottom: 8px;">Client Case Study</div>
-                    <div style="font-size: 15px; font-weight: 700; color: #f8fafc;">Unlocking Soon</div>
-                    <div style="font-size: 12.5px; color: #94a3b8; margin-top: 6px; line-height: 1.5;">Process documented — real brand results coming.</div>
-                </div>
-            </div>
-        </div>
 
-        <!-- CARD 05: PREMIUM BRAND VISUAL IDENTITY -->
-        <div class="port-card">
-            <div>
-                <div>
-                    <span class="port-tag">Beauty &amp; Personal Care</span>
-                    <span class="port-scale" style="color:#a78bfa;">Studio + Build</span>
+                <div class="process-step">
+                    <div class="step-num">02</div>
+                    <div class="step-content">
+                        <div class="step-title">Foundation &amp; Identity</div>
+                        <div class="step-desc">Legal groundwork + brand system, built to last. Company structure, IP protection, brand architecture, and visual identity — the infrastructure most agencies skip.</div>
+                    </div>
+                    <div class="step-connector"></div>
                 </div>
-                <h3>Premium Visual Rebrand &amp; Retail Distribution</h3>
-                <p>How we approach a luxury skincare brand's complete visual identity overhaul — 3D renders, packaging mockups, editorial lifestyle imagery — and connect them to modern trade retail partners and distributor networks through AHrik Network.</p>
-                <div class="pillars-used">
-                    <span class="pillar-chip" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">Studio</span>
-                    <span class="pillar-chip" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">Build</span>
-                    <span class="pillar-chip" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.4);">Network</span>
-                </div>
-            </div>
-            <div class="results-box" style="border-color: rgba(96, 165, 250, 0.25);">
-                <div style="text-align: center; padding: 10px 0;">
-                    <div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #60a5fa; margin-bottom: 8px;">Client Case Study</div>
-                    <div style="font-size: 15px; font-weight: 700; color: #f8fafc;">Unlocking Soon</div>
-                    <div style="font-size: 12.5px; color: #94a3b8; margin-top: 6px; line-height: 1.5;">Capability live — client result publication pending.</div>
-                </div>
-            </div>
-        </div>
 
-        <!-- CARD 06: AI AUTOMATION + VC NETWORK -->
-        <div class="port-card">
-            <div>
-                <div>
-                    <span class="port-tag">Consumer Electronics &amp; Home</span>
-                    <span class="port-scale" style="color:#60a5fa;">Build + Network</span>
+                <div class="process-step">
+                    <div class="step-num">03</div>
+                    <div class="step-content">
+                        <div class="step-title">Build &amp; Launch</div>
+                        <div class="step-desc">Storefront, content, and marketing infrastructure — live in weeks, not months. AI-powered visuals, conversion-built store, ad campaigns, and marketplace onboarding in parallel.</div>
+                    </div>
+                    <div class="step-connector"></div>
                 </div>
-                <h3>AI Automation &amp; Investor Access</h3>
-                <p>Our approach to deploying 24/7 AI customer support bots that resolve 60–70% of queries autonomously, combined with structured VC readiness preparation and warm angel network introductions for brands ready for their first institutional round.</p>
-                <div class="pillars-used">
-                    <span class="pillar-chip" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">Build</span>
-                    <span class="pillar-chip" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.4);">Marketing</span>
-                    <span class="pillar-chip" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.4);">Network</span>
+
+                <div class="process-step">
+                    <div class="step-num">04</div>
+                    <div class="step-content">
+                        <div class="step-title">Growth Loop</div>
+                        <div class="step-desc">Monthly reporting, honest numbers, continuous optimisation. We don't disappear after launch — this is where the real work of scaling begins.</div>
+                    </div>
                 </div>
-            </div>
-            <div class="results-box" style="border-color: rgba(96, 165, 250, 0.25);">
-                <div style="text-align: center; padding: 10px 0;">
-                    <div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #60a5fa; margin-bottom: 8px;">Client Case Study</div>
-                    <div style="font-size: 15px; font-weight: 700; color: #f8fafc;">Unlocking Soon</div>
-                    <div style="font-size: 12.5px; color: #94a3b8; margin-top: 6px; line-height: 1.5;">Framework validated — awaiting client result sign-off.</div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -315,9 +297,10 @@
     <!-- PORTFOLIO CTA SECTION -->
     <section>
         <div class="port-cta-box">
-            <h3>Be Among Our <span class="gradient-text">First Case Studies</span></h3>
-            <p>We're actively taking on founding clients who want to build with us from the ground up. Your brand's story could be the first published here. Get a free, honest 6-pillar audit — no pitch decks, no inflated promises.</p>
-            <a href="connect.html" class="btn-primary" style="padding: 16px 36px; font-size: 15.5px;">Schedule My Free Strategy Audit &rarr;</a>
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #f472b6; margin-bottom: 16px; display: block;">FOUNDING COHORT — LIMITED SPOTS</span>
+            <h3>Ready to Be Our<br><span class="gradient-text">First Success Story?</span></h3>
+            <p>Founding cohort spots are limited — we're keeping this small so every client gets real attention, real strategy, and real results. Once these spots fill, this pricing and access level closes permanently.</p>
+            <a href="connect.html" class="btn-primary" style="padding: 16px 40px; font-size: 15.5px;">Apply for Founding Access &rarr;</a>
         </div>
     </section>
 
