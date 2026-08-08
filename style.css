@@ -75,7 +75,7 @@
 
 [data-theme="dark"] footer a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):not([class*="social-"]):hover {
     color: #ffffff !important;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6) !important;
+    text-shadow: none !important;
 }
 
 * {
@@ -1140,44 +1140,44 @@ footer a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([hre
 footer a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):not([class*="social-"]):hover, 
 .pillar-footer-extra a:not([href*="base"]):not([href*="studio"]):not([href*="build"]):not([href*="marketing"]):not([href*="commerce"]):not([href*="network"]):not([class*="social-"]):hover {
     color: #ffffff !important;
-    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8) !important;
+    text-shadow: none !important;
     transform: translateX(4px);
 }
 
 /* Specific Pillar Hover Highlights for "The Journey" & Pillar Links */
 footer a[href*="base"]:hover {
     color: #22d3ee !important;
-    text-shadow: 0 0 12px rgba(34, 211, 238, 0.8) !important;
+    text-shadow: none !important;
     transform: translateX(4px);
 }
 
 footer a[href*="studio"]:hover {
     color: #a78bfa !important;
-    text-shadow: 0 0 12px rgba(167, 139, 250, 0.8) !important;
+    text-shadow: none !important;
     transform: translateX(4px);
 }
 
 footer a[href*="build"]:hover {
     color: #fb923c !important;
-    text-shadow: 0 0 12px rgba(251, 146, 60, 0.8) !important;
+    text-shadow: none !important;
     transform: translateX(4px);
 }
 
 footer a[href*="marketing"]:hover {
     color: #4ade80 !important;
-    text-shadow: 0 0 12px rgba(74, 222, 128, 0.8) !important;
+    text-shadow: none !important;
     transform: translateX(4px);
 }
 
 footer a[href*="commerce"]:hover {
     color: #fbbf24 !important;
-    text-shadow: 0 0 12px rgba(251, 191, 36, 0.8) !important;
+    text-shadow: none !important;
     transform: translateX(4px);
 }
 
 footer a[href*="network"]:hover {
     color: #60a5fa !important;
-    text-shadow: 0 0 12px rgba(96, 165, 250, 0.8) !important;
+    text-shadow: none !important;
     transform: translateX(4px);
 }
 
@@ -2028,6 +2028,13 @@ footer {
     transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+.footer-logo:hover,
+footer .footer-logo:hover {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
 /* 1. Logo Gradient Hover for NAVIGATE, CONNECT & Footer Links */
 .footer-col ul li a:hover,
 .footer-bottom a:hover {
@@ -2038,7 +2045,7 @@ footer {
     background-clip: text !important;
     font-weight: 700 !important;
     transform: translateX(5px) !important;
-    text-shadow: 0 0 12px rgba(192, 132, 252, 0.4) !important;
+    text-shadow: none !important;
 }
 
 /* 2. Permanent Signature Indicator Colors for "THE JOURNEY" Pillar Links */
@@ -2057,7 +2064,7 @@ footer a[href*="base.html"]:hover,
     color: #67e8f9 !important;
     -webkit-text-fill-color: #67e8f9 !important;
     background: none !important;
-    text-shadow: 0 0 12px rgba(34, 211, 238, 0.7) !important;
+    text-shadow: none !important;
     transform: translateX(5px) !important;
 }
 
@@ -2076,7 +2083,7 @@ footer a[href*="studio.html"]:hover,
     color: #c084fc !important;
     -webkit-text-fill-color: #c084fc !important;
     background: none !important;
-    text-shadow: 0 0 12px rgba(167, 139, 250, 0.7) !important;
+    text-shadow: none !important;
     transform: translateX(5px) !important;
 }
 
@@ -2095,7 +2102,7 @@ footer a[href*="build.html"]:hover,
     color: #fdba74 !important;
     -webkit-text-fill-color: #fdba74 !important;
     background: none !important;
-    text-shadow: 0 0 12px rgba(251, 146, 60, 0.7) !important;
+    text-shadow: none !important;
     transform: translateX(5px) !important;
 }
 
@@ -2114,7 +2121,7 @@ footer a[href*="marketing.html"]:hover,
     color: #86efac !important;
     -webkit-text-fill-color: #86efac !important;
     background: none !important;
-    text-shadow: 0 0 12px rgba(74, 222, 128, 0.7) !important;
+    text-shadow: none !important;
     transform: translateX(5px) !important;
 }
 
@@ -2133,7 +2140,7 @@ footer a[href*="commerce.html"]:hover,
     color: #fde047 !important;
     -webkit-text-fill-color: #fde047 !important;
     background: none !important;
-    text-shadow: 0 0 12px rgba(251, 191, 36, 0.7) !important;
+    text-shadow: none !important;
     transform: translateX(5px) !important;
 }
 
@@ -2152,7 +2159,7 @@ footer a[href*="network.html"]:hover,
     color: #93c5fd !important;
     -webkit-text-fill-color: #93c5fd !important;
     background: none !important;
-    text-shadow: 0 0 12px rgba(96, 165, 250, 0.7) !important;
+    text-shadow: none !important;
     transform: translateX(5px) !important;
 }
 
